@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+
+#active{
+    border-bottom: 1px solid white;
+}
+
+
+#hero{
+    font-family: 'Carter One', cursive !important;
+    font-size: 50px !important;
+}
+
+#r{
+    font-size: 50px !important;
+}
+
