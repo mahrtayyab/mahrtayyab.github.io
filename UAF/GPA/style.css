@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap');
+
+
+#active{
+    border-bottom: 1px solid white;
+}
+
+
+#title{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 50px;
+}
+
+#form-width{
+    width:70%;
+}
+
+.hidden{
+    display: none ;
+}
+
+.visible{
+    display: block;
+}
+
+#info{
+    margin-left: 30px !important;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0 ,0 ,0 , 0.15);
+}
+
+#warn{
+    display:none
+}
+
+
+tbody tr {
+    border-bottom: 2px solid rgba(221, 221, 221, 0.2) !important ;
+}
+
+tbody tr:nth-child(6) {
+    border-bottom: 2px solid rgba(221, 221, 221, 0.9) !important ;
+}
+
+tbody tr:last-of-type{
+    border-bottom: 3px solid #a0aec0 !important;
+}
+
+
+@media screen and (max-width: 601px) {
+    #info {
+      margin-left: 30px !important;
+      margin-right: 30px !important;
+    }
+    #warn{
+        display:inline;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 200px) {
+    #info {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+      overflow: scroll; 
+      width:100%;
+    }
+    #warn{
+        display:inline;
+    }
+    #title{
+        font-size:35px;
+    }
+    #form-width{
+        width:99%;
+    }
+}
