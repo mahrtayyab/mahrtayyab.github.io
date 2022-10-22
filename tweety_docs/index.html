@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Welcome to Tweety &#8212; Tweety 0.5 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dependencies" href="installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section class="hide-header" id="welcome-to-tweety">
+<h1>Welcome to Tweety<a class="headerlink" href="#welcome-to-tweety" title="Permalink to this heading">¶</a></h1>
+<p>Welcome to Tweety’s documentation. Get started with <a class="reference internal" href="installation.html"><span class="doc">Dependencies</span></a>
+and then get an overview with the <a class="reference internal" href="quickstart.html"><span class="doc">Quickstart</span></a>. The rest of the docs describe each
+component of Tweety in detail, with a full reference in the <a class="reference internal" href="all_functions.html"><span class="doc">All Available Functions</span></a>
+section.</p>
+<p>Twitter’s API is annoying to work with, and has lots of limitations — luckily their frontend (JavaScript) has it’s own API, which I reverse–engineered. No API rate limits. No restrictions. Extremely fast.</p>
+<section id="user-s-guide">
+<h2>User’s Guide<a class="headerlink" href="#user-s-guide" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Dependencies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#optional-dependencies">Optional dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#install-tweety">Install Tweety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#a-quick-scraper">A Quick scraper</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="all_functions.html">All Available Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="all_functions.html#get-tweets">Get Tweets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all_functions.html#get-trends">Get Trends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all_functions.html#searching-a-keyword">Searching a Keyword</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all_functions.html#getting-user-info">Getting USER Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all_functions.html#getting-a-tweet-detail">Getting a Tweet Detail</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="twDataTypes.html">twDataTypes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#usertweets">UserTweets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#search">Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#tweet-section">Tweet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#media-section">Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#stream-section">Stream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#short-user-section">ShortUser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#user-userlegacy">User / UserLegacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#trends">Trends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#card-usually-poll">Card (Usually Poll)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#choice-section">Choice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#place-section">Place</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twDataTypes.html#coordinates-section">Coordinates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#usernotfound"><code class="docutils literal notranslate"><span class="pre">UserNotFound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#guesttokennotfound"><code class="docutils literal notranslate"><span class="pre">GuestTokenNotFound</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#invalidtweetidentifier"><code class="docutils literal notranslate"><span class="pre">InvalidTweetIdentifier</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#proxyparseerror"><code class="docutils literal notranslate"><span class="pre">ProxyParseError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#userprotected"><code class="docutils literal notranslate"><span class="pre">UserProtected</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#unknownerror"><code class="docutils literal notranslate"><span class="pre">UnknownError</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="filters.html#search-filters">Search Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelogs.html">ChangeLogs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelogs.html#updates">Updates:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Tweety</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#install-tweety">Install Tweety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="all_functions.html">All Available Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twDataTypes.html">twDataTypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelogs.html">ChangeLogs</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="installation.html" title="next chapter">Dependencies</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, mahrtayyab.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
