@@ -269,9 +269,9 @@
 <td><p>datetime.datetime</p></td>
 <td><p>Time and Date at which the tweet was created</p></td>
 </tr>
-<tr class="row-odd"><td><p>author</p></td>
-<td><p><a class="reference external" href="#user-userlegacy-section">User</a></p></td>
-<td><p>Author of the Tweet</p></td>
+<tr class="row-even"><td><p>bookmark_count</p></td>
+  <td><p>int | None</p></td>
+  <td><p>Number of times this tweet was bookmarked by anyone</p></td>
 </tr>
 <tr class="row-even"><td><p>is_retweet</p></td>
 <td><p>boolean</p></td>
@@ -279,6 +279,10 @@
 <tr class="row-even"><td><p>is_quoted</p></td>
   <td><p>boolean</p></td>
   <td><p>Is it a Quoted tweet</p></td>
+</tr>
+<tr class="row-even"><td><p>quote_counts</p></td>
+  <td><p>int</p></td>
+  <td><p>Number of times this tweet was quoted by anyone</p></td>
 </tr>
 <tr class="row-even"><td><p>quoted_tweet</p></td>
   <td><p><a class="reference external" href="#tweet-section">Tweet</a></p></td>
@@ -308,6 +312,10 @@
 <td><p>boolean</p></td>
 <td><p>Is it a retweeted tweet</p></td>
 </tr>
+<tr class="row-even"><td><p>retweeted_tweet</p></td>
+  <td><p><a class="reference external" href="#tweet-section">Tweet</a> | None</p></td>
+  <td><p>Retweeted Tweet (if <code class="docutils literal notranslate"><span class="pre">is_retweet</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></td>
+  </tr>
 <tr class="row-odd"><td><p>is_quoted</p></td>
 <td><p>boolean</p></td>
 <td><p>Is it a Quoted tweet</p></td>
