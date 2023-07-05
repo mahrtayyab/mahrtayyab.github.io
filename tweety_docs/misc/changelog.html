@@ -4,20 +4,22 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelogs &mdash; Tweety 0.7.1.1 documentation</title>
+  <title>Changelogs &mdash; Tweety 0.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Search Filters" href="../basic/filter.html" /> 
+    <link rel="prev" title="Events" href="../basic/events.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -32,7 +34,7 @@
             Tweety
           </a>
               <div class="version">
-                0.7.1f
+                0.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -50,6 +52,7 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../basic/twitter-class.html">Twitter Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/updateMethods-class.html">UpdateMethod Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -57,6 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../basic/twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/exceptions.html">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/filter.html">Search Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/events.html">Events</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="current">
@@ -68,6 +72,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#update-1-2">Update 1.2:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-1-3">Update 1.3:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-1-4">Update 1.4:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-1-5">Update 1.5:</a></li>
 </ul>
 </li>
 </ul>
@@ -180,13 +185,27 @@
 <li><p><strong>Please</strong> do check the full documentation before upgrading</p></li>
 </ul>
 </section>
+<section id="update-1-5">
+<h2>Update 1.5:<a class="headerlink" href="#update-1-5" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Module version on <a class="reference external" href="https://pypi.org/project/tweety-ns/">PYPI Repository</a> is bumped to 0.8</p></li>
+<li><p>Many bug fixes</p></li>
+<li><p>Added new <code class="docutils literal notranslate"><span class="pre">get_mentions</span></code> , <code class="docutils literal notranslate"><span class="pre">get_inbox</span></code>, <code class="docutils literal notranslate"><span class="pre">send_message</span></code> methods</p></li>
+<li><p>Cookies are now necessary</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">can_dm</span></code> attributes to <a class="reference internal" href="../basic/twDataTypes.html#User" title="User"><code class="xref py py-obj docutils literal notranslate"><span class="pre">User</span></code></a></p></li>
+<li><p>Added <a class="reference internal" href="../basic/exceptions.html#RateLimitReached" title="RateLimitReached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RateLimitReached</span></code></a> new Exception</p></li>
+<li><p>Added New <a class="reference internal" href="../basic/twDataTypes.html#Inbox" title="Inbox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Inbox</span></code></a>, <a class="reference internal" href="../basic/twDataTypes.html#Conversation" title="Conversation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Conversation</span></code></a>, <a class="reference internal" href="../basic/twDataTypes.html#Message" title="Message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Message</span></code></a>, <a class="reference internal" href="../basic/twDataTypes.html#Mention" title="Mention"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mention</span></code></a></p></li>
+<li><p>Added Event Listener</p></li>
+<li><p><strong>Please do check the full documentation before upgrading</strong></p></li>
+</ul>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../basic/filter.html" class="btn btn-neutral float-left" title="Search Filters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../basic/events.html" class="btn btn-neutral float-left" title="Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

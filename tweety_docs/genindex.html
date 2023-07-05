@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Tweety 0.7.1.1 documentation</title>
+  <title>Index &mdash; Tweety 0.8 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
@@ -30,7 +32,7 @@
             Tweety
           </a>
               <div class="version">
-                0.7
+                0.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -48,6 +50,7 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basic/twitter-class.html">Twitter Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/updateMethods-class.html">UpdateMethod Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -55,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic/twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/exceptions.html">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/filter.html">Search Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/events.html">Events</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -102,6 +106,7 @@
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
@@ -120,9 +125,19 @@
       <ul>
         <li><a href="basic/twDataTypes.html#Choice.__repr__">(Choice method)</a>
 </li>
+        <li><a href="basic/twDataTypes.html#Conversation.__repr__">(Conversation method)</a>
+</li>
         <li><a href="basic/twDataTypes.html#Coordinates.__repr__">(Coordinates method)</a>
 </li>
+        <li><a href="basic/twDataTypes.html#Inbox.__repr__">(Inbox method)</a>
+</li>
         <li><a href="basic/twDataTypes.html#Media.__repr__">(Media method)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#Mention.__repr__">(Mention method)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#Message.__repr__">(Message method)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#NewMessage.__repr__">(NewMessage method)</a>
 </li>
         <li><a href="basic/twDataTypes.html#Place.__repr__">(Place method)</a>
 </li>
@@ -136,6 +151,8 @@
 </li>
         <li><a href="basic/twDataTypes.html#Tweet.__repr__">(Tweet method)</a>
 </li>
+        <li><a href="basic/twDataTypes.html#TweetThread.__repr__">(TweetThread method)</a>
+</li>
         <li><a href="basic/twDataTypes.html#User.__repr__">(User method)</a>
 </li>
         <li><a href="basic/twDataTypes.html#UserTweets.__repr__">(UserTweets method)</a>
@@ -147,21 +164,23 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/all-functions.html#Arguments">Arguments (built-in variable)</a>, <a href="basic/all-functions.html#id1">[1]</a>, <a href="basic/all-functions.html#id13">[2]</a>, <a href="basic/all-functions.html#id5">[3]</a>
+      <li><a href="basic/updateMethods-class.html#UpdateMethod.add_event_handler">add_event_handler() (UpdateMethod method)</a>
+</li>
+      <li><a href="basic/all-functions.html#Arguments">Arguments (built-in variable)</a>, <a href="basic/all-functions.html#id1">[1]</a>, <a href="basic/all-functions.html#id13">[2]</a>, <a href="basic/all-functions.html#id19">[3]</a>, <a href="basic/all-functions.html#id29">[4]</a>, <a href="basic/all-functions.html#id33">[5]</a>, <a href="basic/all-functions.html#id40">[6]</a>, <a href="basic/all-functions.html#id45">[7]</a>, <a href="basic/all-functions.html#id5">[8]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Stream.aspect_ratio">aspect_ratio (Stream attribute)</a>
 </li>
-      <li><a href="basic/exceptions.html#AuthenticationRequired">AuthenticationRequired (built-in class)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/exceptions.html#AuthenticationRequired">AuthenticationRequired (built-in class)</a>
+</li>
       <li><a href="basic/twDataTypes.html#Tweet.author">author (Tweet attribute)</a>
 </li>
       <li>
     AuthRequired()
 
       <ul>
-        <li><a href="basic/all-functions.html#AuthRequired">built-in function</a>
+        <li><a href="basic/all-functions.html#AuthRequired">built-in function</a>, <a href="basic/all-functions.html#id31">[1]</a>, <a href="basic/all-functions.html#id38">[2]</a>, <a href="basic/all-functions.html#id43">[3]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -171,6 +190,8 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/all-functions.html#banner_extensions">banner_extensions (built-in variable)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#User.bio">bio (User attribute)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Stream.bitrate">bitrate (Stream attribute)</a>
 </li>
@@ -182,7 +203,7 @@
     built-in function
 
       <ul>
-        <li><a href="basic/all-functions.html#AuthRequired">AuthRequired()</a>
+        <li><a href="basic/all-functions.html#AuthRequired">AuthRequired()</a>, <a href="basic/all-functions.html#id31">[1]</a>, <a href="basic/all-functions.html#id38">[2]</a>, <a href="basic/all-functions.html#id43">[3]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -191,6 +212,8 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#User.can_dm">can_dm (User attribute)</a>
+</li>
       <li><a href="basic/twDataTypes.html#Card">Card (built-in class)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Card.Return">Card.Return (built-in variable)</a>
@@ -205,12 +228,28 @@
 </li>
       <li><a href="basic/twDataTypes.html#Stream.content_type">content_type (Stream attribute)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Conversation">Conversation (built-in class)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#NewMessage.conversation">conversation (NewMessage attribute)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Conversation.Return">Conversation.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id14">[1]</a>, <a href="basic/twDataTypes.html#id15">[2]</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Conversation.text">Conversation.text (built-in variable)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Message.conversation_id">conversation_id (Message attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#NewMessage.conversation_id">(NewMessage attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#Inbox.conversations">conversations (Inbox attribute)</a>
+</li>
       <li><a href="basic/twDataTypes.html#Coordinates">Coordinates (built-in class)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Place.coordinates">coordinates (Place attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Coordinates.Return">Coordinates.Return (built-in variable)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Place.country">country (Place attribute)</a>
@@ -223,9 +262,13 @@
 </li>
       <li><a href="basic/twDataTypes.html#Tweet.created_on">created_on (Tweet attribute)</a>
 </li>
-      <li><a href="basic/all-functions.html#cursor">cursor (built-in variable)</a>, <a href="basic/all-functions.html#id8">[1]</a>
+      <li><a href="basic/all-functions.html#cursor">cursor (built-in variable)</a>, <a href="basic/all-functions.html#id10">[1]</a>, <a href="basic/all-functions.html#id16">[2]</a>, <a href="basic/all-functions.html#id24">[3]</a>, <a href="basic/all-functions.html#id36">[4]</a>, <a href="basic/all-functions.html#id41">[5]</a>
 
       <ul>
+        <li><a href="basic/twDataTypes.html#Inbox.cursor">(Inbox attribute)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#Mention.cursor">(Mention attribute)</a>
+</li>
         <li><a href="basic/twDataTypes.html#Search.cursor">(Search attribute)</a>
 </li>
         <li><a href="basic/twDataTypes.html#UserTweets.cursor">(UserTweets attribute)</a>
@@ -237,6 +280,16 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#Tweet.date">date (Tweet attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#User.date">(User attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="basic/twDataTypes.html#User.description">description (User attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Media.display_url">display_url (Media attribute)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Media.download">download() (Media method)</a>
@@ -245,8 +298,6 @@
         <li><a href="basic/twDataTypes.html#Stream.download">(Stream method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Card.duration">duration (Card attribute)</a>
 </li>
   </ul></td>
@@ -257,6 +308,10 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Card.end_time">end_time (Card attribute)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#User.entities">entities (User attribute)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Message.epoch_time">epoch_time (Message attribute)</a>
+</li>
       <li><a href="basic/exceptions.html#AuthenticationRequired.error_code">error_code (AuthenticationRequired attribute)</a>
 
       <ul>
@@ -265,6 +320,8 @@
         <li><a href="basic/exceptions.html#InvalidCredentials.error_code">(InvalidCredentials attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#InvalidTweetIdentifier.error_code">(InvalidTweetIdentifier attribute)</a>
+</li>
+        <li><a href="basic/exceptions.html#RateLimitReached.error_code">(RateLimitReached attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#UnknownError.error_code">(UnknownError attribute)</a>
 </li>
@@ -283,6 +340,8 @@
         <li><a href="basic/exceptions.html#InvalidCredentials.error_name">(InvalidCredentials attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#InvalidTweetIdentifier.error_name">(InvalidTweetIdentifier attribute)</a>
+</li>
+        <li><a href="basic/exceptions.html#RateLimitReached.error_name">(RateLimitReached attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#UnknownError.error_name">(UnknownError attribute)</a>
 </li>
@@ -307,7 +366,7 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/all-functions.html#filter_">filter_ (built-in variable)</a>
+      <li><a href="basic/all-functions.html#filter_">filter_ (built-in variable)</a>, <a href="basic/all-functions.html#id22">[1]</a>
 </li>
       <li><a href="basic/twDataTypes.html#User.followers_count">followers_count (User attribute)</a>
 </li>
@@ -321,9 +380,17 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/twDataTypes.html#Search.get_next_page">get_next_page() (Search method)</a>
+      <li><a href="basic/twDataTypes.html#Conversation.get_all_messages">get_all_messages() (Conversation method)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Tweet.get_comments">get_comments() (Tweet method)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Inbox.get_conversation">get_conversation() (Inbox method)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Mention.get_next_page">get_next_page() (Mention method)</a>
 
       <ul>
+        <li><a href="basic/twDataTypes.html#Search.get_next_page">(Search method)</a>
+</li>
         <li><a href="basic/twDataTypes.html#UserTweets.get_next_page">(UserTweets method)</a>
 </li>
       </ul></li>
@@ -347,9 +414,15 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/twDataTypes.html#Media.id">id (Media attribute)</a>
+      <li><a href="basic/twDataTypes.html#Conversation.id">id (Conversation attribute)</a>
 
       <ul>
+        <li><a href="basic/twDataTypes.html#Media.id">(Media attribute)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#Message.id">(Message attribute)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#NewMessage.id">(NewMessage attribute)</a>
+</li>
         <li><a href="basic/twDataTypes.html#Place.id">(Place attribute)</a>
 </li>
         <li><a href="basic/twDataTypes.html#ShortUser.id">(ShortUser attribute)</a>
@@ -363,15 +436,23 @@
 </li>
       <li><a href="basic/all-functions.html#image_extensions">image_extensions (built-in variable)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Inbox">Inbox (built-in class)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#Inbox.conversation_id">Inbox.conversation_id (built-in variable)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Inbox.Return">Inbox.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id6">[1]</a>
+</li>
       <li><a href="basic/exceptions.html#InvalidCredentials">InvalidCredentials (built-in class)</a>
 </li>
       <li><a href="basic/exceptions.html#InvalidTweetIdentifier">InvalidTweetIdentifier (built-in class)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Search.is_next_page">is_next_page (Search attribute)</a>
+      <li><a href="basic/twDataTypes.html#Mention.is_next_page">is_next_page (Mention attribute)</a>
 
       <ul>
+        <li><a href="basic/twDataTypes.html#Search.is_next_page">(Search attribute)</a>
+</li>
         <li><a href="basic/twDataTypes.html#UserTweets.is_next_page">(UserTweets attribute)</a>
 </li>
       </ul></li>
@@ -383,13 +464,15 @@
 </li>
       <li><a href="basic/twDataTypes.html#Tweet.is_sensitive">is_sensitive (Tweet attribute)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Tweet.iter_comments">iter_comments() (Tweet method)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="K">K</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/all-functions.html#keyword">keyword (built-in variable)</a>
+      <li><a href="basic/all-functions.html#id20">keyword (built-in variable)</a>, <a href="basic/all-functions.html#keyword">[1]</a>
 
       <ul>
         <li><a href="basic/twDataTypes.html#Search.keyword">(Search attribute)</a>
@@ -419,6 +502,8 @@
 </li>
       <li><a href="basic/twDataTypes.html#Coordinates.longitude">longitude (Coordinates attribute)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Conversation.low_quality">low_quality (Conversation attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -427,11 +512,17 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Media">Media (built-in class)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Tweet.media">media (Tweet attribute)</a>
+      <li><a href="basic/twDataTypes.html#Message.media">media (Message attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#NewMessage.media">(NewMessage attribute)</a>
 </li>
+        <li><a href="basic/twDataTypes.html#Tweet.media">(Tweet attribute)</a>
+</li>
+      </ul></li>
       <li><a href="basic/twDataTypes.html#Media.filename">Media.filename (built-in variable)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Media.Return">Media.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id5">[1]</a>
+      <li><a href="basic/twDataTypes.html#Media.Return">Media.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id12">[1]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Media.show_progress">Media.show_progress (built-in variable)</a>
 </li>
@@ -439,18 +530,28 @@
 </li>
       <li><a href="basic/twDataTypes.html#Media.media_url_https">media_url_https (Media attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Media.mediaStats">mediaStats (Media attribute)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Mention">Mention (built-in class)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Mention.Return">Mention.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id5">[1]</a>
+</li>
       <li><a href="basic/exceptions.html#AuthenticationRequired.message">message (AuthenticationRequired attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#Message">Message (built-in class)</a>
+</li>
+      <li><a href="basic/exceptions.html#GuestTokenNotFound.message">message (GuestTokenNotFound attribute)</a>
 
       <ul>
-        <li><a href="basic/exceptions.html#GuestTokenNotFound.message">(GuestTokenNotFound attribute)</a>
-</li>
         <li><a href="basic/exceptions.html#InvalidCredentials.message">(InvalidCredentials attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#InvalidTweetIdentifier.message">(InvalidTweetIdentifier attribute)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#NewMessage.message">(NewMessage attribute)</a>
+</li>
+        <li><a href="basic/exceptions.html#RateLimitReached.message">(RateLimitReached attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#UnknownError.message">(UnknownError attribute)</a>
 </li>
@@ -459,6 +560,16 @@
         <li><a href="basic/exceptions.html#UserProtected.message">(UserProtected attribute)</a>
 </li>
       </ul></li>
+      <li><a href="basic/twDataTypes.html#Message.Return">Message.Return (built-in variable)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Conversation.messages">messages (Conversation attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#Inbox.messages">(Inbox attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="basic/twDataTypes.html#Conversation.muted">muted (Conversation attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -481,7 +592,27 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#NewMessage">NewMessage (built-in class)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#NewMessage.Return">NewMessage.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id17">[1]</a>
+</li>
+      <li><a href="basic/twDataTypes.html#id16">NewMessage.text (built-in variable)</a>
+</li>
+      <li><a href="basic/events.html#NewMessageUpdate">NewMessageUpdate (built-in class)</a>
+</li>
       <li><a href="basic/twDataTypes.html#User.normal_followers_count">normal_followers_count (User attribute)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Conversation.notifications_disabled">notifications_disabled (Conversation attribute)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Conversation.nsfw">nsfw (Conversation attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/updateMethods-class.html#UpdateMethod.on">on() (UpdateMethod method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -489,16 +620,22 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/all-functions.html#id6">pages (built-in variable)</a>, <a href="basic/all-functions.html#pages">[1]</a>
+      <li><a href="basic/all-functions.html#id14">pages (built-in variable)</a>, <a href="basic/all-functions.html#id21">[1]</a>, <a href="basic/all-functions.html#id34">[2]</a>, <a href="basic/all-functions.html#id7">[3]</a>, <a href="basic/all-functions.html#pages">[4]</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Conversation.participants">participants (Conversation attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#NewMessage.participants">(NewMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="basic/twDataTypes.html#User.pinned_tweets">pinned_tweets (User attribute)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Place">Place (built-in class)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Tweet.place">place (Tweet attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#Tweet.place">place (Tweet attribute)</a>
+</li>
       <li><a href="basic/twDataTypes.html#Place.Return">Place.Return (built-in variable)</a>
 </li>
       <li><a href="basic/twDataTypes.html#User.possibly_sensitive">possibly_sensitive (User attribute)</a>
@@ -527,13 +664,27 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/exceptions.html#RateLimitReached">RateLimitReached (built-in class)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Conversation.read_only">read_only (Conversation attribute)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Message.receiver">receiver (Message attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#NewMessage.receiver">(NewMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="basic/twDataTypes.html#Tweet.replied_to">replied_to (Tweet attribute)</a>
 </li>
-      <li><a href="basic/all-functions.html#replies">replies (built-in variable)</a>
+      <li><a href="basic/all-functions.html#id8">replies (built-in variable)</a>, <a href="basic/all-functions.html#replies">[1]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Tweet.reply_counts">reply_counts (Tweet attribute)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Message.request_id">request_id (Message attribute)</a>
+</li>
       <li><a href="basic/twDataTypes.html#Stream.res">res (Stream attribute)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#NewMessage.respond">respond() (NewMessage method)</a>
 </li>
       <li><a href="basic/exceptions.html#AuthenticationRequired.response">response (AuthenticationRequired attribute)</a>
 
@@ -543,6 +694,8 @@
         <li><a href="basic/exceptions.html#InvalidCredentials.response">(InvalidCredentials attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#InvalidTweetIdentifier.response">(InvalidTweetIdentifier attribute)</a>
+</li>
+        <li><a href="basic/exceptions.html#RateLimitReached.response">(RateLimitReached attribute)</a>
 </li>
         <li><a href="basic/exceptions.html#UnknownError.response">(UnknownError attribute)</a>
 </li>
@@ -559,11 +712,13 @@
         <li><a href="basic/twDataTypes.html#User.rest_id">(User attribute)</a>
 </li>
       </ul></li>
-      <li><a href="basic/all-functions.html#Return">Return (built-in variable)</a>, <a href="basic/all-functions.html#id11">[1]</a>, <a href="basic/all-functions.html#id14">[2]</a>, <a href="basic/all-functions.html#id3">[3]</a>, <a href="basic/all-functions.html#id9">[4]</a>
+      <li><a href="basic/all-functions.html#Return">Return (built-in variable)</a>, <a href="basic/all-functions.html#id11">[1]</a>, <a href="basic/all-functions.html#id17">[2]</a>, <a href="basic/all-functions.html#id25">[3]</a>, <a href="basic/all-functions.html#id27">[4]</a>, <a href="basic/all-functions.html#id3">[5]</a>, <a href="basic/all-functions.html#id30">[6]</a>, <a href="basic/all-functions.html#id37">[7]</a>, <a href="basic/all-functions.html#id42">[8]</a>, <a href="basic/all-functions.html#id47">[9]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Tweet.retweet_counts">retweet_counts (Tweet attribute)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Tweet.retweeted_tweet">retweeted_tweet (Tweet attribute)</a>
+</li>
+      <li><a href="basic/updateMethods-class.html#UpdateMethod.run_until_disconnected">run_until_disconnected() (UpdateMethod method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -591,6 +746,14 @@
 </li>
       <li><a href="basic/filter.html#SearchFilters.Videos">SearchFilters.Videos (built-in class)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Conversation.send_message">send_message() (Conversation method)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Message.sender">sender (Message attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#NewMessage.sender">(NewMessage attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#ShortUser">ShortUser (built-in class)</a>
@@ -605,7 +768,7 @@
 </li>
       <li><a href="basic/twDataTypes.html#Stream.filename">Stream.filename (built-in variable)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Stream.Return">Stream.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id6">[1]</a>
+      <li><a href="basic/twDataTypes.html#Stream.Return">Stream.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id13">[1]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Stream.show_progress">Stream.show_progress (built-in variable)</a>
 </li>
@@ -619,8 +782,22 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/all-functions.html#text">text (built-in variable)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#Message.text">(Message attribute)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#NewMessage.text">(NewMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="basic/twDataTypes.html#Tweet.threads">threads (Tweet attribute)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Message.time">time (Message attribute)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#NewMessage.time">(NewMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="basic/twDataTypes.html#Search.to_xlsx">to_xlsx() (Search method)</a>
 
       <ul>
@@ -631,23 +808,39 @@
 </li>
       <li><a href="basic/twDataTypes.html#Trends.Return">Trends.Return (built-in variable)</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Conversation.trusted">trusted (Conversation attribute)</a>
+</li>
       <li><a href="basic/twDataTypes.html#Tweet">Tweet (built-in class)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Tweet.Return">Tweet.Return (built-in variable)</a>
+      <li><a href="basic/twDataTypes.html#Tweet.cursor">Tweet.cursor (built-in variable)</a>, <a href="basic/twDataTypes.html#id9">[1]</a>
 </li>
+      <li><a href="basic/twDataTypes.html#Tweet.pages">Tweet.pages (built-in variable)</a>, <a href="basic/twDataTypes.html#id7">[1]</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Tweet.Return">Tweet.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id10">[1]</a>, <a href="basic/twDataTypes.html#id11">[2]</a>
+</li>
+      <li><a href="basic/twDataTypes.html#Tweet.wait_time">Tweet.wait_time (built-in variable)</a>, <a href="basic/twDataTypes.html#id8">[1]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Trends.tweet_count">tweet_count (Trends attribute)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Search.tweets">tweets (Search attribute)</a>
+      <li><a href="basic/twDataTypes.html#Mention.tweets">tweets (Mention attribute)</a>
 
       <ul>
+        <li><a href="basic/twDataTypes.html#Search.tweets">(Search attribute)</a>
+</li>
+        <li><a href="basic/twDataTypes.html#TweetThread.tweets">(TweetThread attribute)</a>
+</li>
         <li><a href="basic/twDataTypes.html#UserTweets.tweets">(UserTweets attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#TweetThread">TweetThread (built-in class)</a>
+</li>
+      <li><a href="basic/twDataTypes.html#TweetThread.Return">TweetThread.Return (built-in variable)</a>
+</li>
       <li><a href="basic/twitter-class.html#Twitter">Twitter (built-in class)</a>
 </li>
-      <li><a href="basic/all-functions.html#Twitter">Twitter()</a>, <a href="basic/all-functions.html#id0">[1]</a>, <a href="basic/all-functions.html#id10">[2]</a>, <a href="basic/all-functions.html#id12">[3]</a>, <a href="basic/all-functions.html#id4">[4]</a>
+      <li><a href="basic/all-functions.html#Twitter">Twitter()</a>, <a href="basic/all-functions.html#id0">[1]</a>, <a href="basic/all-functions.html#id12">[2]</a>, <a href="basic/all-functions.html#id18">[3]</a>, <a href="basic/all-functions.html#id26">[4]</a>, <a href="basic/all-functions.html#id28">[5]</a>, <a href="basic/all-functions.html#id32">[6]</a>, <a href="basic/all-functions.html#id39">[7]</a>, <a href="basic/all-functions.html#id4">[8]</a>, <a href="basic/all-functions.html#id44">[9]</a>
 </li>
       <li><a href="basic/twitter-class.html#Twitter.Arguments">Twitter.Arguments (built-in variable)</a>
 </li>
@@ -660,6 +853,8 @@
       <li><a href="basic/twDataTypes.html#Choice.type">type (Choice attribute)</a>
 
       <ul>
+        <li><a href="basic/twDataTypes.html#Conversation.type">(Conversation attribute)</a>
+</li>
         <li><a href="basic/twDataTypes.html#Media.type">(Media attribute)</a>
 </li>
       </ul></li>
@@ -670,6 +865,14 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/exceptions.html#UnknownError">UnknownError (built-in class)</a>
+</li>
+      <li><a href="basic/updateMethods-class.html#UpdateMethod">UpdateMethod (built-in class)</a>
+</li>
+      <li><a href="basic/updateMethods-class.html#UpdateMethod.callback">UpdateMethod.callback (built-in variable)</a>
+</li>
+      <li><a href="basic/updateMethods-class.html#UpdateMethod.event">UpdateMethod.event (built-in variable)</a>
+</li>
+      <li><a href="basic/updateMethods-class.html#UpdateMethod.Return">UpdateMethod.Return (built-in variable)</a>, <a href="basic/updateMethods-class.html#id0">[1]</a>, <a href="basic/updateMethods-class.html#id2">[2]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Media.url">url (Media attribute)</a>
 
@@ -687,15 +890,21 @@
 </li>
       <li><a href="basic/twDataTypes.html#User.Return">User.Return (built-in variable)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#UserTweets.user_id">user_id (UserTweets attribute)</a>
+      <li><a href="basic/all-functions.html#user_id">user_id (built-in variable)</a>
+
+      <ul>
+        <li><a href="basic/twDataTypes.html#Mention.user_id">(Mention attribute)</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Tweet.user_mentions">user_mentions (Tweet attribute)</a>
+        <li><a href="basic/twDataTypes.html#UserTweets.user_id">(UserTweets attribute)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#Tweet.user_mentions">user_mentions (Tweet attribute)</a>
+</li>
       <li><a href="basic/twDataTypes.html#Card.user_ref">user_ref (Card attribute)</a>
 </li>
-      <li><a href="basic/all-functions.html#id2">username (built-in variable)</a>, <a href="basic/all-functions.html#username">[1]</a>
+      <li><a href="basic/all-functions.html#id2">username (built-in variable)</a>, <a href="basic/all-functions.html#id46">[1]</a>, <a href="basic/all-functions.html#id6">[2]</a>, <a href="basic/all-functions.html#username">[3]</a>
 
       <ul>
         <li><a href="basic/twDataTypes.html#ShortUser.username">(ShortUser attribute)</a>
@@ -735,7 +944,7 @@
 <h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/all-functions.html#id7">wait_time (built-in variable)</a>, <a href="basic/all-functions.html#wait_time">[1]</a>
+      <li><a href="basic/all-functions.html#id15">wait_time (built-in variable)</a>, <a href="basic/all-functions.html#id23">[1]</a>, <a href="basic/all-functions.html#id35">[2]</a>, <a href="basic/all-functions.html#id9">[3]</a>, <a href="basic/all-functions.html#wait_time">[4]</a>
 </li>
   </ul></td>
 </tr></table>
