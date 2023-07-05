@@ -4,13 +4,15 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exceptions &mdash; Tweety 0.7.1.1 documentation</title>
+  <title>Exceptions &mdash; Tweety 0.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -33,7 +35,7 @@
             Tweety
           </a>
               <div class="version">
-                0.7
+                0.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -51,6 +53,7 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="twitter-class.html">Twitter Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updateMethods-class.html">UpdateMethod Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="current">
@@ -63,10 +66,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#guesttokennotfound">GuestTokenNotFound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#userprotected">UserProtected</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#invalidcredentials">InvalidCredentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ratelimitreached">RateLimitReached</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#unknownerror">UnknownError</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -368,6 +373,52 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidCredentials.response">
 <span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#InvalidCredentials.response" title="Permalink to this definition"></a></dt>
+<dd><p>Raw Response returned by the Twitter</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="ratelimitreached">
+<h2>RateLimitReached<a class="headerlink" href="#ratelimitreached" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RateLimitReached">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RateLimitReached</span></span><a class="headerlink" href="#RateLimitReached" title="Permalink to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Description<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>This Exception is raised when you have exceeded the Twitter Rate Limit</strong></p>
+</dd>
+<dt class="field-even">Reference<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.exceptions_.RateLimitReached</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="RateLimitReached.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">You</span> <span class="pre">have</span> <span class="pre">exceeded</span> <span class="pre">the</span> <span class="pre">Twitter</span> <span class="pre">Rate</span> <span class="pre">Limit</span></em><a class="headerlink" href="#RateLimitReached.message" title="Permalink to this definition"></a></dt>
+<dd><p>Main Exception Message</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RateLimitReached.error_code">
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">88</span></em><a class="headerlink" href="#RateLimitReached.error_code" title="Permalink to this definition"></a></dt>
+<dd><p>Exception Error Code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RateLimitReached.error_name">
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">RateLimitExceeded</span></em><a class="headerlink" href="#RateLimitReached.error_name" title="Permalink to this definition"></a></dt>
+<dd><p>Twitter Internal Error Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RateLimitReached.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#RateLimitReached.response" title="Permalink to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
