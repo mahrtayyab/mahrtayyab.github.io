@@ -7,6 +7,8 @@
   <title>Tweety’s Documentation &mdash; Tweety 0.8 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,6 +18,8 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/dark_mode_js/default_light.js"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -52,10 +56,10 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basic/twitter-class.html">Twitter Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic/updateMethods-class.html">UpdateMethod Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="basic/singing-in.html">Signing In</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/all-functions.html">All Available Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/exceptions.html">Exceptions</a></li>
@@ -93,9 +97,10 @@
              
   <section id="tweety-s-documentation">
 <h1>Tweety’s Documentation<a class="headerlink" href="#tweety-s-documentation" title="Permalink to this heading"></a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">()</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 
 <span class="n">all_tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_tweets</span><span class="p">(</span><span class="s2">&quot;elonmusk&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">all_tweets</span><span class="p">:</span>

@@ -7,6 +7,8 @@
   <title>Twitter Class &mdash; Tweety 0.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,10 +18,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="UpdateMethod Class" href="updateMethods-class.html" />
+    <link rel="next" title="Signing In" href="singing-in.html" />
     <link rel="prev" title="Quick-Start" href="quick-start.html" /> 
 </head>
 
@@ -56,10 +60,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#Twitter"><code class="docutils literal notranslate"><span class="pre">Twitter</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="updateMethods-class.html">UpdateMethod Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="singing-in.html">Signing In</a></li>
 <li class="toctree-l1"><a class="reference internal" href="all-functions.html">All Available Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
@@ -97,22 +101,18 @@
              
   <section id="twitter-class">
 <span id="id1"></span><h1>Twitter Class<a class="headerlink" href="#twitter-class" title="Permalink to this heading"></a></h1>
+<p>The Twitter aggregates several mixin classes to provide all the common functionality in a nice, Pythonic interface. Each mixin has its own methods, which you all can use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Twitter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_retires</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Proxy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cookies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Twitter" title="Permalink to this definition"></a></dt>
-<dd><p>This is main entry Class for the library you should be importing and using to make further method calls</p>
-<p>Bases : <a class="reference internal" href="updateMethods-class.html#UpdateMethod" title="UpdateMethod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateMethod</span></code></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Cookies are now required.</p>
-</div>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Proxy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Twitter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateMethods</span></code> , <code class="xref py py-obj docutils literal notranslate"><span class="pre">BotMethods</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">AuthMethods</span></code></p>
 <dl class="py data">
 <dt class="sig sig-object py" id="Twitter.Arguments">
 <span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#Twitter.Arguments" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="Twitter.max_retires">
-<span class="sig-name descname"><span class="pre">max_retires</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#Twitter.max_retires" title="Permalink to this definition"></a></dt>
-<dd><p>The number of times you want to retry in case the <code class="docutils literal notranslate"><span class="pre">Guest</span> <span class="pre">Token</span></code> couldn’t be obtained</p>
+<dt class="sig sig-object py" id="Twitter.session_name">
+<span class="sig-name descname"><span class="pre">session_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Session</span></em><a class="headerlink" href="#Twitter.session_name" title="Permalink to this definition"></a></dt>
+<dd><p>This is the name of the session which will be saved and can be loaded later</p>
 </dd></dl>
 
 <dl class="py data">
@@ -122,16 +122,6 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Proxy is not yet fully integrated</p>
-</div>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="Twitter.cookies">
-<span class="sig-name descname"><span class="pre">cookies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#Twitter.cookies" title="Permalink to this definition"></a></dt>
-<dd><p>Cookies you want to use when making the requests to Twitter (as authenticated user)</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Some functions requires user authentication and will not work without it</p>
 </div>
 </dd></dl>
 
@@ -145,11 +135,6 @@
 
 </dd></dl>
 
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
-</pre></div>
-</div>
 </section>
 
 
@@ -157,7 +142,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="quick-start.html" class="btn btn-neutral float-left" title="Quick-Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="updateMethods-class.html" class="btn btn-neutral float-right" title="UpdateMethod Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="singing-in.html" class="btn btn-neutral float-right" title="Signing In" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

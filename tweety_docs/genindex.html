@@ -6,6 +6,8 @@
   <title>Index &mdash; Tweety 0.8 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,6 +17,8 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/dark_mode_js/default_light.js"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -50,10 +54,10 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basic/twitter-class.html">Twitter Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic/updateMethods-class.html">UpdateMethod Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="basic/singing-in.html">Signing In</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/all-functions.html">All Available Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/exceptions.html">Exceptions</a></li>
@@ -106,7 +110,6 @@
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
- | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
@@ -164,16 +167,14 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/updateMethods-class.html#UpdateMethod.add_event_handler">add_event_handler() (UpdateMethod method)</a>
-</li>
       <li><a href="basic/all-functions.html#Arguments">Arguments (built-in variable)</a>, <a href="basic/all-functions.html#id1">[1]</a>, <a href="basic/all-functions.html#id13">[2]</a>, <a href="basic/all-functions.html#id19">[3]</a>, <a href="basic/all-functions.html#id29">[4]</a>, <a href="basic/all-functions.html#id33">[5]</a>, <a href="basic/all-functions.html#id40">[6]</a>, <a href="basic/all-functions.html#id45">[7]</a>, <a href="basic/all-functions.html#id5">[8]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Stream.aspect_ratio">aspect_ratio (Stream attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/exceptions.html#AuthenticationRequired">AuthenticationRequired (built-in class)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/twDataTypes.html#Tweet.author">author (Tweet attribute)</a>
 </li>
       <li>
@@ -609,14 +610,6 @@
   </ul></td>
 </tr></table>
 
-<h2 id="O">O</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="basic/updateMethods-class.html#UpdateMethod.on">on() (UpdateMethod method)</a>
-</li>
-  </ul></td>
-</tr></table>
-
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -718,8 +711,6 @@
 </li>
       <li><a href="basic/twDataTypes.html#Tweet.retweeted_tweet">retweeted_tweet (Tweet attribute)</a>
 </li>
-      <li><a href="basic/updateMethods-class.html#UpdateMethod.run_until_disconnected">run_until_disconnected() (UpdateMethod method)</a>
-</li>
   </ul></td>
 </tr></table>
 
@@ -818,10 +809,10 @@
 </li>
       <li><a href="basic/twDataTypes.html#Tweet.Return">Tweet.Return (built-in variable)</a>, <a href="basic/twDataTypes.html#id10">[1]</a>, <a href="basic/twDataTypes.html#id11">[2]</a>
 </li>
-      <li><a href="basic/twDataTypes.html#Tweet.wait_time">Tweet.wait_time (built-in variable)</a>, <a href="basic/twDataTypes.html#id8">[1]</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="basic/twDataTypes.html#Tweet.wait_time">Tweet.wait_time (built-in variable)</a>, <a href="basic/twDataTypes.html#id8">[1]</a>
+</li>
       <li><a href="basic/twDataTypes.html#Trends.tweet_count">tweet_count (Trends attribute)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Mention.tweets">tweets (Mention attribute)</a>
@@ -844,11 +835,9 @@
 </li>
       <li><a href="basic/twitter-class.html#Twitter.Arguments">Twitter.Arguments (built-in variable)</a>
 </li>
-      <li><a href="basic/twitter-class.html#Twitter.cookies">Twitter.cookies (built-in variable)</a>
-</li>
-      <li><a href="basic/twitter-class.html#Twitter.max_retires">Twitter.max_retires (built-in variable)</a>
-</li>
       <li><a href="basic/twitter-class.html#Twitter.proxy">Twitter.proxy (built-in variable)</a>
+</li>
+      <li><a href="basic/twitter-class.html#Twitter.session_name">Twitter.session_name (built-in variable)</a>
 </li>
       <li><a href="basic/twDataTypes.html#Choice.type">type (Choice attribute)</a>
 
@@ -865,14 +854,6 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="basic/exceptions.html#UnknownError">UnknownError (built-in class)</a>
-</li>
-      <li><a href="basic/updateMethods-class.html#UpdateMethod">UpdateMethod (built-in class)</a>
-</li>
-      <li><a href="basic/updateMethods-class.html#UpdateMethod.callback">UpdateMethod.callback (built-in variable)</a>
-</li>
-      <li><a href="basic/updateMethods-class.html#UpdateMethod.event">UpdateMethod.event (built-in variable)</a>
-</li>
-      <li><a href="basic/updateMethods-class.html#UpdateMethod.Return">UpdateMethod.Return (built-in variable)</a>, <a href="basic/updateMethods-class.html#id0">[1]</a>, <a href="basic/updateMethods-class.html#id2">[2]</a>
 </li>
       <li><a href="basic/twDataTypes.html#Media.url">url (Media attribute)</a>
 
