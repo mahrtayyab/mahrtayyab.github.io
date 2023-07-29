@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Search Filters" href="filter.html" />
+    <link rel="next" title="Events" href="events.html" />
     <link rel="prev" title="TwDataTypes" href="twDataTypes.html" /> 
 </head>
 
@@ -71,11 +71,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#userprotected">UserProtected</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#invalidcredentials">InvalidCredentials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ratelimitreached">RateLimitReached</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deniedlogin">DeniedLogin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#unknownerror">UnknownError</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -431,6 +436,52 @@
 </dd></dl>
 
 </section>
+<section id="deniedlogin">
+<h2>DeniedLogin<a class="headerlink" href="#deniedlogin" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DeniedLogin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DeniedLogin</span></span><a class="headerlink" href="#DeniedLogin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Description<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception Raised when the Twitter deny the login request , could be due to multiple login attempts (or failed attempts)</strong></p>
+</dd>
+<dt class="field-even">Reference<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.exceptions_.DeniedLogin</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="DeniedLogin.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#DeniedLogin.message" title="Permalink to this definition"></a></dt>
+<dd><p>Main Exception Message</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DeniedLogin.error_code">
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#DeniedLogin.error_code" title="Permalink to this definition"></a></dt>
+<dd><p>Exception Error Code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DeniedLogin.error_name">
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#DeniedLogin.error_name" title="Permalink to this definition"></a></dt>
+<dd><p>Twitter Internal Error Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DeniedLogin.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#DeniedLogin.response" title="Permalink to this definition"></a></dt>
+<dd><p>Raw Response returned by the Twitter</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="unknownerror">
 <h2>UnknownError<a class="headerlink" href="#unknownerror" title="Permalink to this heading"></a></h2>
 <dl class="py class">
@@ -484,7 +535,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="twDataTypes.html" class="btn btn-neutral float-left" title="TwDataTypes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="filter.html" class="btn btn-neutral float-right" title="Search Filters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="events.html" class="btn btn-neutral float-right" title="Events" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

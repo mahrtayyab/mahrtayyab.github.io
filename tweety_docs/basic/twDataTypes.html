@@ -66,6 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#usertweets">UserTweets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#search">Search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mention">Mention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bookmarks">Bookmarks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#inbox">Inbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tweetthread">TweetThread</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tweet">Tweet</a></li>
@@ -84,8 +85,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -124,7 +129,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="UserTweets">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserTweets</span></span><a class="headerlink" href="#UserTweets" title="Permalink to this definition"></a></dt>
-<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>This Object is JSON Serializable and Iterable</strong></p>
@@ -232,7 +237,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="Search">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Search</span></span><a class="headerlink" href="#Search" title="Permalink to this definition"></a></dt>
-<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>This Object is JSON Serializable and Iterable</strong></p>
@@ -345,7 +350,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="Mention">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mention</span></span><a class="headerlink" href="#Mention" title="Permalink to this definition"></a></dt>
-<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>This Object is JSON Serializable and Iterable</strong></p>
@@ -408,6 +413,85 @@
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Mention(user_id={user_id},</span> <span class="pre">count={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="bookmarks">
+<h2>Bookmarks<a class="headerlink" href="#bookmarks" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Bookmarks">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Bookmarks</span></span><a class="headerlink" href="#Bookmarks" title="Permalink to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.bookmarks.Bookmarks</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Bookmarks.tweets">
+<span class="sig-name descname"><span class="pre">tweets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a></em><a class="headerlink" href="#Bookmarks.tweets" title="Permalink to this definition"></a></dt>
+<dd><p>List of User Tweets</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Bookmarks.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Bookmarks.cursor" title="Permalink to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Bookmarks.is_next_page">
+<span class="sig-name descname"><span class="pre">is_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#Bookmarks.is_next_page" title="Permalink to this definition"></a></dt>
+<dd><p>Is next page of tweets available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Bookmarks.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#Bookmarks.user_id" title="Permalink to this definition"></a></dt>
+<dd><p>User ID of the user in question</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Bookmarks.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bookmarks.get_next_page" title="Permalink to this definition"></a></dt>
+<dd><p>Get next page of tweets if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Bookmarks.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Bookmarks.Return" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Bookmarks.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Bookmarks.__repr__" title="Permalink to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id6" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Bookmarks(user_id={user_id},</span> <span class="pre">count={number_of_results})</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -487,8 +571,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Inbox.__repr__" title="Permalink to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id6">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id6" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id7" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Inbox(user_id={user_id},</span> <span class="pre">count={number_of_results})</span></code></p>
@@ -780,28 +864,28 @@
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Arguments:</span></span></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id7">
-<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id7" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id8" title="Permalink to this definition"></a></dt>
 <dd><p>How many pages to get</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id8">
-<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id8" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id9" title="Permalink to this definition"></a></dt>
 <dd><p>Number of seconds to wait between multiple requests</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id9">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id9" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id10" title="Permalink to this definition"></a></dt>
 <dd><p>Pagination cursor to get the comments from that cursor up-to</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id10">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Generator</span> <span class="pre">:</span> <span class="pre">(`Tweet`</span> <span class="pre">,</span> <span class="pre">list[`Tweet`])</span></em><a class="headerlink" href="#id10" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Generator</span> <span class="pre">:</span> <span class="pre">(`Tweet`</span> <span class="pre">,</span> <span class="pre">list[`Tweet`])</span></em><a class="headerlink" href="#id11" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -811,8 +895,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Tweet.__repr__" title="Permalink to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id11">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id11" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id12" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Tweet(id=id_of_tweet,</span> <span class="pre">author=author_of_tweet,</span> <span class="pre">created_on=tweet_creation_date,</span> <span class="pre">threads=number_of_threads)</span></code></p>
@@ -900,7 +984,7 @@
 <span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="Media.download">
-<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Media.download" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Media.download" title="Permalink to this definition"></a></dt>
 <dd><p>Download the Media</p>
 <dl class="py data">
 <dt class="sig sig-object py">
@@ -912,9 +996,10 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="Media.show_progress">
-<span class="sig-name descname"><span class="pre">show_progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#Media.show_progress" title="Permalink to this definition"></a></dt>
-<dd><p>Either to show the download progress or not</p>
+<dt class="sig sig-object py" id="Media.progress_callback">
+<span class="sig-name descname"><span class="pre">progress_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#Media.progress_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function which will called while downloading to track the progress.
+[filename, total_size_in_bytes, downloaded_in_bytes]</p>
 </dd></dl>
 
 </dd></dl>
@@ -931,8 +1016,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Media.__repr__" title="Permalink to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id12">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id12" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id13" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Media(id=id_of_media,</span> <span class="pre">type=type_of_media)</span></code></p>
@@ -1008,7 +1093,7 @@
 <span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="Stream.download">
-<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Stream.download" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Stream.download" title="Permalink to this definition"></a></dt>
 <dd><p>Download the Media</p>
 <dl class="py data">
 <dt class="sig sig-object py">
@@ -1020,9 +1105,10 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="Stream.show_progress">
-<span class="sig-name descname"><span class="pre">show_progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#Stream.show_progress" title="Permalink to this definition"></a></dt>
-<dd><p>Either to show the download progress or not</p>
+<dt class="sig sig-object py" id="Stream.progress_callback">
+<span class="sig-name descname"><span class="pre">progress_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#Stream.progress_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function which will called while downloading to track the progress.
+[filename, total_size_in_bytes, downloaded_in_bytes]</p>
 </dd></dl>
 
 </dd></dl>
@@ -1039,8 +1125,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Stream.__repr__" title="Permalink to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id13">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id13" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id14" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Stream(content_type=content_type_of_stream,</span> <span class="pre">length=length_of_stream_in_millis,</span> <span class="pre">bitrate=bitrate_of_media_audio,</span> <span class="pre">res=resolution_of_media)</span></code></p>
@@ -1791,8 +1877,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id14">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Message" title="Message"><span class="pre">Message</span></a></em><a class="headerlink" href="#id14" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Message" title="Message"><span class="pre">Message</span></a></em><a class="headerlink" href="#id15" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1802,8 +1888,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Conversation.__repr__" title="Permalink to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id15">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id15" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id16">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id16" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Conversation(id=id_of_conversation,</span> <span class="pre">muted=is</span> <span class="pre">muted,</span> <span class="pre">nsfw=is</span> <span class="pre">nsfw,</span> <span class="pre">participants=number</span> <span class="pre">of</span> <span class="pre">participants)</span></code></p>
@@ -2007,8 +2093,8 @@
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Arguments:</span></span></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id16">
-<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id16" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id17" title="Permalink to this definition"></a></dt>
 <dd><p>Content of the message to send</p>
 </dd></dl>
 
@@ -2026,8 +2112,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#NewMessage.__repr__" title="Permalink to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id17">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id17" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id18" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Message(id=id_of_the_message,</span> <span class="pre">conversation_id=id_of_the_conversation,</span> <span class="pre">time=time_of_the_message)</span></code></p>

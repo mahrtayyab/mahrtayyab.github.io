@@ -68,14 +68,20 @@
 <li class="toctree-l2"><a class="reference internal" href="#get-trends">Get Trends</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-a-tweet-detail">Get a Tweet Detail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#getting-mentioned-tweets">Getting Mentioned Tweets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-bookmarks">Getting Bookmarks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#getting-inbox">Getting Inbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sending-message">Sending Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-tweet">Creating a Tweet</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -148,8 +154,8 @@
 </dd></dl>
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">user</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_user_info</span><span class="p">(</span><span class="s1">&#39;elonmusk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -214,8 +220,7 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_tweets</span><span class="p">(</span><span class="s1">&#39;elonmusk&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
@@ -277,8 +282,7 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">userTweetsObj</span><span class="p">,</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_tweets</span><span class="p">(</span><span class="s1">&#39;elonmusk&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
 </pre></div>
@@ -353,8 +357,7 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;elonmusk&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
@@ -420,8 +423,7 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">search_obj</span><span class="p">,</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_search</span><span class="p">(</span><span class="s1">&#39;elonmusk&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
 </pre></div>
@@ -450,8 +452,7 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">all_trends</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_trends</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">trend</span> <span class="ow">in</span> <span class="n">all_trends</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">trend</span><span class="p">)</span>
@@ -492,8 +493,7 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">tweet</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">tweet_detail</span><span class="p">(</span><span class="s2">&quot;https://twitter.com/Microsoft/status/1442542812197801985&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -555,10 +555,179 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_mentions</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id38">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_mentions(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id38" title="Permalink to this definition"></a></dt>
+<dd><p>Getting the Tweets in which the authenticated user is mentioned as a generator</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This method requires user to be authenticated</p>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="id39">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id39" title="Permalink to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id40">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id40" title="Permalink to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id41">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id41" title="Permalink to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id42">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id42" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id43">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id43" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator: (<a class="reference internal" href="twDataTypes.html#Mention" title="Mention"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mention</span></code></a>, list[<a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">mention_obj</span><span class="p">,</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_mentions</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="getting-bookmarks">
+<h2>Getting Bookmarks<a class="headerlink" href="#getting-bookmarks" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="id44">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id44" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id45">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_bookmarks(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id45" title="Permalink to this definition"></a></dt>
+<dd><p>Getting the Bookmarked Tweets of authenticated user</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This method requires user to be authenticated</p>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="id46">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id46" title="Permalink to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id47">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id47" title="Permalink to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id48">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id48" title="Permalink to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id49">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id49" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id50">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id50" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Bookmarks" title="Bookmarks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bookmarks</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_bookmarks</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id51">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_bookmarks(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id51" title="Permalink to this definition"></a></dt>
+<dd><p>Getting the Bookmarked Tweets of authenticated user as a generator</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This method requires user to be authenticated</p>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="id52">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id52" title="Permalink to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id53">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id53" title="Permalink to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id54">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id54" title="Permalink to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id55">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id55" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id56">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id56" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator: (<a class="reference internal" href="twDataTypes.html#Bookmarks" title="Bookmarks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bookmarks</span></code></a>, list[<a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">bookmark_obj</span><span class="p">,</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_bookmarks</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -570,22 +739,22 @@
 <section id="getting-inbox">
 <h2>Getting Inbox<a class="headerlink" href="#getting-inbox" title="Permalink to this heading"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="id38">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id38" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id57">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id57" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <ul>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id39">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_inbox(user_id:</span> <span class="pre">Union[int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">User]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id39" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id58">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_inbox(user_id:</span> <span class="pre">Union[int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">User]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id58" title="Permalink to this definition"></a></dt>
 <dd><p>Getting the inbox of authenticated user</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>This method requires user to be authenticated</p>
 </div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id40">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id40" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id59">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id59" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
 <dt class="sig sig-object py" id="user_id">
 <span class="sig-name descname"><span class="pre">user_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#user_id" title="Permalink to this definition"></a></dt>
@@ -593,16 +762,16 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id41">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id41" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id60">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id60" title="Permalink to this definition"></a></dt>
 <dd><p>Pagination cursor of inbox which will be used to get the new messages</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id42">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id42" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id61">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id61" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Inbox" title="Inbox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Inbox</span></code></a></p>
@@ -612,8 +781,7 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">inbox</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_inbox</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">conversation</span> <span class="ow">in</span> <span class="n">inbox</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">conversation</span><span class="p">)</span>
@@ -627,25 +795,25 @@
 <section id="sending-message">
 <h2>Sending Message<a class="headerlink" href="#sending-message" title="Permalink to this heading"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="id43">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id43" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id62">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id62" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <ul>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id44">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).send_message(username:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">User],</span> <span class="pre">text:</span> <span class="pre">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id44" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id63">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).send_message(username:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">User],</span> <span class="pre">text:</span> <span class="pre">str,</span> <span class="pre">file:</span> <span class="pre">Union[str,</span> <span class="pre">UploadedMedia]</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id63" title="Permalink to this definition"></a></dt>
 <dd><p>Sending Message to a User</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>This method requires user to be authenticated</p>
 </div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id45">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id45" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id64">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id64" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id46">
-<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id46" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id65">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id65" title="Permalink to this definition"></a></dt>
 <dd><p>Username of User ID of the user whom to send the message</p>
 </dd></dl>
 
@@ -655,11 +823,17 @@
 <dd><p>Content of the message to be sent</p>
 </dd></dl>
 
+<dl class="py data">
+<dt class="sig sig-object py" id="file">
+<span class="sig-name descname"><span class="pre">file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#file" title="Permalink to this definition"></a></dt>
+<dd><p>Filepath of the file to be sent</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id47">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id47" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id66">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id66" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Message" title="Message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Message</span></code></a></p>
@@ -669,8 +843,69 @@
 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="s2">&quot;cookies_value&quot;</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;Hi&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="creating-a-tweet">
+<h2>Creating a Tweet<a class="headerlink" href="#creating-a-tweet" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="id67">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id67" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id68">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).create_tweet(text:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files:</span> <span class="pre">list[Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UploadedMedia</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tuple[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id68" title="Permalink to this definition"></a></dt>
+<dd><p>Create a Tweet using the authenticated user</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This method requires user to be authenticated</p>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="id69">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id69" title="Permalink to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id70">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id70" title="Permalink to this definition"></a></dt>
+<dd><p>Content of the message to be sent</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="files">
+<span class="sig-name descname"><span class="pre">files</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">UploadedMedia</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#files" title="Permalink to this definition"></a></dt>
+<dd><p>List of Filepath of the files to be sent</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id71">
+<span class="sig-name descname"><span class="pre">filter_</span></span><a class="headerlink" href="#id71" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">:type:</span> <span class="pre">Union[str,</span> <span class="pre">TweetConversationFilters]</span></span></dt>
+<dd><p>Filter to be applied for Tweet Audience. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Search Filters</span></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id72">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id72" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">message</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;Hi&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

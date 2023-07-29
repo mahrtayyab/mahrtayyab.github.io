@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Events" href="../basic/events.html" /> 
+    <link rel="prev" title="Search Filters" href="../basic/filter.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -63,8 +63,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../basic/all-functions.html">All Available Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/exceptions.html">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic/filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/events.html">Events</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/filter.html">Search Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="current">
@@ -78,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#update-1-4">Update 1.4:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-1-5">Update 1.5:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-1-6">Update 1.6:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-1-7">Update 1.7:</a></li>
 </ul>
 </li>
 </ul>
@@ -215,13 +220,28 @@
 <li><p><strong>Please do check the full documentation before upgrading</strong></p></li>
 </ul>
 </section>
+<section id="update-1-7">
+<h2>Update 1.7:<a class="headerlink" href="#update-1-7" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Module version on <a class="reference external" href="https://pypi.org/project/tweety-ns/">PYPI Repository</a> is bumped to 0.95</p></li>
+<li><p>Fixed sign in issues</p></li>
+<li><p>Session file can only be saved and loaded from different directory</p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">send_message</span></code> can only send files too (only images)</p></li>
+<li><p>Added <a class="reference internal" href="../basic/exceptions.html#DeniedLogin" title="DeniedLogin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeniedLogin</span></code></a> Exception</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">create_tweet</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_bookmarks</span></code> , <code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_bookmarks</span></code> method</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">MozillaCookieJar</span></code> support to <code class="xref py py-obj docutils literal notranslate"><span class="pre">load_cookies</span></code> method</p></li>
+<li><p>Removed tqdm totally , you can now pass your own <code class="docutils literal notranslate"><span class="pre">progress_callback</span></code> function</p></li>
+<li><p><strong>Please do check the full documentation before upgrading</strong></p></li>
+</ul>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../basic/events.html" class="btn btn-neutral float-left" title="Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../basic/filter.html" class="btn btn-neutral float-left" title="Search Filters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

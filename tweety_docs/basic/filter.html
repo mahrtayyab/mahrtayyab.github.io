@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Events" href="events.html" />
-    <link rel="prev" title="Exceptions" href="exceptions.html" /> 
+    <link rel="next" title="Changelogs" href="../misc/changelog.html" />
+    <link rel="prev" title="Events" href="events.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -59,11 +59,15 @@
 <li class="toctree-l1"><a class="reference internal" href="twitter-class.html">Twitter Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="singing-in.html">Signing In</a></li>
 <li class="toctree-l1"><a class="reference internal" href="all-functions.html">All Available Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="twDataTypes.html">TwDataTypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Search Filters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#filter-latest-tweets">Filter Latest Tweets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#filter-only-photos-tweets">Filter Only Photos Tweets</a></li>
@@ -71,7 +75,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#filter-only-users">Filter Only Users</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#tweet-audience-filter">Tweet Audience Filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#filter-only-people-you-mention">Filter Only People You Mention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-only-people-you-follow">Filter Only People You Follow</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -115,11 +123,11 @@
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.SearchFilters.Latest</span></code></p>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
-<span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="n">cookies_value</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Latest</span><span class="p">())</span>
+<span class="c1"># Assuming `app` is Twitter Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Latest</span><span class="p">())</span>
 <span class="kn">from</span> <span class="nn">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
 </pre></div>
@@ -137,11 +145,11 @@
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.SearchFilters.Photos</span></code></p>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
-<span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="n">cookies_value</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Photos</span><span class="p">())</span>
+<span class="c1"># Assuming `app` is Twitter Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Photos</span><span class="p">())</span>
 <span class="kn">from</span> <span class="nn">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">media</span><span class="p">)</span>
 </pre></div>
@@ -159,11 +167,11 @@
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.SearchFilters.Videos</span></code></p>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
-<span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="n">cookies_value</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Videos</span><span class="p">())</span>
+<span class="c1"># Assuming `app` is Twitter Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Videos</span><span class="p">())</span>
 <span class="kn">from</span> <span class="nn">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">media</span><span class="p">)</span>
 </pre></div>
@@ -181,13 +189,57 @@
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.SearchFilters.Users</span></code></p>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
-<span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
 
-<span class="n">cookies</span> <span class="o">=</span> <span class="n">cookies_value</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Users</span><span class="p">())</span>
+<span class="c1"># Assuming `app` is Twitter Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;#pakistan&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">Users</span><span class="p">())</span>
 <span class="kn">from</span> <span class="nn">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="tweet-audience-filter">
+<h1>Tweet Audience Filter<a class="headerlink" href="#tweet-audience-filter" title="Permalink to this heading"></a></h1>
+<p>You can filter the created Tweet Comment Audience function using these methods</p>
+<section id="filter-only-people-you-mention">
+<h2>Filter Only People You Mention<a class="headerlink" href="#filter-only-people-you-mention" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="TweetConversationFilters.PeopleYouMention">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TweetConversationFilters.</span></span><span class="sig-name descname"><span class="pre">PeopleYouMention</span></span><a class="headerlink" href="#TweetConversationFilters.PeopleYouMention" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.TweetConversationFilters.PeopleYouMention</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">TweetConversationFilters</span>
+
+<span class="c1"># Assuming `app` is Twitter Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">TweetConversationFilters</span><span class="o">.</span><span class="n">PeopleYouMention</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="filter-only-people-you-follow">
+<h2>Filter Only People You Follow<a class="headerlink" href="#filter-only-people-you-follow" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="TweetConversationFilters.PeopleYouFollow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TweetConversationFilters.</span></span><span class="sig-name descname"><span class="pre">PeopleYouFollow</span></span><a class="headerlink" href="#TweetConversationFilters.PeopleYouFollow" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.TweetConversationFilters.PeopleYouFollow</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">TweetConversationFilters</span>
+
+<span class="c1"># Assuming `app` is Twitter Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">TweetConversationFilters</span><span class="o">.</span><span class="n">PeopleYouFollow</span><span class="p">())</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -199,8 +251,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exceptions.html" class="btn btn-neutral float-left" title="Exceptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="events.html" class="btn btn-neutral float-right" title="Events" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="events.html" class="btn btn-neutral float-left" title="Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../misc/changelog.html" class="btn btn-neutral float-right" title="Changelogs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
