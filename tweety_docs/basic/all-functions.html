@@ -115,13 +115,17 @@
   <section id="all-available-functions">
 <span id="all-functions"></span><h1>All Available Functions<a class="headerlink" href="#all-available-functions" title="Permalink to this heading"></a></h1>
 <p>This page contains all the public method available to work with</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>All methods requires user to be authenticated</p>
+</div>
 <section id="get-user-info">
 <h2>Get User Info<a class="headerlink" href="#get-user-info" title="Permalink to this heading"></a></h2>
 <ul>
 <li><dl class="py method">
 <dt class="sig sig-object py" id="Twitter">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_user_info(username:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">banner_extensions:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_extensions:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Twitter" title="Permalink to this definition"></a></dt>
-<dd><p>Get the User Info of the specified username or <code class="docutils literal notranslate"><span class="pre">self</span></code> if user is authenticated using <code class="docutils literal notranslate"><span class="pre">cookies</span></code></p>
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_user_info(username:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Twitter" title="Permalink to this definition"></a></dt>
+<dd><p>Get the User Info of the specified username or <code class="docutils literal notranslate"><span class="pre">self</span></code></p>
 <dl class="py data">
 <dt class="sig sig-object py" id="Arguments">
 <span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#Arguments" title="Permalink to this definition"></a></dt>
@@ -130,16 +134,6 @@
 <span class="sig-name descname"><span class="pre">username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional)</span> <span class="pre">(Required</span> <span class="pre">if</span> <span class="pre">not</span> <span class="pre">authenticated</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#username" title="Permalink to this definition"></a></dt>
 <dd><p>Username of the user you want to get info of.</p>
 </dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="banner_extensions">
-<span class="sig-name descname"><span class="pre">banner_extensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#banner_extensions" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="image_extensions">
-<span class="sig-name descname"><span class="pre">image_extensions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#image_extensions" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -294,20 +288,11 @@
 </section>
 <section id="searching-a-keyword">
 <h2>Searching a Keyword<a class="headerlink" href="#searching-a-keyword" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="AuthRequired">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#AuthRequired" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <ul>
 <li><dl class="py method">
 <dt class="sig sig-object py" id="id12">
 <span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).search(keyword:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id12" title="Permalink to this definition"></a></dt>
 <dd><p>Search for a keyword or hashtag on Twitter</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
 <dt class="sig sig-object py" id="id13">
 <span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id13" title="Permalink to this definition"></a></dt>
@@ -370,10 +355,6 @@
 <dt class="sig sig-object py" id="id18">
 <span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_search(keyword:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id18" title="Permalink to this definition"></a></dt>
 <dd><p>Search for a keyword or hashtag on Twitter as a generator</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
 <dt class="sig sig-object py" id="id19">
 <span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id19" title="Permalink to this definition"></a></dt>
@@ -504,38 +485,33 @@
 </section>
 <section id="getting-mentioned-tweets">
 <h2>Getting Mentioned Tweets<a class="headerlink" href="#getting-mentioned-tweets" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="id31">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id31" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <ul>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id32">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_mentions(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id32" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id31">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_mentions(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id31" title="Permalink to this definition"></a></dt>
 <dd><p>Getting the Tweets in which the authenticated user is mentioned</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>This method requires user to be authenticated</p>
 </div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id33">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id33" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id32">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id32" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id34">
-<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id34" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id33">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id33" title="Permalink to this definition"></a></dt>
 <dd><p>Number of Tweet Pages you want to get</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id35">
-<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id35" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id34">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id34" title="Permalink to this definition"></a></dt>
 <dd><p>Number of seconds to wait between multiple requests</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id36">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id36" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id35">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id35" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
 </div></blockquote>
@@ -544,8 +520,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id37">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id37" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id36">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id36" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Mention" title="Mention"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mention</span></code></a></p>
@@ -565,31 +541,27 @@
 
 </li>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id38">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_mentions(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id38" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id37">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_mentions(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id37" title="Permalink to this definition"></a></dt>
 <dd><p>Getting the Tweets in which the authenticated user is mentioned as a generator</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id39">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id39" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id38">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id38" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id40">
-<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id40" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id39">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id39" title="Permalink to this definition"></a></dt>
 <dd><p>Number of Tweet Pages you want to get</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id41">
-<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id41" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id40">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id40" title="Permalink to this definition"></a></dt>
 <dd><p>Number of seconds to wait between multiple requests</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id42">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id42" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id41">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id41" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
 </div></blockquote>
@@ -598,8 +570,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id43">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id43" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id42">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id42" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Generator: (<a class="reference internal" href="twDataTypes.html#Mention" title="Mention"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mention</span></code></a>, list[<a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a>])</p>
@@ -621,38 +593,29 @@
 </section>
 <section id="getting-bookmarks">
 <h2>Getting Bookmarks<a class="headerlink" href="#getting-bookmarks" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="id44">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id44" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <ul>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id45">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_bookmarks(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id45" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id43">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_bookmarks(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id43" title="Permalink to this definition"></a></dt>
 <dd><p>Getting the Bookmarked Tweets of authenticated user</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id46">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id46" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id44">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id44" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id47">
-<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id47" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id45">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id45" title="Permalink to this definition"></a></dt>
 <dd><p>Number of Tweet Pages you want to get</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id48">
-<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id48" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id46">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id46" title="Permalink to this definition"></a></dt>
 <dd><p>Number of seconds to wait between multiple requests</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id49">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id49" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id47">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id47" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
 </div></blockquote>
@@ -661,8 +624,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id50">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id50" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id48">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id48" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Bookmarks" title="Bookmarks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bookmarks</span></code></a></p>
@@ -682,31 +645,27 @@
 
 </li>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id51">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_bookmarks(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id51" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id49">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_bookmarks(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id49" title="Permalink to this definition"></a></dt>
 <dd><p>Getting the Bookmarked Tweets of authenticated user as a generator</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id52">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id52" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id50">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id50" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id53">
-<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id53" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id51">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id51" title="Permalink to this definition"></a></dt>
 <dd><p>Number of Tweet Pages you want to get</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id54">
-<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id54" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id52">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id52" title="Permalink to this definition"></a></dt>
 <dd><p>Number of seconds to wait between multiple requests</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id55">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id55" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id53">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id53" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
 </div></blockquote>
@@ -715,8 +674,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id56">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id56" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id54">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id54" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Generator: (<a class="reference internal" href="twDataTypes.html#Bookmarks" title="Bookmarks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bookmarks</span></code></a>, list[<a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a>])</p>
@@ -738,23 +697,14 @@
 </section>
 <section id="getting-inbox">
 <h2>Getting Inbox<a class="headerlink" href="#getting-inbox" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="id57">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id57" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <ul>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id58">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_inbox(user_id:</span> <span class="pre">Union[int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">User]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id58" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id55">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_inbox(user_id:</span> <span class="pre">Union[int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">User]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id55" title="Permalink to this definition"></a></dt>
 <dd><p>Getting the inbox of authenticated user</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id59">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id59" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id56">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id56" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
 <dt class="sig sig-object py" id="user_id">
 <span class="sig-name descname"><span class="pre">user_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#user_id" title="Permalink to this definition"></a></dt>
@@ -762,16 +712,16 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id60">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id60" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id57">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id57" title="Permalink to this definition"></a></dt>
 <dd><p>Pagination cursor of inbox which will be used to get the new messages</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id61">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id61" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id58">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id58" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Inbox" title="Inbox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Inbox</span></code></a></p>
@@ -794,26 +744,17 @@
 </section>
 <section id="sending-message">
 <h2>Sending Message<a class="headerlink" href="#sending-message" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="id62">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id62" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <ul>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id63">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).send_message(username:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">User],</span> <span class="pre">text:</span> <span class="pre">str,</span> <span class="pre">file:</span> <span class="pre">Union[str,</span> <span class="pre">UploadedMedia]</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id63" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id59">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).send_message(username:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">User],</span> <span class="pre">text:</span> <span class="pre">str,</span> <span class="pre">file:</span> <span class="pre">Union[str,</span> <span class="pre">UploadedMedia]</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id59" title="Permalink to this definition"></a></dt>
 <dd><p>Sending Message to a User</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id64">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id64" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id60">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id60" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id65">
-<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id65" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id61">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id61" title="Permalink to this definition"></a></dt>
 <dd><p>Username of User ID of the user whom to send the message</p>
 </dd></dl>
 
@@ -832,8 +773,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id66">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id66" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id62">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id62" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Message" title="Message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Message</span></code></a></p>
@@ -854,26 +795,17 @@
 </section>
 <section id="creating-a-tweet">
 <h2>Creating a Tweet<a class="headerlink" href="#creating-a-tweet" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="id67">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">AuthRequired</span></span><a class="headerlink" href="#id67" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <ul>
 <li><dl class="py method">
-<dt class="sig sig-object py" id="id68">
-<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).create_tweet(text:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files:</span> <span class="pre">list[Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UploadedMedia</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tuple[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id68" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id63">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).create_tweet(text:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files:</span> <span class="pre">list[Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UploadedMedia</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tuple[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id63" title="Permalink to this definition"></a></dt>
 <dd><p>Create a Tweet using the authenticated user</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This method requires user to be authenticated</p>
-</div>
 <dl class="py data">
-<dt class="sig sig-object py" id="id69">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id69" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id64">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id64" title="Permalink to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id70">
-<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id70" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id65">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id65" title="Permalink to this definition"></a></dt>
 <dd><p>Content of the message to be sent</p>
 </dd></dl>
 
@@ -884,8 +816,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id71">
-<span class="sig-name descname"><span class="pre">filter_</span></span><a class="headerlink" href="#id71" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id66">
+<span class="sig-name descname"><span class="pre">filter_</span></span><a class="headerlink" href="#id66" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">:type:</span> <span class="pre">Union[str,</span> <span class="pre">TweetConversationFilters]</span></span></dt>
 <dd><p>Filter to be applied for Tweet Audience. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Search Filters</span></a></p>
@@ -894,8 +826,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id72">
-<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id72" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="id67">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id67" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a></p>
