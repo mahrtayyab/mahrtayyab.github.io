@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exceptions &mdash; Tweety 0.9.5 documentation</title>
+  <title>Exceptions &mdash; Tweety 0.9.9 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
@@ -13,13 +13,13 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/dark_mode_js/default_light.js"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=be50ab7b"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,7 +39,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.5
+                0.9.9
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -73,6 +73,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#ratelimitreached">RateLimitReached</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deniedlogin">DeniedLogin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#unknownerror">UnknownError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actionrequired">ActionRequired</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
@@ -112,13 +113,13 @@
            <div itemprop="articleBody">
              
   <section id="exceptions">
-<span id="id1"></span><h1>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1>Exceptions<a class="headerlink" href="#exceptions" title="Link to this heading"></a></h1>
 <p>This page contains all the Exceptions raised by the different methods</p>
 <section id="authenticationrequired">
-<h2>AuthenticationRequired<a class="headerlink" href="#authenticationrequired" title="Permalink to this heading"></a></h2>
+<h2>AuthenticationRequired<a class="headerlink" href="#authenticationrequired" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="AuthenticationRequired">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuthenticationRequired</span></span><a class="headerlink" href="#AuthenticationRequired" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuthenticationRequired</span></span><a class="headerlink" href="#AuthenticationRequired" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -133,25 +134,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="AuthenticationRequired.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">You</span> <span class="pre">need</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">authenticated</span> <span class="pre">to</span> <span class="pre">make</span> <span class="pre">this</span> <span class="pre">request</span></em><a class="headerlink" href="#AuthenticationRequired.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">You</span> <span class="pre">need</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">authenticated</span> <span class="pre">to</span> <span class="pre">make</span> <span class="pre">this</span> <span class="pre">request</span></em><a class="headerlink" href="#AuthenticationRequired.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="AuthenticationRequired.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">200</span></em><a class="headerlink" href="#AuthenticationRequired.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">200</span></em><a class="headerlink" href="#AuthenticationRequired.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="AuthenticationRequired.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">GenericForbidden</span></em><a class="headerlink" href="#AuthenticationRequired.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">GenericForbidden</span></em><a class="headerlink" href="#AuthenticationRequired.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="AuthenticationRequired.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#AuthenticationRequired.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#AuthenticationRequired.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -161,10 +162,10 @@
 
 </section>
 <section id="usernotfound">
-<h2>UserNotFound<a class="headerlink" href="#usernotfound" title="Permalink to this heading"></a></h2>
+<h2>UserNotFound<a class="headerlink" href="#usernotfound" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="UserNotFound">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserNotFound</span></span><a class="headerlink" href="#UserNotFound" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserNotFound</span></span><a class="headerlink" href="#UserNotFound" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -179,25 +180,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="UserNotFound.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">User</span> <span class="pre">Account</span> <span class="pre">wasn't</span> <span class="pre">Found</span></em><a class="headerlink" href="#UserNotFound.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">User</span> <span class="pre">Account</span> <span class="pre">wasn't</span> <span class="pre">Found</span></em><a class="headerlink" href="#UserNotFound.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UserNotFound.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#UserNotFound.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#UserNotFound.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UserNotFound.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">GenericUserNotFound</span></em><a class="headerlink" href="#UserNotFound.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">GenericUserNotFound</span></em><a class="headerlink" href="#UserNotFound.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UserNotFound.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#UserNotFound.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#UserNotFound.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -207,10 +208,10 @@
 
 </section>
 <section id="invalidtweetidentifier">
-<h2>InvalidTweetIdentifier<a class="headerlink" href="#invalidtweetidentifier" title="Permalink to this heading"></a></h2>
+<h2>InvalidTweetIdentifier<a class="headerlink" href="#invalidtweetidentifier" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="InvalidTweetIdentifier">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidTweetIdentifier</span></span><a class="headerlink" href="#InvalidTweetIdentifier" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidTweetIdentifier</span></span><a class="headerlink" href="#InvalidTweetIdentifier" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -225,25 +226,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidTweetIdentifier.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">Tweet</span> <span class="pre">Identifier</span> <span class="pre">is</span> <span class="pre">Invalid</span></em><a class="headerlink" href="#InvalidTweetIdentifier.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">Tweet</span> <span class="pre">Identifier</span> <span class="pre">is</span> <span class="pre">Invalid</span></em><a class="headerlink" href="#InvalidTweetIdentifier.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidTweetIdentifier.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">144</span></em><a class="headerlink" href="#InvalidTweetIdentifier.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">144</span></em><a class="headerlink" href="#InvalidTweetIdentifier.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidTweetIdentifier.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">StatusNotFound</span></em><a class="headerlink" href="#InvalidTweetIdentifier.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">StatusNotFound</span></em><a class="headerlink" href="#InvalidTweetIdentifier.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidTweetIdentifier.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#InvalidTweetIdentifier.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#InvalidTweetIdentifier.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -253,10 +254,10 @@
 
 </section>
 <section id="guesttokennotfound">
-<h2>GuestTokenNotFound<a class="headerlink" href="#guesttokennotfound" title="Permalink to this heading"></a></h2>
+<h2>GuestTokenNotFound<a class="headerlink" href="#guesttokennotfound" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="GuestTokenNotFound">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GuestTokenNotFound</span></span><a class="headerlink" href="#GuestTokenNotFound" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GuestTokenNotFound</span></span><a class="headerlink" href="#GuestTokenNotFound" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -271,25 +272,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="GuestTokenNotFound.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">Guest</span> <span class="pre">Token</span> <span class="pre">couldn't</span> <span class="pre">be</span> <span class="pre">obtained</span></em><a class="headerlink" href="#GuestTokenNotFound.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">Guest</span> <span class="pre">Token</span> <span class="pre">couldn't</span> <span class="pre">be</span> <span class="pre">obtained</span></em><a class="headerlink" href="#GuestTokenNotFound.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="GuestTokenNotFound.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#GuestTokenNotFound.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#GuestTokenNotFound.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="GuestTokenNotFound.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#GuestTokenNotFound.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#GuestTokenNotFound.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="GuestTokenNotFound.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#GuestTokenNotFound.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#GuestTokenNotFound.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -299,10 +300,10 @@
 
 </section>
 <section id="userprotected">
-<h2>UserProtected<a class="headerlink" href="#userprotected" title="Permalink to this heading"></a></h2>
+<h2>UserProtected<a class="headerlink" href="#userprotected" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="UserProtected">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserProtected</span></span><a class="headerlink" href="#UserProtected" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserProtected</span></span><a class="headerlink" href="#UserProtected" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -317,25 +318,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="UserProtected.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">User</span> <span class="pre">is</span> <span class="pre">Protected</span> <span class="pre">,</span> <span class="pre">please</span> <span class="pre">make</span> <span class="pre">sure</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">authenticated</span> <span class="pre">and</span> <span class="pre">authorized</span></em><a class="headerlink" href="#UserProtected.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">User</span> <span class="pre">is</span> <span class="pre">Protected</span> <span class="pre">,</span> <span class="pre">please</span> <span class="pre">make</span> <span class="pre">sure</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">authenticated</span> <span class="pre">and</span> <span class="pre">authorized</span></em><a class="headerlink" href="#UserProtected.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UserProtected.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">403</span></em><a class="headerlink" href="#UserProtected.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">403</span></em><a class="headerlink" href="#UserProtected.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UserProtected.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">UserUnavailable</span></em><a class="headerlink" href="#UserProtected.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">UserUnavailable</span></em><a class="headerlink" href="#UserProtected.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UserProtected.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#UserProtected.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#UserProtected.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -345,10 +346,10 @@
 
 </section>
 <section id="invalidcredentials">
-<h2>InvalidCredentials<a class="headerlink" href="#invalidcredentials" title="Permalink to this heading"></a></h2>
+<h2>InvalidCredentials<a class="headerlink" href="#invalidcredentials" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="InvalidCredentials">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidCredentials</span></span><a class="headerlink" href="#InvalidCredentials" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InvalidCredentials</span></span><a class="headerlink" href="#InvalidCredentials" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -363,25 +364,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidCredentials.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">Cookies</span> <span class="pre">are</span> <span class="pre">Invalid</span></em><a class="headerlink" href="#InvalidCredentials.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">The</span> <span class="pre">Cookies</span> <span class="pre">are</span> <span class="pre">Invalid</span></em><a class="headerlink" href="#InvalidCredentials.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidCredentials.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">403</span></em><a class="headerlink" href="#InvalidCredentials.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">403</span></em><a class="headerlink" href="#InvalidCredentials.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidCredentials.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">UserUnavailable</span></em><a class="headerlink" href="#InvalidCredentials.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">UserUnavailable</span></em><a class="headerlink" href="#InvalidCredentials.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="InvalidCredentials.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#InvalidCredentials.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#InvalidCredentials.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -391,10 +392,10 @@
 
 </section>
 <section id="ratelimitreached">
-<h2>RateLimitReached<a class="headerlink" href="#ratelimitreached" title="Permalink to this heading"></a></h2>
+<h2>RateLimitReached<a class="headerlink" href="#ratelimitreached" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="RateLimitReached">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RateLimitReached</span></span><a class="headerlink" href="#RateLimitReached" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RateLimitReached</span></span><a class="headerlink" href="#RateLimitReached" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -409,25 +410,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="RateLimitReached.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">You</span> <span class="pre">have</span> <span class="pre">exceeded</span> <span class="pre">the</span> <span class="pre">Twitter</span> <span class="pre">Rate</span> <span class="pre">Limit</span></em><a class="headerlink" href="#RateLimitReached.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">You</span> <span class="pre">have</span> <span class="pre">exceeded</span> <span class="pre">the</span> <span class="pre">Twitter</span> <span class="pre">Rate</span> <span class="pre">Limit</span></em><a class="headerlink" href="#RateLimitReached.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="RateLimitReached.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">88</span></em><a class="headerlink" href="#RateLimitReached.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">88</span></em><a class="headerlink" href="#RateLimitReached.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="RateLimitReached.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">RateLimitExceeded</span></em><a class="headerlink" href="#RateLimitReached.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">RateLimitExceeded</span></em><a class="headerlink" href="#RateLimitReached.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="RateLimitReached.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#RateLimitReached.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#RateLimitReached.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -437,10 +438,10 @@
 
 </section>
 <section id="deniedlogin">
-<h2>DeniedLogin<a class="headerlink" href="#deniedlogin" title="Permalink to this heading"></a></h2>
+<h2>DeniedLogin<a class="headerlink" href="#deniedlogin" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="DeniedLogin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DeniedLogin</span></span><a class="headerlink" href="#DeniedLogin" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DeniedLogin</span></span><a class="headerlink" href="#DeniedLogin" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -455,25 +456,25 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="DeniedLogin.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#DeniedLogin.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#DeniedLogin.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="DeniedLogin.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#DeniedLogin.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#DeniedLogin.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="DeniedLogin.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#DeniedLogin.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#DeniedLogin.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="DeniedLogin.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#DeniedLogin.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#DeniedLogin.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
@@ -483,10 +484,10 @@
 
 </section>
 <section id="unknownerror">
-<h2>UnknownError<a class="headerlink" href="#unknownerror" title="Permalink to this heading"></a></h2>
+<h2>UnknownError<a class="headerlink" href="#unknownerror" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="UnknownError">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnknownError</span></span><a class="headerlink" href="#UnknownError" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnknownError</span></span><a class="headerlink" href="#UnknownError" title="Link to this definition"></a></dt>
 <dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Description<span class="colon">:</span></dt>
@@ -501,25 +502,71 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="UnknownError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#UnknownError.message" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#UnknownError.message" title="Link to this definition"></a></dt>
 <dd><p>Main Exception Message</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UnknownError.error_code">
-<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#UnknownError.error_code" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#UnknownError.error_code" title="Link to this definition"></a></dt>
 <dd><p>Exception Error Code</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UnknownError.error_name">
-<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#UnknownError.error_name" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#UnknownError.error_name" title="Link to this definition"></a></dt>
 <dd><p>Twitter Internal Error Name</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="UnknownError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#UnknownError.response" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#UnknownError.response" title="Link to this definition"></a></dt>
+<dd><p>Raw Response returned by the Twitter</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="actionrequired">
+<h2>ActionRequired<a class="headerlink" href="#actionrequired" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ActionRequired">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ActionRequired</span></span><a class="headerlink" href="#ActionRequired" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Description<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>This Exception is raised when an additional step is required for Logging-in</strong></p>
+</dd>
+<dt class="field-even">Reference<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.exceptions_.ActionRequired</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="ActionRequired.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#ActionRequired.message" title="Link to this definition"></a></dt>
+<dd><p>Main Exception Message / Description of the Action to be performed</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ActionRequired.error_code">
+<span class="sig-name descname"><span class="pre">error_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#ActionRequired.error_code" title="Link to this definition"></a></dt>
+<dd><p>Exception Error Code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ActionRequired.error_name">
+<span class="sig-name descname"><span class="pre">error_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#ActionRequired.error_name" title="Link to this definition"></a></dt>
+<dd><p>Twitter Internal Error Name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ActionRequired.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">httpx.Response</span></em><a class="headerlink" href="#ActionRequired.response" title="Link to this definition"></a></dt>
 <dd><p>Raw Response returned by the Twitter</p>
 </dd></dl>
 
