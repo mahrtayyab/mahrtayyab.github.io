@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All Available Functions &mdash; Tweety 0.9.9 documentation</title>
+  <title>All Available Functions &mdash; Tweety 0.9.9.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=be50ab7b"></script>
+        <script src="../_static/documentation_options.js?v=ac2dc936"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -39,7 +39,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.9
+                0.9.9.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -79,6 +79,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#retweeting-the-tweet">Retweeting the Tweet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#follow-a-user">Follow a User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#unfollow-a-user">UnFollow a User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-community">Get Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-community-tweets">Get Community Tweets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-community-members">Get Community Members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-tweet">Delete Tweet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enable-user-notifications">Enable User Notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disable-user-notifications">Disable User Notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-notified-tweets">Get Notified Tweets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="twDataTypes.html">TwDataTypes</a></li>
@@ -1344,6 +1351,526 @@
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">unfollow_user</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-community">
+<h2>Get Community<a class="headerlink" href="#get-community" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id123">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).get_community(community_id:</span> <span class="pre">Union[str,</span> <span class="pre">int]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id123" title="Link to this definition"></a></dt>
+<dd><p>Get a Community Details</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id124">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id124" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="community_id">
+<span class="sig-name descname"><span class="pre">community_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#community_id" title="Link to this definition"></a></dt>
+<dd><p>Id of the Community</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id125">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id125" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#Community" title="Community"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Community</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">get_community</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-community-tweets">
+<h2>Get Community Tweets<a class="headerlink" href="#get-community-tweets" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id126">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_community_tweets(community_id:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id126" title="Link to this definition"></a></dt>
+<dd><p>Get the Tweets of the specified community</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id127">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id127" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id128">
+<span class="sig-name descname"><span class="pre">community_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Community" title="Community"><span class="pre">Community</span></a></em><a class="headerlink" href="#id128" title="Link to this definition"></a></dt>
+<dd><p>ID of the community you want to get Tweets of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id129">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id129" title="Link to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id130">
+<span class="sig-name descname"><span class="pre">filter_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id130" title="Link to this definition"></a></dt>
+<dd><p>Filter you would like to apply on the tweets. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Search Filters</span></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id131">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id131" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id132">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id132" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id133">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id133" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#CommunityTweets" title="CommunityTweets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CommunityTweets</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_community_tweets</span><span class="p">(</span><span class="mi">12345678</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id134">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_community_tweets(community_id:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id134" title="Link to this definition"></a></dt>
+<dd><p>Get the Tweets of the specified community as a generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id135">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id135" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id136">
+<span class="sig-name descname"><span class="pre">community_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Community" title="Community"><span class="pre">Community</span></a></em><a class="headerlink" href="#id136" title="Link to this definition"></a></dt>
+<dd><p>ID of the community you want to get Tweets of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id137">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id137" title="Link to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id138">
+<span class="sig-name descname"><span class="pre">filter_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id138" title="Link to this definition"></a></dt>
+<dd><p>Filter you would like to apply on the search. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Search Filters</span></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id139">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id139" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id140">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id140" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id141">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id141" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator: (<a class="reference internal" href="twDataTypes.html#CommunityTweets" title="CommunityTweets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CommunityTweets</span></code></a>, list[<a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">community_tweets_obj</span><span class="p">,</span> <span class="n">tweets</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_community_tweets</span><span class="p">(</span><span class="s1">&#39;123456789&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-community-members">
+<h2>Get Community Members<a class="headerlink" href="#get-community-members" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id142">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_community_members(community_id:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id142" title="Link to this definition"></a></dt>
+<dd><p>Get the Members of the specified community</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id143">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id143" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id144">
+<span class="sig-name descname"><span class="pre">community_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Community" title="Community"><span class="pre">Community</span></a></em><a class="headerlink" href="#id144" title="Link to this definition"></a></dt>
+<dd><p>ID of the community you want to get Tweets of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id145">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id145" title="Link to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id146">
+<span class="sig-name descname"><span class="pre">filter_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id146" title="Link to this definition"></a></dt>
+<dd><p>Filter you would like to apply on the tweets. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Search Filters</span></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id147">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id147" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id148">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id148" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id149">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id149" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#CommunityMembers" title="CommunityMembers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CommunityMembers</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_community_members</span><span class="p">(</span><span class="mi">12345678</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id150">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_community_members(community_id:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id150" title="Link to this definition"></a></dt>
+<dd><p>Get the Members of the specified community as a generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id151">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id151" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id152">
+<span class="sig-name descname"><span class="pre">community_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Community" title="Community"><span class="pre">Community</span></a></em><a class="headerlink" href="#id152" title="Link to this definition"></a></dt>
+<dd><p>ID of the community you want to get Tweets of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id153">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id153" title="Link to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id154">
+<span class="sig-name descname"><span class="pre">filter_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id154" title="Link to this definition"></a></dt>
+<dd><p>Filter you would like to apply on the search. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Search Filters</span></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id155">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id155" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id156">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id156" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id157">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id157" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator: (<a class="reference internal" href="twDataTypes.html#CommunityMembers" title="CommunityMembers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CommunityMembers</span></code></a>, list[<a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">community_members_obj</span><span class="p">,</span> <span class="n">users</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_community_members</span><span class="p">(</span><span class="s1">&#39;123456789&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="delete-tweet">
+<h2>Delete Tweet<a class="headerlink" href="#delete-tweet" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id158">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).delete_tweet(tweet_id:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">Tweet]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id158" title="Link to this definition"></a></dt>
+<dd><p>Delete a Tweet posted by authenticated user</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id159">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id159" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id160">
+<span class="sig-name descname"><span class="pre">tweet_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><span class="pre">Tweet</span></a></em><a class="headerlink" href="#id160" title="Link to this definition"></a></dt>
+<dd><p>Id of the Tweet</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id161">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id161" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">delete_tweet</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="enable-user-notifications">
+<h2>Enable User Notifications<a class="headerlink" href="#enable-user-notifications" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id162">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).enable_user_notification(user_id:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">User]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id162" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Enable user notification on new tweet from specific user</p>
+</div></blockquote>
+<dl class="py data">
+<dt class="sig sig-object py" id="id163">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id163" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id164">
+<span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id164" title="Link to this definition"></a></dt>
+<dd><p>Id of the User</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id165">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id165" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">enable_user_notification</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="disable-user-notifications">
+<h2>Disable User Notifications<a class="headerlink" href="#disable-user-notifications" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id166">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).disable_user_notification(user_id:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">User]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id166" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Disable user notification on new tweet from specific user</p>
+</div></blockquote>
+<dl class="py data">
+<dt class="sig sig-object py" id="id167">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id167" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id168">
+<span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id168" title="Link to this definition"></a></dt>
+<dd><p>Id of the User</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id169">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id169" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">disable_user_notification</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-notified-tweets">
+<h2>Get Notified Tweets<a class="headerlink" href="#get-notified-tweets" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id170">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_tweet_notifications(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id170" title="Link to this definition"></a></dt>
+<dd><p>Get the Tweets of the user whom the authenticated user has enabled the New Tweet Notification</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id171">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id171" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id172">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id172" title="Link to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id173">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id173" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id174">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id174" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id175">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id175" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twDataTypes.html#TweetNotifications" title="TweetNotifications"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TweetNotifications</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_tweet_notifications</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id176">
+<span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_tweet_notifications(pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id176" title="Link to this definition"></a></dt>
+<dd><p>Get the Tweets of the user whom the authenticated user has enabled the New Tweet Notification as a generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id177">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id177" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id178">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id178" title="Link to this definition"></a></dt>
+<dd><p>Number of Tweet Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id179">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id179" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id180">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id180" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id181">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id181" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator: (<a class="reference internal" href="twDataTypes.html#TweetNotifications" title="TweetNotifications"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TweetNotifications</span></code></a>, list[<a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.bot</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tweet_notification_obj</span><span class="p">,</span> <span class="n">tweets</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_tweet_notifications</span><span class="p">(</span><span class="s1">&#39;123456789&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>

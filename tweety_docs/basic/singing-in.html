@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signing In &mdash; Tweety 0.9.9 documentation</title>
+  <title>Signing In &mdash; Tweety 0.9.9.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=be50ab7b"></script>
+        <script src="../_static/documentation_options.js?v=ac2dc936"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -39,7 +39,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.9
+                0.9.9.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -64,6 +64,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#interactive-singing-in">Interactive Singing In</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#singing-in-using-credentials">Singing In using Credentials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#singing-in-using-cookies">Singing In using Cookies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#singing-in-using-auth-token">Singing In using Auth Token</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#singing-in-using-previous-session">Singing In using previous session</a></li>
 </ul>
 </li>
@@ -172,7 +173,25 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">load_cookies</span><span class="p">(</span><span class="n">cookies_value</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>By running this code ,if the request was successful , the authentication cookies obtained from response will be saved in <code class="docutils literal notranslate"><span class="pre">session.tw_session</span></code> (filename is subject to the name of session) file.</p></li>
+</ul>
+</section>
+<section id="singing-in-using-auth-token">
+<h2>Singing In using Auth Token<a class="headerlink" href="#singing-in-using-auth-token" title="Link to this heading"></a></h2>
+<p>you can also log-in to Twitter on Tweety using <code class="docutils literal notranslate"><span class="pre">auth_token</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+
+<span class="n">auth_token</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;auth_token_value&quot;&quot;&quot;</span>
+
+<span class="c1"># Cookies can be a str or a dict</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">load_auth_token</span><span class="p">(</span><span class="n">auth_token</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -194,7 +213,7 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <span class="c1"># as &#39;session.tw_session&#39; is already a authenticated session file , the session can be loaded using  `connect` method</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

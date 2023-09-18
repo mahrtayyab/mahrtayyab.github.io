@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TwDataTypes &mdash; Tweety 0.9.9 documentation</title>
+  <title>TwDataTypes &mdash; Tweety 0.9.9.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=be50ab7b"></script>
+        <script src="../_static/documentation_options.js?v=ac2dc936"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -39,7 +39,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.9
+                0.9.9.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -69,6 +69,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#tweetretweets">TweetRetweets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mention">Mention</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#bookmarks">Bookmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#communitytweets">CommunityTweets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#communitymembers">CommunityMembers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tweetnotifications">TweetNotifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#inbox">Inbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#selfthread">SelfThread</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#conversationthread">ConversationThread</a></li>
@@ -85,6 +88,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#conversation">Conversation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#message">Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#newmessage">NewMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#community">Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#richtext">RichText</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#richtag">RichTag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pool">Pool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
@@ -664,6 +671,281 @@
 </dd></dl>
 
 </section>
+<section id="communitytweets">
+<h2>CommunityTweets<a class="headerlink" href="#communitytweets" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="CommunityTweets">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CommunityTweets</span></span><a class="headerlink" href="#CommunityTweets" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.community.CommunityTweets</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityTweets.tweets">
+<span class="sig-name descname"><span class="pre">tweets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#CommunityTweets.tweets" title="Link to this definition"></a></dt>
+<dd><p>List of  Tweets</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityTweets.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#CommunityTweets.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityTweets.is_next_page">
+<span class="sig-name descname"><span class="pre">is_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#CommunityTweets.is_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of tweets available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityTweets.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#CommunityTweets.filter" title="Link to this definition"></a></dt>
+<dd><p>Any Filter which is begin applied</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="CommunityTweets.to_xlsx">
+<span class="sig-name descname"><span class="pre">to_xlsx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CommunityTweets.to_xlsx" title="Link to this definition"></a></dt>
+<dd><p>Export the User Tweets to Excel</p>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Arguments:</span></span></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="CommunityTweets.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#CommunityTweets.filename" title="Link to this definition"></a></dt>
+<dd><p>Filename of Excel Workbook</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="CommunityTweets.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#CommunityTweets.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CommunityTweets.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CommunityTweets.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of tweets if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CommunityTweets.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CommunityTweets.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">CommunityTweets(id={id_of_community},</span> <span class="pre">count={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="communitymembers">
+<h2>CommunityMembers<a class="headerlink" href="#communitymembers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="CommunityMembers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CommunityMembers</span></span><a class="headerlink" href="#CommunityMembers" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.community.CommunityMembers</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityMembers.users">
+<span class="sig-name descname"><span class="pre">users</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#CommunityMembers.users" title="Link to this definition"></a></dt>
+<dd><p>List of User</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityMembers.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#CommunityMembers.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityMembers.is_next_page">
+<span class="sig-name descname"><span class="pre">is_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#CommunityMembers.is_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of tweets available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="CommunityMembers.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#CommunityMembers.filter" title="Link to this definition"></a></dt>
+<dd><p>Any Filter which is begin applied</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="CommunityMembers.to_xlsx">
+<span class="sig-name descname"><span class="pre">to_xlsx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CommunityMembers.to_xlsx" title="Link to this definition"></a></dt>
+<dd><p>Export the User Tweets to Excel</p>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Arguments:</span></span></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="CommunityMembers.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#CommunityMembers.filename" title="Link to this definition"></a></dt>
+<dd><p>Filename of Excel Workbook</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="CommunityMembers.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#CommunityMembers.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CommunityMembers.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CommunityMembers.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of tweets if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id11" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CommunityMembers.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CommunityMembers.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id12" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">CommunityMembers(id={id_of_community},</span> <span class="pre">count={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="tweetnotifications">
+<h2>TweetNotifications<a class="headerlink" href="#tweetnotifications" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="TweetNotifications">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TweetNotifications</span></span><a class="headerlink" href="#TweetNotifications" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.notification.TweetNotifications</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="TweetNotifications.tweets">
+<span class="sig-name descname"><span class="pre">tweets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#TweetNotifications.tweets" title="Link to this definition"></a></dt>
+<dd><p>List of tweets</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TweetNotifications.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#TweetNotifications.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TweetNotifications.is_next_page">
+<span class="sig-name descname"><span class="pre">is_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#TweetNotifications.is_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of tweets available</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="TweetNotifications.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TweetNotifications.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of tweets if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="TweetNotifications.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#TweetNotifications.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TweetNotifications.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TweetNotifications.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id13" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">TweetNotifications(user_id={id_of_user},</span> <span class="pre">count={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="inbox">
 <h2>Inbox<a class="headerlink" href="#inbox" title="Link to this heading"></a></h2>
 <dl class="py class">
@@ -732,8 +1014,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Inbox.__repr__" title="Link to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id9">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id14" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Inbox(user_id={user_id},</span> <span class="pre">count={number_of_results})</span></code></p>
@@ -909,6 +1191,18 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="Tweet.text">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Tweet.text" title="Link to this definition"></a></dt>
+<dd><p>Text of the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Tweet.rich_text">
+<span class="sig-name descname"><span class="pre">rich_text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#RichText" title="RichText"><span class="pre">RichText</span></a></em><a class="headerlink" href="#Tweet.rich_text" title="Link to this definition"></a></dt>
+<dd><p>Text of the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="Tweet.author">
 <span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#Tweet.author" title="Link to this definition"></a></dt>
 <dd><p>Author of the Tweet</p>
@@ -1017,6 +1311,18 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="Tweet.pool">
+<span class="sig-name descname"><span class="pre">pool</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Pool" title="Pool"><span class="pre">Pool</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#Tweet.pool" title="Link to this definition"></a></dt>
+<dd><p>Pool in the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Tweet.community">
+<span class="sig-name descname"><span class="pre">community</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Community" title="Community"><span class="pre">Community</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#Tweet.community" title="Link to this definition"></a></dt>
+<dd><p>Community this tweet is part of</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="Tweet.media">
 <span class="sig-name descname"><span class="pre">media</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Media" title="Media"><span class="pre">Media</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Tweet.media" title="Link to this definition"></a></dt>
 <dd><p>Media of the Tweet</p>
@@ -1117,28 +1423,28 @@
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Arguments:</span></span></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id10">
-<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id15" title="Link to this definition"></a></dt>
 <dd><p>How many pages to get</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id11">
-<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id11" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id16">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id16" title="Link to this definition"></a></dt>
 <dd><p>Number of seconds to wait between multiple requests</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id12">
-<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id12" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id17" title="Link to this definition"></a></dt>
 <dd><p>Pagination cursor to get the comments from that cursor up-to</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id13">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Generator</span> <span class="pre">:</span> <span class="pre">(`Tweet`</span> <span class="pre">,</span> <span class="pre">list[`Tweet`])</span></em><a class="headerlink" href="#id13" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Generator</span> <span class="pre">:</span> <span class="pre">(`Tweet`</span> <span class="pre">,</span> <span class="pre">list[`Tweet`])</span></em><a class="headerlink" href="#id18" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1148,8 +1454,8 @@
 <span class="sig-name descname"><span class="pre">like</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Tweet.like" title="Link to this definition"></a></dt>
 <dd><p>Like the Tweet</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id14">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Bool</span></em><a class="headerlink" href="#id14" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id19">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Bool</span></em><a class="headerlink" href="#id19" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1159,8 +1465,8 @@
 <span class="sig-name descname"><span class="pre">retweet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Tweet.retweet" title="Link to this definition"></a></dt>
 <dd><p>Retweet the Tweet</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id15">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Bool</span></em><a class="headerlink" href="#id15" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id20">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Bool</span></em><a class="headerlink" href="#id20" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1170,8 +1476,8 @@
 <span class="sig-name descname"><span class="pre">get_reply_to</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Tweet.get_reply_to" title="Link to this definition"></a></dt>
 <dd><p>Get the Tweet to which this Tweet was sent in reply</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id16">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a></em><a class="headerlink" href="#id16" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id21">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Tweet" title="Tweet"><span class="pre">Tweet</span></a></em><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1181,8 +1487,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Tweet.__repr__" title="Link to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id17">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id17" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id22">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Tweet(id=id_of_tweet,</span> <span class="pre">author=author_of_tweet,</span> <span class="pre">created_on=tweet_creation_date,</span> <span class="pre">threads=number_of_threads)</span></code></p>
@@ -1302,8 +1608,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Media.__repr__" title="Link to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id18">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id18" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id23">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Media(id=id_of_media,</span> <span class="pre">type=type_of_media)</span></code></p>
@@ -1411,8 +1717,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Stream.__repr__" title="Link to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id19">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id19" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id24">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Stream(content_type=content_type_of_stream,</span> <span class="pre">length=length_of_stream_in_millis,</span> <span class="pre">bitrate=bitrate_of_media_audio,</span> <span class="pre">res=resolution_of_media)</span></code></p>
@@ -1662,6 +1968,12 @@
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Choice.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Choice.id" title="Link to this definition"></a></dt>
+<dd><p>Id of the pool</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="Choice.name">
 <span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Choice.name" title="Link to this definition"></a></dt>
 <dd><p>Name of the choice</p>
@@ -1674,9 +1986,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="Choice.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Choice.type" title="Link to this definition"></a></dt>
-<dd><p>Type of the choice <a class="reference internal" href="#Choice.value" title="Choice.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></p>
+<dt class="sig sig-object py" id="Choice.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Choice.key" title="Link to this definition"></a></dt>
+<dd><p>Key of the choice</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2027,6 +2339,24 @@
 <dd><p>List of id of tweets pinned by the user</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.notifications_enabled">
+<span class="sig-name descname"><span class="pre">notifications_enabled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.notifications_enabled" title="Link to this definition"></a></dt>
+<dd><p>Is new tweet notification enabled for this user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.notifications">
+<span class="sig-name descname"><span class="pre">notifications</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.notifications" title="Link to this definition"></a></dt>
+<dd><p>Is new tweet notification enabled for this user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.community_role">
+<span class="sig-name descname"><span class="pre">community_role</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#User.community_role" title="Link to this definition"></a></dt>
+<dd><p>Role in Community (if applicable)</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py data">
@@ -2048,8 +2378,30 @@
 <span class="sig-name descname"><span class="pre">unfollow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#User.unfollow" title="Link to this definition"></a></dt>
 <dd><p>un-Follow the User</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id20">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id20" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id25">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.enable_notifications">
+<span class="sig-name descname"><span class="pre">enable_notifications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#User.enable_notifications" title="Link to this definition"></a></dt>
+<dd><p>Enable new Tweet notification for this user</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id26">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#id26" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.disable_notifications">
+<span class="sig-name descname"><span class="pre">disable_notifications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#User.disable_notifications" title="Link to this definition"></a></dt>
+<dd><p>Disable new Tweet notification for this user</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id27">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#id27" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2059,8 +2411,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#User.__repr__" title="Link to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id21">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id28">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id28" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">User(id=rest_id_of_user,</span> <span class="pre">name=name_of_the_user,</span> <span class="pre">username=username_of_the_user,</span> <span class="pre">followers=number_of_followers_of_user,</span> <span class="pre">verified=is_user_verified)</span></code></p>
@@ -2185,8 +2537,8 @@
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="id22">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Message" title="Message"><span class="pre">Message</span></a></em><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id29">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Message" title="Message"><span class="pre">Message</span></a></em><a class="headerlink" href="#id29" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2196,8 +2548,8 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Conversation.__repr__" title="Link to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id23">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id30">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id30" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Conversation(id=id_of_conversation,</span> <span class="pre">muted=is</span> <span class="pre">muted,</span> <span class="pre">nsfw=is</span> <span class="pre">nsfw,</span> <span class="pre">participants=number</span> <span class="pre">of</span> <span class="pre">participants)</span></code></p>
@@ -2401,8 +2753,8 @@
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Arguments:</span></span></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="id24">
-<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id31">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id31" title="Link to this definition"></a></dt>
 <dd><p>Content of the message to send</p>
 </dd></dl>
 
@@ -2420,11 +2772,392 @@
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#NewMessage.__repr__" title="Link to this definition"></a></dt>
 <dd><p>Developer Representation of the Object</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="id25">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id32">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id32" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Message(id=id_of_the_message,</span> <span class="pre">conversation_id=id_of_the_conversation,</span> <span class="pre">time=time_of_the_message)</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="community">
+<h2>Community<a class="headerlink" href="#community" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Community">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Community</span></span><a class="headerlink" href="#Community" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twDataTypes.Community</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Community.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#Community.id" title="Link to this definition"></a></dt>
+<dd><p>Id of the Community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.11)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Community.created_at" title="Link to this definition"></a></dt>
+<dd><p>DateTime at which the Community was created</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.date">
+<span class="sig-name descname"><span class="pre">date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.11)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Community.date" title="Link to this definition"></a></dt>
+<dd><p>DateTime at which the Tweet was created</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Community.description" title="Link to this definition"></a></dt>
+<dd><p>Bio / Description on Community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Community.name" title="Link to this definition"></a></dt>
+<dd><p>Name of the Community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.role">
+<span class="sig-name descname"><span class="pre">role</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Community.role" title="Link to this definition"></a></dt>
+<dd><p>Role of authenticated user in the community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.member_count">
+<span class="sig-name descname"><span class="pre">member_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#Community.member_count" title="Link to this definition"></a></dt>
+<dd><p>Number of Members in the Community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.moderator_count">
+<span class="sig-name descname"><span class="pre">moderator_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#Community.moderator_count" title="Link to this definition"></a></dt>
+<dd><p>Number of Moderator in the Community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.admin">
+<span class="sig-name descname"><span class="pre">admin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Community.admin" title="Link to this definition"></a></dt>
+<dd><p>List of Admins of the community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.creator">
+<span class="sig-name descname"><span class="pre">creator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Community.creator" title="Link to this definition"></a></dt>
+<dd><p>List of Creators of the community</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Community.rules">
+<span class="sig-name descname"><span class="pre">rules</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Community.rules" title="Link to this definition"></a></dt>
+<dd><p>List of rules of the Community</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Community.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Community.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Community.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Community.Return" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Community(id={rest_id_of_user},</span> <span class="pre">name={name_of_the_user},</span> <span class="pre">role={role_of_user},</span> <span class="pre">admin={admin_of_the_community})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="richtext">
+<h2>RichText<a class="headerlink" href="#richtext" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RichText">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RichText</span></span><a class="headerlink" href="#RichText" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twDataTypes.RichText</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#RichText.id" title="Link to this definition"></a></dt>
+<dd><p>Id of the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.text">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#RichText.text" title="Link to this definition"></a></dt>
+<dd><p>Text of the tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.hashtags">
+<span class="sig-name descname"><span class="pre">hashtags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichText.hashtags" title="Link to this definition"></a></dt>
+<dd><p>List of hashtags in the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.urls">
+<span class="sig-name descname"><span class="pre">urls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichText.urls" title="Link to this definition"></a></dt>
+<dd><p>List of URLs in the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.symbols">
+<span class="sig-name descname"><span class="pre">symbols</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichText.symbols" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>List of Symbols in the Tweet</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.user_mentions">
+<span class="sig-name descname"><span class="pre">user_mentions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ShortUser" title="ShortUser"><span class="pre">ShortUser</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichText.user_mentions" title="Link to this definition"></a></dt>
+<dd><p>List of Users mentioned in the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.media">
+<span class="sig-name descname"><span class="pre">media</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Media" title="Media"><span class="pre">Media</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichText.media" title="Link to this definition"></a></dt>
+<dd><p>List of Media in the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichText.tags">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#RichTag" title="RichTag"><span class="pre">RichTag</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichText.tags" title="Link to this definition"></a></dt>
+<dd><p>List of rich text tags in the text</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="RichText.get_html">
+<span class="sig-name descname"><span class="pre">get_html</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RichText.get_html" title="Link to this definition"></a></dt>
+<dd><p>Get HTML version of the text which includes all the tags and elements</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="RichText.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#RichText.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RichText.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RichText.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id33">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#id33" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">RichText(id={rest_id_of_tweet})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="richtag">
+<h2>RichTag<a class="headerlink" href="#richtag" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RichTag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RichTag</span></span><a class="headerlink" href="#RichTag" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twDataTypes.RichTag</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="RichTag.from_index">
+<span class="sig-name descname"><span class="pre">from_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#RichTag.from_index" title="Link to this definition"></a></dt>
+<dd><p>The start index of this specific tag in the text</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichTag.to_index">
+<span class="sig-name descname"><span class="pre">to_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><a class="headerlink" href="#RichTag.to_index" title="Link to this definition"></a></dt>
+<dd><p>The end index of this specific tag in the text</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichTag.hashtags">
+<span class="sig-name descname"><span class="pre">hashtags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichTag.hashtags" title="Link to this definition"></a></dt>
+<dd><p>List of hashtags in the Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RichTag.types">
+<span class="sig-name descname"><span class="pre">types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#RichTag.types" title="Link to this definition"></a></dt>
+<dd><p>Type of tags included in the range</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="RichTag.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RichTag.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="RichTag.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#RichTag.Return" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">RichTag(from_index={from_index},</span> <span class="pre">to_index={to_index},</span> <span class="pre">types={types})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pool">
+<h2>Pool<a class="headerlink" href="#pool" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Pool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Pool</span></span><a class="headerlink" href="#Pool" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twDataTypes.Pool</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Pool.id" title="Link to this definition"></a></dt>
+<dd><p>Id of the Pool</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Pool.name" title="Link to this definition"></a></dt>
+<dd><p>Name of the Pool</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.choices">
+<span class="sig-name descname"><span class="pre">choices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Choice" title="Choice"><span class="pre">Choice</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pool.choices" title="Link to this definition"></a></dt>
+<dd><p>List of choices in teh Tweet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.end_time">
+<span class="sig-name descname"><span class="pre">end_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.11)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Pool.end_time" title="Link to this definition"></a></dt>
+<dd><p>End Time of the Pool</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.last_updated_time">
+<span class="sig-name descname"><span class="pre">last_updated_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.11)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Pool.last_updated_time" title="Link to this definition"></a></dt>
+<dd><p>Last Updated Time of the Pool</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Pool.duration" title="Link to this definition"></a></dt>
+<dd><p>Duration of Pool in Minutes</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.user_ref">
+<span class="sig-name descname"><span class="pre">user_ref</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pool.user_ref" title="Link to this definition"></a></dt>
+<dd><p>Users Referred in the Pool</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.selected_choice">
+<span class="sig-name descname"><span class="pre">selected_choice</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Choice" title="Choice"><span class="pre">Choice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#Pool.selected_choice" title="Link to this definition"></a></dt>
+<dd><p>Choice already selected by the authenticated user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pool.is_final">
+<span class="sig-name descname"><span class="pre">is_final</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#Pool.is_final" title="Link to this definition"></a></dt>
+<dd><p>Has pool ended or not</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Pool.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Pool.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Pool.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#Pool.Return" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Card(id={rest_id_of_poll},</span> <span class="pre">choices={list_of_choices},</span> <span class="pre">end_time={end_time_of_pool},</span> <span class="pre">duration={duration_of_pool}</span> <span class="pre">minutes)</span></code></p>
 </dd>
 </dl>
 </dd></dl>
