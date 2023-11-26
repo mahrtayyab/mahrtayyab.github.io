@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twitch Types &mdash; TwitchDig 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exceptions" href="exceptions.html" />
+    <link rel="prev" title="All Available Functions" href="all-functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TwitchDig
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick-Start</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="all-functions.html">All Available Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Twitch Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#uservideos">UserVideos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#userclips">UserClips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gamestreams">GameStreams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gameclips">GameClips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gamevideos">GameVideos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search">Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#topgames">TopGames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#topstreams">TopStreams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#video">Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#game">Game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user">User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#social">Social</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stream">Stream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clip">Clip</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/changelog.html">Changelogs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TwitchDig</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Twitch Types</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/basic/twitch_types.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="twitch-types">
+<span id="id1"></span><h1>Twitch Types<a class="headerlink" href="#twitch-types" title="Link to this heading"></a></h1>
+<p>This page contains all the Data Class returned by the different methods</p>
+<section id="uservideos">
+<h2>UserVideos<a class="headerlink" href="#uservideos" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="UserVideos">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserVideos</span></span><a class="headerlink" href="#UserVideos" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.user.UserVideos</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="UserVideos.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Video" title="Video"><span class="pre">Video</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UserVideos.results" title="Link to this definition"></a></dt>
+<dd><p>List of User Videos</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UserVideos.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#UserVideos.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UserVideos.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#UserVideos.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UserVideos.username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#UserVideos.username" title="Link to this definition"></a></dt>
+<dd><p>User Identifier from User</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="UserVideos.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UserVideos.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="UserVideos.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Video" title="Video"><span class="pre">Video</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UserVideos.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UserVideos.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UserVideos.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">UserVideos(user={user_identifier},</span> <span class="pre">sort={sorting},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="userclips">
+<h2>UserClips<a class="headerlink" href="#userclips" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="UserClips">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UserClips</span></span><a class="headerlink" href="#UserClips" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.user.UserClips</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="UserClips.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Clip" title="Clip"><span class="pre">Clip</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UserClips.results" title="Link to this definition"></a></dt>
+<dd><p>List of User Clips</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UserClips.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#UserClips.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UserClips.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#UserClips.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UserClips.username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#UserClips.username" title="Link to this definition"></a></dt>
+<dd><p>User Identifier from User</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="UserClips.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UserClips.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="UserClips.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Clip" title="Clip"><span class="pre">Clip</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#UserClips.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UserClips.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UserClips.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">UserClips(user={user_identifier},</span> <span class="pre">sort={sorting},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="gamestreams">
+<h2>GameStreams<a class="headerlink" href="#gamestreams" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GameStreams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GameStreams</span></span><a class="headerlink" href="#GameStreams" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.game.GameStreams</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="GameStreams.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GameStreams.results" title="Link to this definition"></a></dt>
+<dd><p>List of Game Stream</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameStreams.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#GameStreams.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameStreams.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#GameStreams.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameStreams.game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a></em><a class="headerlink" href="#GameStreams.game" title="Link to this definition"></a></dt>
+<dd><p>Actual Game in query</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="GameStreams.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameStreams.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="GameStreams.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GameStreams.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GameStreams.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameStreams.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">GameStreams(game={game},</span> <span class="pre">tags={tags},</span> <span class="pre">sort={sorting},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="gameclips">
+<h2>GameClips<a class="headerlink" href="#gameclips" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GameClips">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GameClips</span></span><a class="headerlink" href="#GameClips" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.game.GameClips</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="GameClips.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Clip" title="Clip"><span class="pre">Clip</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GameClips.results" title="Link to this definition"></a></dt>
+<dd><p>List of Game Clip</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameClips.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#GameClips.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameClips.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#GameClips.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameClips.game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a></em><a class="headerlink" href="#GameClips.game" title="Link to this definition"></a></dt>
+<dd><p>Actual Game in query</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="GameClips.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameClips.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="GameClips.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GameClips.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GameClips.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameClips.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">GameClips(game={game},</span> <span class="pre">languages={tags},</span> <span class="pre">sort={sorting},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="gamevideos">
+<h2>GameVideos<a class="headerlink" href="#gamevideos" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GameVideos">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GameVideos</span></span><a class="headerlink" href="#GameVideos" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.game.GameVideos</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="GameVideos.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GameVideos.results" title="Link to this definition"></a></dt>
+<dd><p>List of Game Videos</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameVideos.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#GameVideos.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameVideos.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#GameVideos.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GameVideos.game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a></em><a class="headerlink" href="#GameVideos.game" title="Link to this definition"></a></dt>
+<dd><p>Actual Game in query</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="GameVideos.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameVideos.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="GameVideos.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GameVideos.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GameVideos.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameVideos.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">GameVideos(game={game},</span> <span class="pre">languages={tags},</span> <span class="pre">sort={sorting},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="search">
+<h2>Search<a class="headerlink" href="#search" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Search">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Search</span></span><a class="headerlink" href="#Search" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.search.Search</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Search.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#Clip" title="Clip"><span class="pre">Clip</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Search.results" title="Link to this definition"></a></dt>
+<dd><p>List of results</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Search.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Search.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Search.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#Search.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Search.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Search.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Search.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#Clip" title="Clip"><span class="pre">Clip</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Search.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Search.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Search.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Search(keyword={keyword},</span> <span class="pre">filter={filter},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="topgames">
+<h2>TopGames<a class="headerlink" href="#topgames" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="TopGames">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TopGames</span></span><a class="headerlink" href="#TopGames" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.top.TopGames</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="TopGames.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#TopGames.results" title="Link to this definition"></a></dt>
+<dd><p>List of results</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TopGames.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#TopGames.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TopGames.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#TopGames.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="TopGames.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TopGames.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="TopGames.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#TopGames.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TopGames.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TopGames.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">TopGames(tags={tags},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="topstreams">
+<h2>TopStreams<a class="headerlink" href="#topstreams" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="TopStreams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TopStreams</span></span><a class="headerlink" href="#TopStreams" title="Link to this definition"></a></dt>
+<dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">twitch_types.types.top.TopStreams</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="TopStreams.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#TopStreams.results" title="Link to this definition"></a></dt>
+<dd><p>List of results</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TopStreams.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#TopStreams.cursor" title="Link to this definition"></a></dt>
+<dd><p>Cursor for next page</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TopStreams.has_next_page">
+<span class="sig-name descname"><span class="pre">has_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#TopStreams.has_next_page" title="Link to this definition"></a></dt>
+<dd><p>Is next page of results available</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="TopStreams.get_next_page">
+<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TopStreams.get_next_page" title="Link to this definition"></a></dt>
+<dd><p>Get next page of videos if available</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="TopStreams.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#TopStreams.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TopStreams.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TopStreams.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">TopStreams(tags={tags},</span> <span class="pre">results={number_of_results})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="video">
+<h2>Video<a class="headerlink" href="#video" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Video">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Video</span></span><a class="headerlink" href="#Video" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable and Iterable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twitch_types.Video</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Video.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#Video.id" title="Link to this definition"></a></dt>
+<dd><p>ID of the Video</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Video.date">
+<span class="sig-name descname"><span class="pre">date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.12)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Video.date" title="Link to this definition"></a></dt>
+<dd><p>DateTime at which the Video was created</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Video.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Video.duration" title="Link to this definition"></a></dt>
+<dd><p>Duration of video in seconds</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Video.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Video.title" title="Link to this definition"></a></dt>
+<dd><p>Title of the Video</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Video.view_count">
+<span class="sig-name descname"><span class="pre">view_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Video.view_count" title="Link to this definition"></a></dt>
+<dd><p>View Count of the Video</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Video.user">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#Video.user" title="Link to this definition"></a></dt>
+<dd><p>User who have uploaded this video</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Video.game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a></em><a class="headerlink" href="#Video.game" title="Link to this definition"></a></dt>
+<dd><p>Which game is begin played in Twitch</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Video.get_link">
+<span class="sig-name descname"><span class="pre">get_link</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Video.get_link" title="Link to this definition"></a></dt>
+<dd><p>Get m3u8 stream link of the video</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Video.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Video.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Video.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Video.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Video(id={id_of_video},</span> <span class="pre">title={title_of_video},</span> <span class="pre">date={date_of_video},</span> <span class="pre">duration={duration_of_video})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="game">
+<h2>Game<a class="headerlink" href="#game" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Game">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Game</span></span><a class="headerlink" href="#Game" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twitch_types.Game</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Game.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Game.id" title="Link to this definition"></a></dt>
+<dd><p>ID of the Game</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Game.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Game.display_name" title="Link to this definition"></a></dt>
+<dd><p>Display Name of the game</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Game.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Game.name" title="Link to this definition"></a></dt>
+<dd><p>Name of the game</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Game.original_release_date">
+<span class="sig-name descname"><span class="pre">original_release_date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.12)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Game.original_release_date" title="Link to this definition"></a></dt>
+<dd><p>Release Date of the Game</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Game.viewers_count">
+<span class="sig-name descname"><span class="pre">viewers_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Game.viewers_count" title="Link to this definition"></a></dt>
+<dd><p>Viewer Count of the Video</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Game.followers_count">
+<span class="sig-name descname"><span class="pre">followers_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Game.followers_count" title="Link to this definition"></a></dt>
+<dd><p>Followers Count of the Video</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Game.broadcasters_count">
+<span class="sig-name descname"><span class="pre">broadcasters_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Game.broadcasters_count" title="Link to this definition"></a></dt>
+<dd><p>Broadcaster Count of the Video</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Game.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Game.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Game.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Game.Return" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Game(id={id_of_the_game},</span> <span class="pre">name={name_of_the_game})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="user">
+<h2>User<a class="headerlink" href="#user" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">User</span></span><a class="headerlink" href="#User" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twitch_types.User</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="User.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#User.id" title="Link to this definition"></a></dt>
+<dd><p>ID of the user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.channel_id">
+<span class="sig-name descname"><span class="pre">channel_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#User.channel_id" title="Link to this definition"></a></dt>
+<dd><p>Channel ID of the user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.date">
+<span class="sig-name descname"><span class="pre">date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.12)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#User.date" title="Link to this definition"></a></dt>
+<dd><p>Date time of the user creation</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#User.description" title="Link to this definition"></a></dt>
+<dd><p>Description of the user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#User.display_name" title="Link to this definition"></a></dt>
+<dd><p>Display Name of the User</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.followers_count">
+<span class="sig-name descname"><span class="pre">followers_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#User.followers_count" title="Link to this definition"></a></dt>
+<dd><p>Number of followers this user has</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#User.username" title="Link to this definition"></a></dt>
+<dd><p>username of the user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.is_mature">
+<span class="sig-name descname"><span class="pre">is_mature</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.is_mature" title="Link to this definition"></a></dt>
+<dd><p>Do user post mature content [18+]</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.is_affiliate">
+<span class="sig-name descname"><span class="pre">is_affiliate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.is_affiliate" title="Link to this definition"></a></dt>
+<dd><p>Is user affiliate</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.is_partner">
+<span class="sig-name descname"><span class="pre">is_partner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.is_partner" title="Link to this definition"></a></dt>
+<dd><p>Is user partner of twitch</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.is_staff">
+<span class="sig-name descname"><span class="pre">is_staff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.is_staff" title="Link to this definition"></a></dt>
+<dd><p>Is user staff member of twitch</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.is_site_admin">
+<span class="sig-name descname"><span class="pre">is_site_admin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.is_site_admin" title="Link to this definition"></a></dt>
+<dd><p>Is user site admin of twitch</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.is_global_mod">
+<span class="sig-name descname"><span class="pre">is_global_mod</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#User.is_global_mod" title="Link to this definition"></a></dt>
+<dd><p>Is user global moderaot of twitch</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.stream">
+<span class="sig-name descname"><span class="pre">stream</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Stream" title="Stream"><span class="pre">Stream</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></em><a class="headerlink" href="#User.stream" title="Link to this definition"></a></dt>
+<dd><p>Ongoing Stream of the user</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.socials">
+<span class="sig-name descname"><span class="pre">socials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#Social" title="Social"><span class="pre">Social</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#User.socials" title="Link to this definition"></a></dt>
+<dd><p>Social Links of the user</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="User.get_videos">
+<span class="sig-name descname"><span class="pre">get_videos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.get_videos" title="Link to this definition"></a></dt>
+<dd><p>Get Video of the User</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.iter_videos">
+<span class="sig-name descname"><span class="pre">iter_videos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.iter_videos" title="Link to this definition"></a></dt>
+<dd><p>Get Video of the User as generator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.get_clips">
+<span class="sig-name descname"><span class="pre">get_clips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.get_clips" title="Link to this definition"></a></dt>
+<dd><p>Get Clips of the User</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.iter_clips">
+<span class="sig-name descname"><span class="pre">iter_clips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL_TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.iter_clips" title="Link to this definition"></a></dt>
+<dd><p>Get Clips of the User as generator</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#User.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="User.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#User.Return" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">User(id={id_of_user},</span> <span class="pre">name={name_of_user})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="social">
+<h2>Social<a class="headerlink" href="#social" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Social">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Social</span></span><a class="headerlink" href="#Social" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twitch_types.Social</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Social.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Social.id" title="Link to this definition"></a></dt>
+<dd><p>ID of the Social Link</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Social.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Social.name" title="Link to this definition"></a></dt>
+<dd><p>Name of social platform</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Social.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Social.title" title="Link to this definition"></a></dt>
+<dd><p>Title of social profile</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Social.url">
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Social.url" title="Link to this definition"></a></dt>
+<dd><p>URL of social profile</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Social.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Social.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Social.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Social.Return" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Social(name={name},</span> <span class="pre">title={title})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="stream">
+<h2>Stream<a class="headerlink" href="#stream" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Stream">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Stream</span></span><a class="headerlink" href="#Stream" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twitch_types.Stream</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Stream.id" title="Link to this definition"></a></dt>
+<dd><p>ID of the Stream</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.fps">
+<span class="sig-name descname"><span class="pre">fps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#Stream.fps" title="Link to this definition"></a></dt>
+<dd><p>FPS of stream</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.broadcaster_software">
+<span class="sig-name descname"><span class="pre">broadcaster_software</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Stream.broadcaster_software" title="Link to this definition"></a></dt>
+<dd><p>Name of software begin used for broadcasting / stream</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a></em><a class="headerlink" href="#Stream.game" title="Link to this definition"></a></dt>
+<dd><p>Game begin played in stream</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.date">
+<span class="sig-name descname"><span class="pre">date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.12)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Stream.date" title="Link to this definition"></a></dt>
+<dd><p>Datetime at which the stream was started</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Stream.title" title="Link to this definition"></a></dt>
+<dd><p>Title of stream</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.view_count">
+<span class="sig-name descname"><span class="pre">view_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#Stream.view_count" title="Link to this definition"></a></dt>
+<dd><p>Total Views of the Stream</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.user">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#Stream.user" title="Link to this definition"></a></dt>
+<dd><p>User who is streaming</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Stream.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Stream.type" title="Link to this definition"></a></dt>
+<dd><p>Type of the stream</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><blockquote>
+<div><dl class="py method">
+<dt class="sig sig-object py" id="Stream.get_link">
+<span class="sig-name descname"><span class="pre">get_link</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Stream.get_link" title="Link to this definition"></a></dt>
+<dd><p>Get m3u8 streamable link of the stream</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Stream.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Stream.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="Stream.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Stream.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Stream(id={id},</span> <span class="pre">type={type},</span> <span class="pre">game={game})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="clip">
+<h2>Clip<a class="headerlink" href="#clip" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Clip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Clip</span></span><a class="headerlink" href="#Clip" title="Link to this definition"></a></dt>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This Object is JSON Serializable</strong></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.twitch_types.Clip</span></code></p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Clip.id" title="Link to this definition"></a></dt>
+<dd><p>ID of the Clip</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#Clip.duration" title="Link to this definition"></a></dt>
+<dd><p>Duration of Clip in seconds</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.is_featured">
+<span class="sig-name descname"><span class="pre">is_featured</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#Clip.is_featured" title="Link to this definition"></a></dt>
+<dd><p>Is this clip being featured</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Clip.slug" title="Link to this definition"></a></dt>
+<dd><p>Unique slug of clip</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.date">
+<span class="sig-name descname"><span class="pre">date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.12)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#Clip.date" title="Link to this definition"></a></dt>
+<dd><p>Datetime at which the clip was created</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Clip.title" title="Link to this definition"></a></dt>
+<dd><p>Title of Clip</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.view_count">
+<span class="sig-name descname"><span class="pre">view_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#Clip.view_count" title="Link to this definition"></a></dt>
+<dd><p>Total Views of the Clip</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.user">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#Clip.user" title="Link to this definition"></a></dt>
+<dd><p>User who is streaming</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.video_Offset_seconds">
+<span class="sig-name descname"><span class="pre">video_Offset_seconds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><a class="headerlink" href="#Clip.video_Offset_seconds" title="Link to this definition"></a></dt>
+<dd><p>Offset of the video in seconds</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.video">
+<span class="sig-name descname"><span class="pre">video</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Video" title="Video"><span class="pre">Video</span></a></em><a class="headerlink" href="#Clip.video" title="Link to this definition"></a></dt>
+<dd><p>Video from which this clip was created</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clip.game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Game" title="Game"><span class="pre">Game</span></a></em><a class="headerlink" href="#Clip.game" title="Link to this definition"></a></dt>
+<dd><p>Game being played in clip</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#User" title="User"><span class="pre">User</span></a></em><a class="headerlink" href="#id11" title="Link to this definition"></a></dt>
+<dd><p>Who is the owner of this clip</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
+<dd><blockquote>
+<div><dl class="py method">
+<dt class="sig sig-object py" id="Clip.get_link">
+<span class="sig-name descname"><span class="pre">get_link</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Clip.get_link" title="Link to this definition"></a></dt>
+<dd><p>Get m3u8 streamable link of the clip</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Clip.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#Clip.Return" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="Clip.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Clip.__repr__" title="Link to this definition"></a></dt>
+<dd><p>Developer Representation of the Object</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id12" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Clip(video={video},</span> <span class="pre">game={game},</span> <span class="pre">videoOffsetSecond={offset_seconds})</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="all-functions.html" class="btn btn-neutral float-left" title="All Available Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exceptions.html" class="btn btn-neutral float-right" title="Exceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 - 2023, mahrtayyab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

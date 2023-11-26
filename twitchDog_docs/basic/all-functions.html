@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Available Functions &mdash; TwitchDig 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Twitch Types" href="twitch_types.html" />
+    <link rel="prev" title="Quick-Start" href="quick-start.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TwitchDig
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick-Start</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">All Available Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-user-info">Get User Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-user-videos">Get User Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-user-video-clips">Get User Video Clips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#searching-a-keyword">Searching a Keyword</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-top-streams">Get Top Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-top-games">Get Top Games</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-game-streams">Get Game Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-game-clips">Get Game Clips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-game-videos">Get Game Videos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="twitch_types.html">Twitch Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/changelog.html">Changelogs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TwitchDig</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">All Available Functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/basic/all-functions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="all-available-functions">
+<span id="all-functions"></span><h1>All Available Functions<a class="headerlink" href="#all-available-functions" title="Link to this heading"></a></h1>
+<p>This page contains all the public method available to work with</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All Examples on the page assumes that <code class="xref py py-obj docutils literal notranslate"><span class="pre">app</span></code> is the <a class="reference internal" href="#id112" title="Bot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bot</span></code></a> class instance</p>
+</div>
+<section id="get-user-info">
+<h2>Get User Info<a class="headerlink" href="#get-user-info" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="Bot">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_user(username:</span> <span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Bot" title="Link to this definition"></a></dt>
+<dd><p>Get the User Info of the specified username or user_id</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Arguments">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#Arguments" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#username" title="Link to this definition"></a></dt>
+<dd><p>Username or User ID of the user you want to get info of.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#Return" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#User" title="User"><code class="xref py py-obj docutils literal notranslate"><span class="pre">User</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="s1">&#39;kharltayyab&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-user-videos">
+<h2>Get User Videos<a class="headerlink" href="#get-user-videos" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_user_videos(username:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;TIME&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Get the Videos of the specified username</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Username or User ID of the user you want to get Videos of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sort">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#sort" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="pages">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pages" title="Link to this definition"></a></dt>
+<dd><p>Number of Videos Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="wait_time">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#wait_time" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#cursor" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#UserVideos" title="UserVideos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserVideos</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">videos</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_user_videos</span><span class="p">(</span><span class="s1">&#39;kharltayyab&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">video</span> <span class="ow">in</span> <span class="n">videos</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">video</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_user_videos(username:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;TIME&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Get the Videos of the specified username as a generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Username or User ID of the user you want to get Videos of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><p>Number of Videos Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id11" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator : (<a class="reference internal" href="twitch_types.html#UserVideos" title="UserVideos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserVideos</span></code></a> , list[<a class="reference internal" href="twitch_types.html#Video" title="Video"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Video</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">videos</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_user_videos</span><span class="p">(</span><span class="s1">&#39;kharltayyab&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">videos</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-user-video-clips">
+<h2>Get User Video Clips<a class="headerlink" href="#get-user-video-clips" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_user_clips(username:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;TIME&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id12" title="Link to this definition"></a></dt>
+<dd><p>Get the Videos Clips of the specified username</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id13" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id14" title="Link to this definition"></a></dt>
+<dd><p>Username or User ID of the user you want to get Video Clips of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id15" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id16">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id16" title="Link to this definition"></a></dt>
+<dd><p>Number of Clips Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id17" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id18" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id19">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id19" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#UserClips" title="UserClips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserClips</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">clips</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_user_clips</span><span class="p">(</span><span class="s1">&#39;kharltayyab&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">clip</span> <span class="ow">in</span> <span class="n">clips</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clip</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id20">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_user_clips(username:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;TIME&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id20" title="Link to this definition"></a></dt>
+<dd><p>Get the Video Clips of the specified username as a generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id21">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id22">
+<span class="sig-name descname"><span class="pre">username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
+<dd><p>Username or User ID of the user you want to get Video Clips of.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id23">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id24">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
+<dd><p>Number of Clips Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id25">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id26">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id26" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id27">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id27" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator : (<a class="reference internal" href="twitch_types.html#UserClips" title="UserClips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserClips</span></code></a> , list[<a class="reference internal" href="twitch_types.html#Clip" title="Clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Clip</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">clips</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_user_clips</span><span class="p">(</span><span class="s1">&#39;kharltayyab&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clips</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="searching-a-keyword">
+<h2>Searching a Keyword<a class="headerlink" href="#searching-a-keyword" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id28">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).search(keyword:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;SearchStreams&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id28" title="Link to this definition"></a></dt>
+<dd><p>Search for a on Twitch</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id29">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id29" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="keyword">
+<span class="sig-name descname"><span class="pre">keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#keyword" title="Link to this definition"></a></dt>
+<dd><p>The keyword which is supposed to be searched</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id30">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id30" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="filter_">
+<span class="sig-name descname"><span class="pre">filter_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;SearchStreams&quot;</span></em><a class="headerlink" href="#filter_" title="Link to this definition"></a></dt>
+<dd><p>Filter you would like to apply on the search. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Filters</span></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id31">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id31" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id32">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id32" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id33">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id33" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#Search" title="Search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Search</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;kharltayyab&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id34">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_search(keyword:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;SearchStreams&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id34" title="Link to this definition"></a></dt>
+<dd><p>Search for a on Twitch as a generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id35">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id35" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id36">
+<span class="sig-name descname"><span class="pre">keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Required</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id36" title="Link to this definition"></a></dt>
+<dd><p>The keyword which is supposed to be searched</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id37">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id37" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id38">
+<span class="sig-name descname"><span class="pre">filter_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;SearchStreams&quot;</span></em><a class="headerlink" href="#id38" title="Link to this definition"></a></dt>
+<dd><p>Filter you would like to apply on the search. More about <a class="reference internal" href="filter.html#filter"><span class="std std-ref">Filters</span></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id39">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id39" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id40">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id40" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id41">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id41" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Generator: (<a class="reference internal" href="twitch_types.html#Search" title="Search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Search</span></code></a>, list[<a class="reference internal" href="twitch_types.html#Clip" title="Clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Clip</span></code></a> | <a class="reference internal" href="twitch_types.html#Video" title="Video"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Video</span></code></a> | <a class="reference internal" href="twitch_types.html#User" title="User"><code class="xref py py-obj docutils literal notranslate"><span class="pre">User</span></code></a> | <a class="reference internal" href="twitch_types.html#Stream" title="Stream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stream</span></code></a>])</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">results</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_search</span><span class="p">(</span><span class="s1">&#39;kharltayyab&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-top-streams">
+<h2>Get Top Streams<a class="headerlink" href="#get-top-streams" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id42">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_top_streams(tags:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id42" title="Link to this definition"></a></dt>
+<dd><p>Get Twitch Top Streams</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id43">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id43" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="tags">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tags" title="Link to this definition"></a></dt>
+<dd><p>List of tags to look for in streams</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id44">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id44" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id45">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id45" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id46">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id46" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id47">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id47" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#TopStreams" title="TopStreams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TopStreams</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">streams</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_top_streams</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">stream</span> <span class="ow">in</span> <span class="n">streams</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id48">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_top_streams(tags:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id48" title="Link to this definition"></a></dt>
+<dd><p>Get Twitch Top Streams as generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id49">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id49" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id50">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id50" title="Link to this definition"></a></dt>
+<dd><p>List of tags to look for in streams</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id51">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id51" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id52">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id52" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id53">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id53" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id54">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id54" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#TopStreams" title="TopStreams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TopStreams</span></code></a>, list[<a class="reference internal" href="twitch_types.html#Stream" title="Stream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stream</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">streams</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_top_streams</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">streams</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-top-games">
+<h2>Get Top Games<a class="headerlink" href="#get-top-games" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id55">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).get_top_games(tags:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id55" title="Link to this definition"></a></dt>
+<dd><p>Get Twitch Top Games</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id56">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id56" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id57">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id57" title="Link to this definition"></a></dt>
+<dd><p>List of tags to look for in streams</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id58">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id58" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id59">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id59" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id60">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id60" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id61">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id61" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#TopGames" title="TopGames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TopGames</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">games</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_top_games</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">game</span> <span class="ow">in</span> <span class="n">games</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">game</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id62">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">).iter_top_games(tags:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id62" title="Link to this definition"></a></dt>
+<dd><p>Get Twitch Top Games as generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id63">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id63" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id64">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id64" title="Link to this definition"></a></dt>
+<dd><p>List of tags to look for in streams</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id65">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id65" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id66">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id66" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id67">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id67" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id68">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id68" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#TopStreams" title="TopStreams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TopStreams</span></code></a>, list[<a class="reference internal" href="twitch_types.html#Game" title="Game"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Game</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">games</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_top_games</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">games</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-game-streams">
+<h2>Get Game Streams<a class="headerlink" href="#get-game-streams" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id69">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).get_game_streams(game:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">Game],</span> <span class="pre">tags:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;VIEWER_COUNT&quot;,</span> <span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2,</span> <span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id69" title="Link to this definition"></a></dt>
+<dd><p>Get Streams of specific game</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id70">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id70" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#game" title="Link to this definition"></a></dt>
+<dd><p>Name of the Game</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id71">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id71" title="Link to this definition"></a></dt>
+<dd><p>List of tags to look for in streams</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id72">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id72" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id73">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id73" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id74">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id74" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id75">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id75" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id76">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id76" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#GameStreams" title="GameStreams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GameStreams</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">streams</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_game_streams</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">stream</span> <span class="ow">in</span> <span class="n">streams</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id77">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).iter_top_games(game:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">Game],</span> <span class="pre">tags:</span> <span class="pre">List[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;VIEWER_COUNT&quot;,</span> <span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2,</span> <span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id77" title="Link to this definition"></a></dt>
+<dd><p>Get Streams of specific game as generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id78">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id78" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id79">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id79" title="Link to this definition"></a></dt>
+<dd><p>Name of the Game</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id80">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id80" title="Link to this definition"></a></dt>
+<dd><p>List of tags to look for in streams</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id81">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id81" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id82">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id82" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id83">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id83" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id84">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id84" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id85">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id85" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#GameStreams" title="GameStreams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GameStreams</span></code></a>, list[<a class="reference internal" href="twitch_types.html#Stream" title="Stream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stream</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">streams</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">iter_game_streams</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">streams</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-game-clips">
+<h2>Get Game Clips<a class="headerlink" href="#get-game-clips" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id86">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).get_game_clips(game:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">Game],</span> <span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;VIEWER_COUNT&quot;,</span> <span class="pre">languages:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2,</span> <span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id86" title="Link to this definition"></a></dt>
+<dd><p>Get Clips of specific game</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id87">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id87" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id88">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id88" title="Link to this definition"></a></dt>
+<dd><p>Name of the Game</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="languages">
+<span class="sig-name descname"><span class="pre">languages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#languages" title="Link to this definition"></a></dt>
+<dd><p>What should be the language of clip</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id89">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id89" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id90">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id90" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id91">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id91" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id92">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id92" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id93">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id93" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#GameClips" title="GameClips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GameClips</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">clips</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_game_clips</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">clip</span> <span class="ow">in</span> <span class="n">clips</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clip</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id94">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).iter_game_clips(game:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">Game],</span> <span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;VIEWER_COUNT&quot;,</span> <span class="pre">languages:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2,</span> <span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id94" title="Link to this definition"></a></dt>
+<dd><p>Get Clips of specific game as generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id95">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id95" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id96">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id96" title="Link to this definition"></a></dt>
+<dd><p>Name of the Game</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id97">
+<span class="sig-name descname"><span class="pre">languages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id97" title="Link to this definition"></a></dt>
+<dd><p>What should be the language of clip</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id98">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id98" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id99">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id99" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id100">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id100" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id101">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id101" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id102">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id102" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#GameClips" title="GameClips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GameClips</span></code></a>, list[<a class="reference internal" href="twitch_types.html#Clip" title="Clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Clip</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">clips</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">get_game_clips</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clips</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+<section id="get-game-videos">
+<h2>Get Game Videos<a class="headerlink" href="#get-game-videos" title="Link to this heading"></a></h2>
+<ul>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id103">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).get_game_videos(game:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">Game],</span> <span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;VIEWER_COUNT&quot;,</span> <span class="pre">languages:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2,</span> <span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id103" title="Link to this definition"></a></dt>
+<dd><p>Get Videos of specific game</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id104">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id104" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id105">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id105" title="Link to this definition"></a></dt>
+<dd><p>Name of the Game</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id106">
+<span class="sig-name descname"><span class="pre">languages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id106" title="Link to this definition"></a></dt>
+<dd><p>What should be the language of clip</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id107">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id107" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id108">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id108" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id109">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id109" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id110">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id110" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id111">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id111" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#GameVideos" title="GameVideos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GameVideos</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">videos</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_game_videos</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">video</span> <span class="ow">in</span> <span class="n">videos</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">video</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+<li><dl class="py method">
+<dt class="sig sig-object py" id="id112">
+<span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">).iter_game_videos(game:</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">Game],</span> <span class="pre">sort:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;VIEWER_COUNT&quot;,</span> <span class="pre">languages:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">pages:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">wait_time:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2,</span> <span class="pre">cursor:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id112" title="Link to this definition"></a></dt>
+<dd><p>Get Videos of specific game as generator</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="id113">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#id113" title="Link to this definition"></a></dt>
+<dd><dl class="py data">
+<dt class="sig sig-object py" id="id114">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id114" title="Link to this definition"></a></dt>
+<dd><p>Name of the Game</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id115">
+<span class="sig-name descname"><span class="pre">languages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id115" title="Link to this definition"></a></dt>
+<dd><p>What should be the language of clip</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id116">
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id116" title="Link to this definition"></a></dt>
+<dd><p>Sort the Results</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id117">
+<span class="sig-name descname"><span class="pre">pages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id117" title="Link to this definition"></a></dt>
+<dd><p>Number of Pages you want to get</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id118">
+<span class="sig-name descname"><span class="pre">wait_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#id118" title="Link to this definition"></a></dt>
+<dd><p>Number of seconds to wait between multiple requests</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id119">
+<span class="sig-name descname"><span class="pre">cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id119" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Pagination cursor if you want to get the pages from that cursor up-to (This cursor is different from actual API cursor)</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id120">
+<span class="sig-name descname"><span class="pre">Return</span></span><a class="headerlink" href="#id120" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="twitch_types.html#GameVideos" title="GameVideos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GameVideos</span></code></a>, list[<a class="reference internal" href="twitch_types.html#Video" title="Video"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Video</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">videos</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">get_game_videos</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">videos</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quick-start.html" class="btn btn-neutral float-left" title="Quick-Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="twitch_types.html" class="btn btn-neutral float-right" title="Twitch Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 - 2023, mahrtayyab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

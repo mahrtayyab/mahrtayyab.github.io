@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filters &mdash; TwitchDig 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Changelogs" href="../misc/changelog.html" />
+    <link rel="prev" title="Exceptions" href="exceptions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TwitchDig
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick-Start</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="all-functions.html">All Available Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twitch_types.html">Twitch Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Filters</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#filter-searchfilters">Filter SearchFilters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-uservideos">Filter UserVideos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-userclips">Filter UserClips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-gamestreams">Filter GameStreams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-gamevideos">Filter GameVideos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-gameclips">Filter GameClips</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/changelog.html">Changelogs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TwitchDig</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Filters</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/basic/filter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="filters">
+<span id="filter"></span><h1>Filters<a class="headerlink" href="#filters" title="Link to this heading"></a></h1>
+<section id="filter-searchfilters">
+<h2>Filter SearchFilters<a class="headerlink" href="#filter-searchfilters" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="SearchFilters.GAMES">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SearchFilters.</span></span><span class="sig-name descname"><span class="pre">GAMES</span></span><a class="headerlink" href="#SearchFilters.GAMES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="SearchFilters.CHANNELS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SearchFilters.</span></span><span class="sig-name descname"><span class="pre">CHANNELS</span></span><a class="headerlink" href="#SearchFilters.CHANNELS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="SearchFilters.USERS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SearchFilters.</span></span><span class="sig-name descname"><span class="pre">USERS</span></span><a class="headerlink" href="#SearchFilters.USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="SearchFilters.VIDEOS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SearchFilters.</span></span><span class="sig-name descname"><span class="pre">VIDEOS</span></span><a class="headerlink" href="#SearchFilters.VIDEOS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="SearchFilters.STREAMS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SearchFilters.</span></span><span class="sig-name descname"><span class="pre">STREAMS</span></span><a class="headerlink" href="#SearchFilters.STREAMS" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.SearchFilters</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twitchDig.filters</span> <span class="kn">import</span> <span class="n">SearchFilters</span>
+
+<span class="c1"># Assuming `app` is Bot Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;kharltayyab&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">SearchFilters</span><span class="o">.</span><span class="n">GAMES</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="filter-uservideos">
+<h2>Filter UserVideos<a class="headerlink" href="#filter-uservideos" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="UserVideosFilters.VIEWS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserVideosFilters.</span></span><span class="sig-name descname"><span class="pre">VIEWS</span></span><a class="headerlink" href="#UserVideosFilters.VIEWS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UserVideosFilters.DEFAULT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserVideosFilters.</span></span><span class="sig-name descname"><span class="pre">DEFAULT</span></span><a class="headerlink" href="#UserVideosFilters.DEFAULT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UserVideosFilters.TIME">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserVideosFilters.</span></span><span class="sig-name descname"><span class="pre">TIME</span></span><a class="headerlink" href="#UserVideosFilters.TIME" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UserVideosFilters.UPLOAD_DATE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserVideosFilters.</span></span><span class="sig-name descname"><span class="pre">UPLOAD_DATE</span></span><a class="headerlink" href="#UserVideosFilters.UPLOAD_DATE" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.UserVideosFilters</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twitchDig.filters</span> <span class="kn">import</span> <span class="n">UserVideosFilters</span>
+
+<span class="c1"># Assuming `app` is Bot Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">get_user_videos</span><span class="p">(</span><span class="s2">&quot;kharltayyab&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">UserVideosFilters</span><span class="o">.</span><span class="n">TIME</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="filter-userclips">
+<h2>Filter UserClips<a class="headerlink" href="#filter-userclips" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="UserClipsFilters.THIS_WEEK">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserClipsFilters.</span></span><span class="sig-name descname"><span class="pre">THIS_WEEK</span></span><a class="headerlink" href="#UserClipsFilters.THIS_WEEK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UserClipsFilters.TODAY">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserClipsFilters.</span></span><span class="sig-name descname"><span class="pre">TODAY</span></span><a class="headerlink" href="#UserClipsFilters.TODAY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UserClipsFilters.THIS_MONTH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserClipsFilters.</span></span><span class="sig-name descname"><span class="pre">THIS_MONTH</span></span><a class="headerlink" href="#UserClipsFilters.THIS_MONTH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UserClipsFilters.DEFAULT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserClipsFilters.</span></span><span class="sig-name descname"><span class="pre">DEFAULT</span></span><a class="headerlink" href="#UserClipsFilters.DEFAULT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UserClipsFilters.ALL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UserClipsFilters.</span></span><span class="sig-name descname"><span class="pre">ALL</span></span><a class="headerlink" href="#UserClipsFilters.ALL" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.UserClipsFilters</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twitchDig.filters</span> <span class="kn">import</span> <span class="n">UserClipsFilters</span>
+
+<span class="c1"># Assuming `app` is Bot Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">get_user_clips</span><span class="p">(</span><span class="s2">&quot;kharltayyab&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">UserClipsFilters</span><span class="o">.</span><span class="n">ALL</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="filter-gamestreams">
+<h2>Filter GameStreams<a class="headerlink" href="#filter-gamestreams" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GameStreamsFilters.DEFAULT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameStreamsFilters.</span></span><span class="sig-name descname"><span class="pre">DEFAULT</span></span><a class="headerlink" href="#GameStreamsFilters.DEFAULT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameStreamsFilters.VIEWER_COUNT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameStreamsFilters.</span></span><span class="sig-name descname"><span class="pre">VIEWER_COUNT</span></span><a class="headerlink" href="#GameStreamsFilters.VIEWER_COUNT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameStreamsFilters.VIEWER_COUNT_ASC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameStreamsFilters.</span></span><span class="sig-name descname"><span class="pre">VIEWER_COUNT_ASC</span></span><a class="headerlink" href="#GameStreamsFilters.VIEWER_COUNT_ASC" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.GameStreamsFilters</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twitchDig.filters</span> <span class="kn">import</span> <span class="n">GameStreamsFilters</span>
+
+<span class="c1"># Assuming `app` is Bot Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">get_game_clips</span><span class="p">(</span><span class="s2">&quot;tekken 7&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">GameStreamsFilters</span><span class="o">.</span><span class="n">DEFAULT</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="filter-gamevideos">
+<h2>Filter GameVideos<a class="headerlink" href="#filter-gamevideos" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GameVideosFilters.VIEWS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameVideosFilters.</span></span><span class="sig-name descname"><span class="pre">VIEWS</span></span><a class="headerlink" href="#GameVideosFilters.VIEWS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameVideosFilters.DEFAULT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameVideosFilters.</span></span><span class="sig-name descname"><span class="pre">DEFAULT</span></span><a class="headerlink" href="#GameVideosFilters.DEFAULT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameVideosFilters.TIME">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameVideosFilters.</span></span><span class="sig-name descname"><span class="pre">TIME</span></span><a class="headerlink" href="#GameVideosFilters.TIME" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameVideosFilters.UPLOAD_DATE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameVideosFilters.</span></span><span class="sig-name descname"><span class="pre">UPLOAD_DATE</span></span><a class="headerlink" href="#GameVideosFilters.UPLOAD_DATE" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.GameVideosFilters</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twitchDig.filters</span> <span class="kn">import</span> <span class="n">GameVideosFilters</span>
+
+<span class="c1"># Assuming `app` is Bot Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">get_game_videos</span><span class="p">(</span><span class="s2">&quot;tekken 7&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">UserVideosFilters</span><span class="o">.</span><span class="n">TIME</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="filter-gameclips">
+<h2>Filter GameClips<a class="headerlink" href="#filter-gameclips" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GameClipsFilters.THIS_WEEK">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameClipsFilters.</span></span><span class="sig-name descname"><span class="pre">THIS_WEEK</span></span><a class="headerlink" href="#GameClipsFilters.THIS_WEEK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameClipsFilters.TODAY">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameClipsFilters.</span></span><span class="sig-name descname"><span class="pre">TODAY</span></span><a class="headerlink" href="#GameClipsFilters.TODAY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameClipsFilters.THIS_MONTH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameClipsFilters.</span></span><span class="sig-name descname"><span class="pre">THIS_MONTH</span></span><a class="headerlink" href="#GameClipsFilters.THIS_MONTH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameClipsFilters.DEFAULT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameClipsFilters.</span></span><span class="sig-name descname"><span class="pre">DEFAULT</span></span><a class="headerlink" href="#GameClipsFilters.DEFAULT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GameClipsFilters.ALL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GameClipsFilters.</span></span><span class="sig-name descname"><span class="pre">ALL</span></span><a class="headerlink" href="#GameClipsFilters.ALL" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.filters.GameClipsFilters</span></code></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twitchDig.filters</span> <span class="kn">import</span> <span class="n">GameClipsFilters</span>
+
+<span class="c1"># Assuming `app` is Bot Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">get_game_clips</span><span class="p">(</span><span class="s2">&quot;tekken 7&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">UserClipsFilters</span><span class="o">.</span><span class="n">ALL</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exceptions.html" class="btn btn-neutral float-left" title="Exceptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../misc/changelog.html" class="btn btn-neutral float-right" title="Changelogs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 - 2023, mahrtayyab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
