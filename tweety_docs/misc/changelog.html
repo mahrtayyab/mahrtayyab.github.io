@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelogs &mdash; Tweety 0.9.9.1 documentation</title>
+  <title>Changelogs &mdash; Tweety 0.9.9.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
@@ -15,7 +15,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=ac2dc936"></script>
+        <script src="../_static/documentation_options.js?v=2bc67e20"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
@@ -38,7 +38,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.9.1
+                0.9.9.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -87,6 +87,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#update-1-8">Update 1.8:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-1-8-1">Update 1.8.1:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-1-9">Update 1.9:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-2-0">Update 2.0:</a></li>
 </ul>
 </li>
 </ul>
@@ -286,7 +287,7 @@
 <li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">create_pool</span></code></p></li>
 <li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#Pool" title="Pool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pool</span></code></a></p></li>
 <li><p>Reworked <a class="reference internal" href="../basic/twDataTypes.html#Choice" title="Choice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Choice</span></code></a></p></li>
-<li><p><a class="reference internal" href="../basic/all-functions.html#id179" title="wait_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_time</span></code></a> now accepts iterable</p></li>
+<li><p><a class="reference internal" href="../basic/all-functions.html#id180" title="wait_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_time</span></code></a> now accepts iterable</p></li>
 <li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#RichText" title="RichText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RichText</span></code></a> , <a class="reference internal" href="../basic/twDataTypes.html#RichTag" title="RichTag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RichTag</span></code></a></p></li>
 <li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">rich_text</span></code> attribute to <a class="reference internal" href="../basic/twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a></p></li>
 <li><p>Fixed <a class="reference internal" href="../basic/twDataTypes.html#SelfThread" title="SelfThread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelfThread</span></code></a> not able to parse the tweet</p></li>
@@ -294,6 +295,17 @@
 <li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_community</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_community_tweets</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_community_tweet</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_community_members</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_community_members</span></code> method to BotMethods</p></li>
 <li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_tweet_notifications</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_tweet_notifications</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_user_notification</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_user_notification</span></code>, method to UserMethods</p></li>
 <li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#Community" title="Community"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Community</span></code></a>, <a class="reference internal" href="../basic/twDataTypes.html#CommunityTweets" title="CommunityTweets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CommunityTweets</span></code></a>, <a class="reference internal" href="../basic/twDataTypes.html#CommunityMembers" title="CommunityMembers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CommunityMembers</span></code></a>, <a class="reference internal" href="../basic/twDataTypes.html#TweetNotifications" title="TweetNotifications"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TweetNotifications</span></code></a> Data Types</p></li>
+<li><p><strong>Please do check the full documentation before upgrading</strong></p></li>
+</ul>
+</section>
+<section id="update-2-0">
+<h2>Update 2.0:<a class="headerlink" href="#update-2-0" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Module version on <a class="reference external" href="https://pypi.org/project/tweety-ns/">PYPI Repository</a> is bumped to 1.0</p></li>
+<li><p>Added many new methods to Base <a class="reference internal" href="../basic/twitter-class.html#Twitter" title="Twitter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Twitter</span></code></a> Class, do check full documentation</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">best_stream</span></code> method to <a class="reference internal" href="../basic/twDataTypes.html#Media" title="Media"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Media</span></code></a> Class</p></li>
+<li><p>Added video upload</p></li>
+<li><p>Many bug fixes</p></li>
 <li><p><strong>Please do check the full documentation before upgrading</strong></p></li>
 </ul>
 </section>
