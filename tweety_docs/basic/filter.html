@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Search Filters &mdash; Tweety 0.9.9.8 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+  <title>Search Filters &mdash; Tweety 1.0.9.6 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=2bc67e20"></script>
+        <script src="../_static/documentation_options.js?v=0cd4bd47"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,7 +41,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.9.8
+                1.0.9.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -57,6 +59,7 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="twitter-class.html">Twitter Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twitter-class.html#basegeneratorclass">BaseGeneratorClass</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -77,6 +80,105 @@
 <li class="toctree-l1"><a class="reference internal" href="#tweet-audience-filter">Tweet Audience Filter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#filter-only-people-you-mention">Filter Only People You Mention</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#filter-only-people-you-follow">Filter Only People You Follow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#language">Language</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Urdu"><code class="docutils literal notranslate"><span class="pre">Urdu</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#URDU"><code class="docutils literal notranslate"><span class="pre">URDU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Russian"><code class="docutils literal notranslate"><span class="pre">Russian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#RUSSIAN"><code class="docutils literal notranslate"><span class="pre">RUSSIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Danish"><code class="docutils literal notranslate"><span class="pre">Danish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#DANISH"><code class="docutils literal notranslate"><span class="pre">DANISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Filipino"><code class="docutils literal notranslate"><span class="pre">Filipino</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#FILIPINO"><code class="docutils literal notranslate"><span class="pre">FILIPINO</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Irish"><code class="docutils literal notranslate"><span class="pre">Irish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#IRISH"><code class="docutils literal notranslate"><span class="pre">IRISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#TraditionalChinese"><code class="docutils literal notranslate"><span class="pre">TraditionalChinese</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#TRADITIONAL_CHINESE"><code class="docutils literal notranslate"><span class="pre">TRADITIONAL_CHINESE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Hungarian"><code class="docutils literal notranslate"><span class="pre">Hungarian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#HUNGARIAN"><code class="docutils literal notranslate"><span class="pre">HUNGARIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Spanish"><code class="docutils literal notranslate"><span class="pre">Spanish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SPANISH"><code class="docutils literal notranslate"><span class="pre">SPANISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Arabic_Feminine"><code class="docutils literal notranslate"><span class="pre">Arabic_Feminine</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ARABIC_FEMININE"><code class="docutils literal notranslate"><span class="pre">ARABIC_FEMININE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Croatian"><code class="docutils literal notranslate"><span class="pre">Croatian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#CROATIAN"><code class="docutils literal notranslate"><span class="pre">CROATIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#French"><code class="docutils literal notranslate"><span class="pre">French</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#FRENCH"><code class="docutils literal notranslate"><span class="pre">FRENCH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Kannada"><code class="docutils literal notranslate"><span class="pre">Kannada</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#KANNADA"><code class="docutils literal notranslate"><span class="pre">KANNADA</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Italian"><code class="docutils literal notranslate"><span class="pre">Italian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ITALIAN"><code class="docutils literal notranslate"><span class="pre">ITALIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Marathi"><code class="docutils literal notranslate"><span class="pre">Marathi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#MARATHI"><code class="docutils literal notranslate"><span class="pre">MARATHI</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Japanese"><code class="docutils literal notranslate"><span class="pre">Japanese</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#JAPANESE"><code class="docutils literal notranslate"><span class="pre">JAPANESE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Indonesian"><code class="docutils literal notranslate"><span class="pre">Indonesian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#INDONESIAN"><code class="docutils literal notranslate"><span class="pre">INDONESIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Gujarati"><code class="docutils literal notranslate"><span class="pre">Gujarati</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#GUJARATI"><code class="docutils literal notranslate"><span class="pre">GUJARATI</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Romanian"><code class="docutils literal notranslate"><span class="pre">Romanian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ROMANIAN"><code class="docutils literal notranslate"><span class="pre">ROMANIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Turkish"><code class="docutils literal notranslate"><span class="pre">Turkish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#TURKISH"><code class="docutils literal notranslate"><span class="pre">TURKISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Basque"><code class="docutils literal notranslate"><span class="pre">Basque</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#BASQUE"><code class="docutils literal notranslate"><span class="pre">BASQUE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Swedish"><code class="docutils literal notranslate"><span class="pre">Swedish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SWEDISH"><code class="docutils literal notranslate"><span class="pre">SWEDISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Tamil"><code class="docutils literal notranslate"><span class="pre">Tamil</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#TAMIL"><code class="docutils literal notranslate"><span class="pre">TAMIL</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Thai"><code class="docutils literal notranslate"><span class="pre">Thai</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#THAI"><code class="docutils literal notranslate"><span class="pre">THAI</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Ukrainian"><code class="docutils literal notranslate"><span class="pre">Ukrainian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#UKRAINIAN"><code class="docutils literal notranslate"><span class="pre">UKRAINIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Bangla"><code class="docutils literal notranslate"><span class="pre">Bangla</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#BANGLA"><code class="docutils literal notranslate"><span class="pre">BANGLA</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#German"><code class="docutils literal notranslate"><span class="pre">German</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#GERMAN"><code class="docutils literal notranslate"><span class="pre">GERMAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Vietnamese"><code class="docutils literal notranslate"><span class="pre">Vietnamese</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#VIETNAMESE"><code class="docutils literal notranslate"><span class="pre">VIETNAMESE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Catalan"><code class="docutils literal notranslate"><span class="pre">Catalan</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#CATALAN"><code class="docutils literal notranslate"><span class="pre">CATALAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Arabic"><code class="docutils literal notranslate"><span class="pre">Arabic</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ARABIC"><code class="docutils literal notranslate"><span class="pre">ARABIC</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Dutch"><code class="docutils literal notranslate"><span class="pre">Dutch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#DUTCH"><code class="docutils literal notranslate"><span class="pre">DUTCH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SimplifiedChinese"><code class="docutils literal notranslate"><span class="pre">SimplifiedChinese</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SIMPLIFIED_CHINESE"><code class="docutils literal notranslate"><span class="pre">SIMPLIFIED_CHINESE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Slovak"><code class="docutils literal notranslate"><span class="pre">Slovak</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SLOVAK"><code class="docutils literal notranslate"><span class="pre">SLOVAK</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Czech"><code class="docutils literal notranslate"><span class="pre">Czech</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#CZECH"><code class="docutils literal notranslate"><span class="pre">CZECH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Greek"><code class="docutils literal notranslate"><span class="pre">Greek</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#GREEK"><code class="docutils literal notranslate"><span class="pre">GREEK</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Finnish"><code class="docutils literal notranslate"><span class="pre">Finnish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#FINNISH"><code class="docutils literal notranslate"><span class="pre">FINNISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#English"><code class="docutils literal notranslate"><span class="pre">English</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ENGLISH"><code class="docutils literal notranslate"><span class="pre">ENGLISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Norwegian"><code class="docutils literal notranslate"><span class="pre">Norwegian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#NORWEGIAN"><code class="docutils literal notranslate"><span class="pre">NORWEGIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Polish"><code class="docutils literal notranslate"><span class="pre">Polish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#POLISH"><code class="docutils literal notranslate"><span class="pre">POLISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Portuguese"><code class="docutils literal notranslate"><span class="pre">Portuguese</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#PORTUGUESE"><code class="docutils literal notranslate"><span class="pre">PORTUGUESE</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Persian"><code class="docutils literal notranslate"><span class="pre">Persian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#PERSIAN"><code class="docutils literal notranslate"><span class="pre">PERSIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Galician"><code class="docutils literal notranslate"><span class="pre">Galician</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#GALICIAN"><code class="docutils literal notranslate"><span class="pre">GALICIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Korean"><code class="docutils literal notranslate"><span class="pre">Korean</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#KOREAN"><code class="docutils literal notranslate"><span class="pre">KOREAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Serbian"><code class="docutils literal notranslate"><span class="pre">Serbian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SERBIAN"><code class="docutils literal notranslate"><span class="pre">SERBIAN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#BritishEnglish"><code class="docutils literal notranslate"><span class="pre">BritishEnglish</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#BRITISH_ENGLISH"><code class="docutils literal notranslate"><span class="pre">BRITISH_ENGLISH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Hindi"><code class="docutils literal notranslate"><span class="pre">Hindi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#HINDI"><code class="docutils literal notranslate"><span class="pre">HINDI</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Hebrew"><code class="docutils literal notranslate"><span class="pre">Hebrew</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#HEBREW"><code class="docutils literal notranslate"><span class="pre">HEBREW</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Malay"><code class="docutils literal notranslate"><span class="pre">Malay</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#MALAY"><code class="docutils literal notranslate"><span class="pre">MALAY</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Bulgarian"><code class="docutils literal notranslate"><span class="pre">Bulgarian</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#BULGARIAN"><code class="docutils literal notranslate"><span class="pre">BULGARIAN</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -222,6 +324,499 @@
 </dd></dl>
 
 </section>
+</section>
+<section id="language">
+<h1>Language<a class="headerlink" href="#language" title="Link to this heading"></a></h1>
+<p>You can translate Tweet in different Language , get Language code from here.</p>
+<blockquote>
+<div><dl class="py data">
+<dt class="sig sig-object py" id="Urdu">
+<span class="sig-name descname"><span class="pre">Urdu</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ur&quot;</span></em><a class="headerlink" href="#Urdu" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="URDU">
+<span class="sig-name descname"><span class="pre">URDU</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ur&quot;</span></em><a class="headerlink" href="#URDU" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Russian">
+<span class="sig-name descname"><span class="pre">Russian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ru&quot;</span></em><a class="headerlink" href="#Russian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="RUSSIAN">
+<span class="sig-name descname"><span class="pre">RUSSIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ru&quot;</span></em><a class="headerlink" href="#RUSSIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Danish">
+<span class="sig-name descname"><span class="pre">Danish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;da&quot;</span></em><a class="headerlink" href="#Danish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="DANISH">
+<span class="sig-name descname"><span class="pre">DANISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;da&quot;</span></em><a class="headerlink" href="#DANISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Filipino">
+<span class="sig-name descname"><span class="pre">Filipino</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fil&quot;</span></em><a class="headerlink" href="#Filipino" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="FILIPINO">
+<span class="sig-name descname"><span class="pre">FILIPINO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fil&quot;</span></em><a class="headerlink" href="#FILIPINO" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Irish">
+<span class="sig-name descname"><span class="pre">Irish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ga&quot;</span></em><a class="headerlink" href="#Irish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="IRISH">
+<span class="sig-name descname"><span class="pre">IRISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ga&quot;</span></em><a class="headerlink" href="#IRISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="TraditionalChinese">
+<span class="sig-name descname"><span class="pre">TraditionalChinese</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;zh-tw&quot;</span></em><a class="headerlink" href="#TraditionalChinese" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="TRADITIONAL_CHINESE">
+<span class="sig-name descname"><span class="pre">TRADITIONAL_CHINESE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;zh-tw&quot;</span></em><a class="headerlink" href="#TRADITIONAL_CHINESE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Hungarian">
+<span class="sig-name descname"><span class="pre">Hungarian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;hu&quot;</span></em><a class="headerlink" href="#Hungarian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="HUNGARIAN">
+<span class="sig-name descname"><span class="pre">HUNGARIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;hu&quot;</span></em><a class="headerlink" href="#HUNGARIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Spanish">
+<span class="sig-name descname"><span class="pre">Spanish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;es&quot;</span></em><a class="headerlink" href="#Spanish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SPANISH">
+<span class="sig-name descname"><span class="pre">SPANISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;es&quot;</span></em><a class="headerlink" href="#SPANISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Arabic_Feminine">
+<span class="sig-name descname"><span class="pre">Arabic_Feminine</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ar-x-fm&quot;</span></em><a class="headerlink" href="#Arabic_Feminine" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ARABIC_FEMININE">
+<span class="sig-name descname"><span class="pre">ARABIC_FEMININE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ar-x-fm&quot;</span></em><a class="headerlink" href="#ARABIC_FEMININE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Croatian">
+<span class="sig-name descname"><span class="pre">Croatian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;hr&quot;</span></em><a class="headerlink" href="#Croatian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="CROATIAN">
+<span class="sig-name descname"><span class="pre">CROATIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;hr&quot;</span></em><a class="headerlink" href="#CROATIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="French">
+<span class="sig-name descname"><span class="pre">French</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fr&quot;</span></em><a class="headerlink" href="#French" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="FRENCH">
+<span class="sig-name descname"><span class="pre">FRENCH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fr&quot;</span></em><a class="headerlink" href="#FRENCH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Kannada">
+<span class="sig-name descname"><span class="pre">Kannada</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;kn&quot;</span></em><a class="headerlink" href="#Kannada" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="KANNADA">
+<span class="sig-name descname"><span class="pre">KANNADA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;kn&quot;</span></em><a class="headerlink" href="#KANNADA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Italian">
+<span class="sig-name descname"><span class="pre">Italian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;it&quot;</span></em><a class="headerlink" href="#Italian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ITALIAN">
+<span class="sig-name descname"><span class="pre">ITALIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;it&quot;</span></em><a class="headerlink" href="#ITALIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Marathi">
+<span class="sig-name descname"><span class="pre">Marathi</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;mr&quot;</span></em><a class="headerlink" href="#Marathi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="MARATHI">
+<span class="sig-name descname"><span class="pre">MARATHI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;mr&quot;</span></em><a class="headerlink" href="#MARATHI" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Japanese">
+<span class="sig-name descname"><span class="pre">Japanese</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ja&quot;</span></em><a class="headerlink" href="#Japanese" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="JAPANESE">
+<span class="sig-name descname"><span class="pre">JAPANESE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ja&quot;</span></em><a class="headerlink" href="#JAPANESE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Indonesian">
+<span class="sig-name descname"><span class="pre">Indonesian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;id&quot;</span></em><a class="headerlink" href="#Indonesian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="INDONESIAN">
+<span class="sig-name descname"><span class="pre">INDONESIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;id&quot;</span></em><a class="headerlink" href="#INDONESIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Gujarati">
+<span class="sig-name descname"><span class="pre">Gujarati</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;gu&quot;</span></em><a class="headerlink" href="#Gujarati" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="GUJARATI">
+<span class="sig-name descname"><span class="pre">GUJARATI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;gu&quot;</span></em><a class="headerlink" href="#GUJARATI" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Romanian">
+<span class="sig-name descname"><span class="pre">Romanian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ro&quot;</span></em><a class="headerlink" href="#Romanian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ROMANIAN">
+<span class="sig-name descname"><span class="pre">ROMANIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ro&quot;</span></em><a class="headerlink" href="#ROMANIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Turkish">
+<span class="sig-name descname"><span class="pre">Turkish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;tr&quot;</span></em><a class="headerlink" href="#Turkish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="TURKISH">
+<span class="sig-name descname"><span class="pre">TURKISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;tr&quot;</span></em><a class="headerlink" href="#TURKISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Basque">
+<span class="sig-name descname"><span class="pre">Basque</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;eu&quot;</span></em><a class="headerlink" href="#Basque" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="BASQUE">
+<span class="sig-name descname"><span class="pre">BASQUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;eu&quot;</span></em><a class="headerlink" href="#BASQUE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Swedish">
+<span class="sig-name descname"><span class="pre">Swedish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sv&quot;</span></em><a class="headerlink" href="#Swedish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SWEDISH">
+<span class="sig-name descname"><span class="pre">SWEDISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sv&quot;</span></em><a class="headerlink" href="#SWEDISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Tamil">
+<span class="sig-name descname"><span class="pre">Tamil</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ta&quot;</span></em><a class="headerlink" href="#Tamil" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="TAMIL">
+<span class="sig-name descname"><span class="pre">TAMIL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ta&quot;</span></em><a class="headerlink" href="#TAMIL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Thai">
+<span class="sig-name descname"><span class="pre">Thai</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;th&quot;</span></em><a class="headerlink" href="#Thai" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="THAI">
+<span class="sig-name descname"><span class="pre">THAI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;th&quot;</span></em><a class="headerlink" href="#THAI" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Ukrainian">
+<span class="sig-name descname"><span class="pre">Ukrainian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;uk&quot;</span></em><a class="headerlink" href="#Ukrainian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="UKRAINIAN">
+<span class="sig-name descname"><span class="pre">UKRAINIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;uk&quot;</span></em><a class="headerlink" href="#UKRAINIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Bangla">
+<span class="sig-name descname"><span class="pre">Bangla</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;bn&quot;</span></em><a class="headerlink" href="#Bangla" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="BANGLA">
+<span class="sig-name descname"><span class="pre">BANGLA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;bn&quot;</span></em><a class="headerlink" href="#BANGLA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="German">
+<span class="sig-name descname"><span class="pre">German</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;de&quot;</span></em><a class="headerlink" href="#German" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="GERMAN">
+<span class="sig-name descname"><span class="pre">GERMAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;de&quot;</span></em><a class="headerlink" href="#GERMAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Vietnamese">
+<span class="sig-name descname"><span class="pre">Vietnamese</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;vi&quot;</span></em><a class="headerlink" href="#Vietnamese" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="VIETNAMESE">
+<span class="sig-name descname"><span class="pre">VIETNAMESE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;vi&quot;</span></em><a class="headerlink" href="#VIETNAMESE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Catalan">
+<span class="sig-name descname"><span class="pre">Catalan</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ca&quot;</span></em><a class="headerlink" href="#Catalan" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="CATALAN">
+<span class="sig-name descname"><span class="pre">CATALAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ca&quot;</span></em><a class="headerlink" href="#CATALAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Arabic">
+<span class="sig-name descname"><span class="pre">Arabic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ar&quot;</span></em><a class="headerlink" href="#Arabic" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ARABIC">
+<span class="sig-name descname"><span class="pre">ARABIC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ar&quot;</span></em><a class="headerlink" href="#ARABIC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Dutch">
+<span class="sig-name descname"><span class="pre">Dutch</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;nl&quot;</span></em><a class="headerlink" href="#Dutch" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="DUTCH">
+<span class="sig-name descname"><span class="pre">DUTCH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;nl&quot;</span></em><a class="headerlink" href="#DUTCH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SimplifiedChinese">
+<span class="sig-name descname"><span class="pre">SimplifiedChinese</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;zh-cn&quot;</span></em><a class="headerlink" href="#SimplifiedChinese" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SIMPLIFIED_CHINESE">
+<span class="sig-name descname"><span class="pre">SIMPLIFIED_CHINESE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;zh-cn&quot;</span></em><a class="headerlink" href="#SIMPLIFIED_CHINESE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Slovak">
+<span class="sig-name descname"><span class="pre">Slovak</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sk&quot;</span></em><a class="headerlink" href="#Slovak" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SLOVAK">
+<span class="sig-name descname"><span class="pre">SLOVAK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sk&quot;</span></em><a class="headerlink" href="#SLOVAK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Czech">
+<span class="sig-name descname"><span class="pre">Czech</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;cs&quot;</span></em><a class="headerlink" href="#Czech" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="CZECH">
+<span class="sig-name descname"><span class="pre">CZECH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;cs&quot;</span></em><a class="headerlink" href="#CZECH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Greek">
+<span class="sig-name descname"><span class="pre">Greek</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;el&quot;</span></em><a class="headerlink" href="#Greek" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="GREEK">
+<span class="sig-name descname"><span class="pre">GREEK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;el&quot;</span></em><a class="headerlink" href="#GREEK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Finnish">
+<span class="sig-name descname"><span class="pre">Finnish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fi&quot;</span></em><a class="headerlink" href="#Finnish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="FINNISH">
+<span class="sig-name descname"><span class="pre">FINNISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fi&quot;</span></em><a class="headerlink" href="#FINNISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="English">
+<span class="sig-name descname"><span class="pre">English</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;en&quot;</span></em><a class="headerlink" href="#English" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ENGLISH">
+<span class="sig-name descname"><span class="pre">ENGLISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;en&quot;</span></em><a class="headerlink" href="#ENGLISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Norwegian">
+<span class="sig-name descname"><span class="pre">Norwegian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;no&quot;</span></em><a class="headerlink" href="#Norwegian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="NORWEGIAN">
+<span class="sig-name descname"><span class="pre">NORWEGIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;no&quot;</span></em><a class="headerlink" href="#NORWEGIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Polish">
+<span class="sig-name descname"><span class="pre">Polish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;pl&quot;</span></em><a class="headerlink" href="#Polish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="POLISH">
+<span class="sig-name descname"><span class="pre">POLISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;pl&quot;</span></em><a class="headerlink" href="#POLISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Portuguese">
+<span class="sig-name descname"><span class="pre">Portuguese</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;pt&quot;</span></em><a class="headerlink" href="#Portuguese" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="PORTUGUESE">
+<span class="sig-name descname"><span class="pre">PORTUGUESE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;pt&quot;</span></em><a class="headerlink" href="#PORTUGUESE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Persian">
+<span class="sig-name descname"><span class="pre">Persian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fa&quot;</span></em><a class="headerlink" href="#Persian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="PERSIAN">
+<span class="sig-name descname"><span class="pre">PERSIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;fa&quot;</span></em><a class="headerlink" href="#PERSIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Galician">
+<span class="sig-name descname"><span class="pre">Galician</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;gl&quot;</span></em><a class="headerlink" href="#Galician" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="GALICIAN">
+<span class="sig-name descname"><span class="pre">GALICIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;gl&quot;</span></em><a class="headerlink" href="#GALICIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Korean">
+<span class="sig-name descname"><span class="pre">Korean</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ko&quot;</span></em><a class="headerlink" href="#Korean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="KOREAN">
+<span class="sig-name descname"><span class="pre">KOREAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;ko&quot;</span></em><a class="headerlink" href="#KOREAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Serbian">
+<span class="sig-name descname"><span class="pre">Serbian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sr&quot;</span></em><a class="headerlink" href="#Serbian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SERBIAN">
+<span class="sig-name descname"><span class="pre">SERBIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sr&quot;</span></em><a class="headerlink" href="#SERBIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="BritishEnglish">
+<span class="sig-name descname"><span class="pre">BritishEnglish</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;en-gb&quot;</span></em><a class="headerlink" href="#BritishEnglish" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="BRITISH_ENGLISH">
+<span class="sig-name descname"><span class="pre">BRITISH_ENGLISH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;en-gb&quot;</span></em><a class="headerlink" href="#BRITISH_ENGLISH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Hindi">
+<span class="sig-name descname"><span class="pre">Hindi</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;hi&quot;</span></em><a class="headerlink" href="#Hindi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="HINDI">
+<span class="sig-name descname"><span class="pre">HINDI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;hi&quot;</span></em><a class="headerlink" href="#HINDI" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Hebrew">
+<span class="sig-name descname"><span class="pre">Hebrew</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;he&quot;</span></em><a class="headerlink" href="#Hebrew" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="HEBREW">
+<span class="sig-name descname"><span class="pre">HEBREW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;he&quot;</span></em><a class="headerlink" href="#HEBREW" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Malay">
+<span class="sig-name descname"><span class="pre">Malay</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;msa&quot;</span></em><a class="headerlink" href="#Malay" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="MALAY">
+<span class="sig-name descname"><span class="pre">MALAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;msa&quot;</span></em><a class="headerlink" href="#MALAY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Bulgarian">
+<span class="sig-name descname"><span class="pre">Bulgarian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;bg&quot;</span></em><a class="headerlink" href="#Bulgarian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="BULGARIAN">
+<span class="sig-name descname"><span class="pre">BULGARIAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;bg&quot;</span></em><a class="headerlink" href="#BULGARIAN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety.filters</span> <span class="kn">import</span> <span class="n">Language</span>
+
+<span class="c1"># Assuming `app` is Twitter Client Object</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">translate_tweet</span><span class="p">(</span><span class="s2">&quot;1234&quot;</span><span class="p">,</span> <span class="n">filter_</span><span class="o">=</span><span class="n">Language</span><span class="o">.</span><span class="n">English</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 
 

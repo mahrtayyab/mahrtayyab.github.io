@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelogs &mdash; Tweety 0.9.9.8 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+  <title>Changelogs &mdash; Tweety 1.0.9.6 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=2bc67e20"></script>
+        <script src="../_static/documentation_options.js?v=0cd4bd47"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -38,7 +40,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.9.8
+                1.0.9.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -56,6 +58,7 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../basic/twitter-class.html">Twitter Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/twitter-class.html#basegeneratorclass">BaseGeneratorClass</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -69,6 +72,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../basic/filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/filter.html#language">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="current">
@@ -88,6 +92,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#update-1-8-1">Update 1.8.1:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-1-9">Update 1.9:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-2-0">Update 2.0:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-2-1">Update 2.1:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-3-1">Update 3.1</a></li>
 </ul>
 </li>
 </ul>
@@ -287,7 +293,7 @@
 <li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">create_pool</span></code></p></li>
 <li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#Pool" title="Pool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pool</span></code></a></p></li>
 <li><p>Reworked <a class="reference internal" href="../basic/twDataTypes.html#Choice" title="Choice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Choice</span></code></a></p></li>
-<li><p><a class="reference internal" href="../basic/all-functions.html#id180" title="wait_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_time</span></code></a> now accepts iterable</p></li>
+<li><p><a class="reference internal" href="../basic/all-functions.html#id245" title="wait_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_time</span></code></a> now accepts iterable</p></li>
 <li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#RichText" title="RichText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RichText</span></code></a> , <a class="reference internal" href="../basic/twDataTypes.html#RichTag" title="RichTag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RichTag</span></code></a></p></li>
 <li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">rich_text</span></code> attribute to <a class="reference internal" href="../basic/twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a></p></li>
 <li><p>Fixed <a class="reference internal" href="../basic/twDataTypes.html#SelfThread" title="SelfThread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelfThread</span></code></a> not able to parse the tweet</p></li>
@@ -307,6 +313,45 @@
 <li><p>Added video upload</p></li>
 <li><p>Many bug fixes</p></li>
 <li><p><strong>Please do check the full documentation before upgrading</strong></p></li>
+</ul>
+</section>
+<section id="update-2-1">
+<h2>Update 2.1:<a class="headerlink" href="#update-2-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Module version on <a class="reference external" href="https://pypi.org/project/tweety-ns/">PYPI Repository</a> is bumped to 1.0.2</p></li>
+<li><p>Lot of bug fixes and code improvements</p></li>
+</ul>
+<p>…</p>
+</section>
+<section id="update-3-1">
+<h2>Update 3.1<a class="headerlink" href="#update-3-1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Module version on <a class="reference external" href="https://pypi.org/project/tweety-ns/">PYPI Repository</a> is bumped to 1.0.9.6</p></li>
+<li><p>Alot of Bug Fixes</p></li>
+<li><p>Added <a class="reference internal" href="../basic/exceptions.html#ProtectedTweet" title="ProtectedTweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProtectedTweet</span></code></a> Exception</p></li>
+<li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#URL" title="URL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">URL</span></code></a>, <a class="reference internal" href="../basic/twDataTypes.html#Hashtag" title="Hashtag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Hashtag</span></code></a> Type</p></li>
+<li><p>Added “tweet_edit_history” method</p></li>
+<li><p>Fixed <a class="reference internal" href="../basic/twDataTypes.html#Inbox" title="Inbox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Inbox</span></code></a> Class</p></li>
+<li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#EditControl" title="EditControl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EditControl</span></code></a> Type</p></li>
+<li><p>Added <a class="reference internal" href="../basic/twDataTypes.html#Symbol" title="Symbol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Symbol</span></code></a> Type</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_user_media</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_user_media</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">is_liked</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">is_retweeted</span></code> attributes to <a class="reference internal" href="../basic/twDataTypes.html#Tweet" title="Tweet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tweet</span></code></a> class</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_next_page</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_next_page</span></code> method to <a class="reference internal" href="../basic/twDataTypes.html#Conversation" title="Conversation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Conversation</span></code></a> class</p></li>
+<li><p>Added user id cache</p></li>
+<li><p>Optimized the <a class="reference internal" href="../basic/twitter-class.html#BaseGeneratorClass" title="BaseGeneratorClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseGeneratorClass</span></code></a></p></li>
+<li><p>SelfThread not being parsed is fixed</p></li>
+<li><p>Fixed issue when no user returned in inbox requests</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_topic</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_topic_tweets</span></code> method</p></li>
+<li><p>Create Tweet now supports quoting a Tweet</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_user_id</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">user_mentions</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">urls</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">hashtags</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">symbols</span></code> in <a class="reference internal" href="../basic/twDataTypes.html#Message" title="Message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Message</span></code></a> object</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mutual_followers</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_blocked_users</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_tweet_analytics</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">unlike_tweet</span></code> method</p></li>
+<li><p>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">translate_tweet</span></code> method</p></li>
 </ul>
 </section>
 </section>

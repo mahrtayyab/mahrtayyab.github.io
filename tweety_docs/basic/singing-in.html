@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signing In &mdash; Tweety 0.9.9.8 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+  <title>Signing In &mdash; Tweety 1.0.9.6 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=2bc67e20"></script>
+        <script src="../_static/documentation_options.js?v=0cd4bd47"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,7 +41,7 @@
             Tweety
           </a>
               <div class="version">
-                0.9.9.8
+                1.0.9.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -57,6 +59,7 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="twitter-class.html">Twitter Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twitter-class.html#basegeneratorclass">BaseGeneratorClass</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="current">
@@ -77,6 +80,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#language">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -123,7 +127,7 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Arguments <a class="reference internal" href="all-functions.html#id137" title="username"><code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code></a> , <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">extra</span></code> are optional</p></li>
+<li><p>Arguments <a class="reference internal" href="all-functions.html#id236" title="username"><code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code></a> , <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">extra</span></code> are optional</p></li>
 <li><p>Running the above code will first look for saved session, if found will resume that session</p></li>
 <li><p>If not found , it will ask for <code class="xref py py-obj docutils literal notranslate"><span class="pre">Username</span></code> if not provided</p></li>
 <li><p>Then it will ask for <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code> if not provided</p></li>
@@ -136,7 +140,7 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 </section>
 <section id="singing-in-using-credentials">
 <h2>Singing In using Credentials<a class="headerlink" href="#singing-in-using-credentials" title="Link to this heading"></a></h2>
-<p>You can login to Twitter on Tweety using your <a class="reference internal" href="all-functions.html#id137" title="username"><code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code></a> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code></p>
+<p>You can login to Twitter on Tweety using your <a class="reference internal" href="all-functions.html#id236" title="username"><code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code></a> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
