@@ -1,27 +1,25 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quick-Start &mdash; Tweety 1.0.9.6 documentation</title>
+  <title>Quick-Start &mdash; Tweety 2.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=0cd4bd47"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c4a36953"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -40,9 +38,6 @@
           <a href="../index.html" class="icon icon-home">
             Tweety
           </a>
-              <div class="version">
-                1.0.9.6
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -73,6 +68,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#filter-community-tweets">Filter Community Tweets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#filter-community-members">Filter Community Members</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html#language">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
@@ -108,17 +105,18 @@
 <h1>Quick-Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
 <p>Let’s see a longer example to learn some of the methods that the library
 has to offer.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">TwitterAsync</span>
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
-<span class="n">target_username</span> <span class="o">=</span> <span class="s2">&quot;elonmusk&quot;</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">TwitterAsync</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+    <span class="n">target_username</span> <span class="o">=</span> <span class="s2">&quot;elonmusk&quot;</span>
 
-<span class="n">user</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_user_info</span><span class="p">(</span><span class="n">target_username</span><span class="p">)</span>
-<span class="n">all_tweets</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_tweets</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">get_user_info</span><span class="p">(</span><span class="n">target_username</span><span class="p">)</span>
+    <span class="n">all_tweets</span> <span class="o">=</span> <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">get_tweets</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">all_tweets</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">all_tweets</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Here, we show how to get the user information and tweets from <code class="docutils literal notranslate"><span class="pre">elonmusk</span></code> user profile on Twitter
@@ -141,7 +139,7 @@ and then iterating over the Tweets</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022 - 2023, mahrtayyab.</p>
+    <p>&#169; Copyright 2022 - 2024, mahrtayyab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

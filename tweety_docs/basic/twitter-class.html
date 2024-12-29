@@ -1,27 +1,25 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Twitter Class &mdash; Tweety 1.0.9.6 documentation</title>
+  <title>Twitter Class &mdash; Tweety 2.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=0cd4bd47"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c4a36953"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -40,9 +38,6 @@
           <a href="../index.html" class="icon icon-home">
             Tweety
           </a>
-              <div class="version">
-                1.0.9.6
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -59,6 +54,7 @@
 <p class="caption" role="heading"><span class="caption-text">Base Class</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Twitter Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#TwitterAsync"><code class="docutils literal notranslate"><span class="pre">TwitterAsync</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Twitter"><code class="docutils literal notranslate"><span class="pre">Twitter</span></code></a></li>
 </ul>
 </li>
@@ -79,6 +75,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#filter-community-tweets">Filter Community Tweets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#filter-community-members">Filter Community Members</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html#language">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
@@ -114,21 +112,21 @@
 <span id="id1"></span><h1>Twitter Class<a class="headerlink" href="#twitter-class" title="Link to this heading"></a></h1>
 <p>The Twitter aggregates several mixin classes to provide all the common functionality in a nice, Pythonic interface. Each mixin has its own methods, which you all can use.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="Twitter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><span class="pre">dict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Proxy" title="Proxy"><span class="pre">Proxy</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Twitter" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="TwitterAsync">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TwitterAsync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Proxy" title="Proxy"><span class="pre">Proxy</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#TwitterAsync" title="Link to this definition"></a></dt>
 <dd><p>Bases : <code class="xref py py-obj docutils literal notranslate"><span class="pre">UpdateMethods</span></code> , <code class="xref py py-obj docutils literal notranslate"><span class="pre">BotMethods</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">AuthMethods</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">UserMethods</span></code></p>
 <dl class="py data">
-<dt class="sig sig-object py" id="Twitter.Arguments">
-<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#Twitter.Arguments" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="TwitterAsync.Arguments">
+<span class="sig-name descname"><span class="pre">Arguments</span></span><a class="headerlink" href="#TwitterAsync.Arguments" title="Link to this definition"></a></dt>
 <dd><dl class="py data">
-<dt class="sig sig-object py" id="Twitter.session_name">
-<span class="sig-name descname"><span class="pre">session_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Session</span></em><a class="headerlink" href="#Twitter.session_name" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="TwitterAsync.session_name">
+<span class="sig-name descname"><span class="pre">session_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Session</span></em><a class="headerlink" href="#TwitterAsync.session_name" title="Link to this definition"></a></dt>
 <dd><p>This is the name of the session which will be saved and can be loaded later</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="Twitter.proxy">
-<span class="sig-name descname"><span class="pre">proxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><span class="pre">dict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Proxy" title="Proxy"><span class="pre">Proxy</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#Twitter.proxy" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="TwitterAsync.proxy">
+<span class="sig-name descname"><span class="pre">proxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optional</span></span></em><span class="sig-paren">)</span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Proxy" title="Proxy"><span class="pre">Proxy</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#TwitterAsync.proxy" title="Link to this definition"></a></dt>
 <dd><p>Proxy you want to use</p>
 </dd></dl>
 
@@ -142,13 +140,23 @@
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="Twitter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Twitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#Proxy" title="Proxy"><span class="pre">Proxy</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Twitter" title="Link to this definition"></a></dt>
+<dd><p>This is just Synced Version of <a class="reference internal" href="#TwitterAsync" title="TwitterAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TwitterAsync</span></code></a>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>It is just a little hack , some functions might not work always prefer using <a class="reference internal" href="#TwitterAsync" title="TwitterAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TwitterAsync</span></code></a>.</p>
+</div>
+</dd></dl>
+
 </section>
 <section id="basegeneratorclass">
 <h1>BaseGeneratorClass<a class="headerlink" href="#basegeneratorclass" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="BaseGeneratorClass">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BaseGeneratorClass</span></span><a class="headerlink" href="#BaseGeneratorClass" title="Link to this definition"></a></dt>
-<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dd><p>Bases : <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Reference<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tweety.types.base.BaseGeneratorClass</span></code></p>
@@ -164,19 +172,19 @@
 <span class="sig-name descname"><span class="pre">Attributes:</span></span></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="BaseGeneratorClass.cursor">
-<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#BaseGeneratorClass.cursor" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#BaseGeneratorClass.cursor" title="Link to this definition"></a></dt>
 <dd><p>Cursor for next page</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="BaseGeneratorClass.is_next_page">
-<span class="sig-name descname"><span class="pre">is_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#BaseGeneratorClass.is_next_page" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">is_next_page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#BaseGeneratorClass.is_next_page" title="Link to this definition"></a></dt>
 <dd><p>Is next page of tweets available</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="BaseGeneratorClass.cursor_top">
-<span class="sig-name descname"><span class="pre">cursor_top</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#BaseGeneratorClass.cursor_top" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">cursor_top</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#BaseGeneratorClass.cursor_top" title="Link to this definition"></a></dt>
 <dd><p>Cursor for previous page</p>
 </dd></dl>
 
@@ -187,14 +195,14 @@
 <span class="sig-name descname"><span class="pre">Methods:</span></span></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="BaseGeneratorClass.get_page">
-<span class="sig-name descname"><span class="pre">get_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BaseGeneratorClass.get_page" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BaseGeneratorClass.get_page" title="Link to this definition"></a></dt>
 <dd><p>Get a Page of tweets</p>
 <dl class="py data">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Arguments:</span></span></dt>
 <dd><dl class="py data">
 <dt class="sig sig-object py" id="id0">
-<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
 <dd><p>Cursor of that specific Page</p>
 </dd></dl>
 
@@ -202,18 +210,18 @@
 
 <dl class="py data">
 <dt class="sig sig-object py" id="BaseGeneratorClass.Return">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple[list[Tweet</span> <span class="pre">|</span> <span class="pre">SelfThread</span> <span class="pre">|</span> <span class="pre">User</span> <span class="pre">|</span> <span class="pre">ConversationThread</span> <span class="pre">|</span> <span class="pre">List],</span> <span class="pre">cursor:</span> <span class="pre">str,</span> <span class="pre">cursor_top:</span> <span class="pre">str]</span></em><a class="headerlink" href="#BaseGeneratorClass.Return" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#SelfThread" title="SelfThread"><span class="pre">SelfThread</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#ConversationThread" title="ConversationThread"><span class="pre">ConversationThread</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#TwList" title="TwList"><span class="pre">TwList</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#BaseGeneratorClass.Return" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="BaseGeneratorClass.get_next_page">
-<span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BaseGeneratorClass.get_next_page" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_next_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BaseGeneratorClass.get_next_page" title="Link to this definition"></a></dt>
 <dd><p>Get next page of tweets if available using the saved cursor</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="id2">
-<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#SelfThread" title="SelfThread"><span class="pre">SelfThread</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#ConversationThread" title="ConversationThread"><span class="pre">ConversationThread</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="twDataTypes.html#Tweet" title="Tweet"><span class="pre">Tweet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#SelfThread" title="SelfThread"><span class="pre">SelfThread</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#User" title="User"><span class="pre">User</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#ConversationThread" title="ConversationThread"><span class="pre">ConversationThread</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="twDataTypes.html#TwList" title="TwList"><span class="pre">TwList</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -235,7 +243,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022 - 2023, mahrtayyab.</p>
+    <p>&#169; Copyright 2022 - 2024, mahrtayyab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

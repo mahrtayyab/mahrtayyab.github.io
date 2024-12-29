@@ -1,27 +1,25 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signing In &mdash; Tweety 1.0.9.6 documentation</title>
+  <title>Signing In &mdash; Tweety 2.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=0cd4bd47"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c4a36953"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -40,9 +38,6 @@
           <a href="../index.html" class="icon icon-home">
             Tweety
           </a>
-              <div class="version">
-                1.0.9.6
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -80,6 +75,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="filter.html">Search Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html#tweet-audience-filter">Tweet Audience Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#filter-community-tweets">Filter Community Tweets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html#filter-community-members">Filter Community Members</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter.html#language">Language</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
@@ -119,15 +116,15 @@
 <h2>Interactive Singing In<a class="headerlink" href="#interactive-singing-in" title="Link to this heading"></a></h2>
 <p>Most of the time , <code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code> is the only method you will interact with to login and create a session
 This Method will ask for <code class="xref py py-obj docutils literal notranslate"><span class="pre">Username</span></code>,  <code class="xref py py-obj docutils literal notranslate"><span class="pre">Password</span></code> or any other information or action required for completing the log-in process.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">TwitterAsync</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">extra</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">extra</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Arguments <a class="reference internal" href="all-functions.html#id236" title="username"><code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code></a> , <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">extra</span></code> are optional</p></li>
+<li><p>Arguments <code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code> , <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">extra</span></code> are optional</p></li>
 <li><p>Running the above code will first look for saved session, if found will resume that session</p></li>
 <li><p>If not found , it will ask for <code class="xref py py-obj docutils literal notranslate"><span class="pre">Username</span></code> if not provided</p></li>
 <li><p>Then it will ask for <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code> if not provided</p></li>
@@ -140,12 +137,12 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 </section>
 <section id="singing-in-using-credentials">
 <h2>Singing In using Credentials<a class="headerlink" href="#singing-in-using-credentials" title="Link to this heading"></a></h2>
-<p>You can login to Twitter on Tweety using your <a class="reference internal" href="all-functions.html#id236" title="username"><code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code></a> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<p>You can login to Twitter on Tweety using your <code class="xref py py-obj docutils literal notranslate"><span class="pre">username</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">TwitterAsync</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -155,28 +152,28 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 <li><p>If any other information like 2-Factor Authenticated Code , or Verification id required , the <a class="reference internal" href="exceptions.html#ActionRequired" title="ActionRequired"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionRequired</span></code></a> will be raised</p></li>
 <li><p>In case of <a class="reference internal" href="exceptions.html#ActionRequired" title="ActionRequired"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionRequired</span></code></a> , you can pass the required information to <code class="xref py py-obj docutils literal notranslate"><span class="pre">extra</span></code> argument of <code class="xref py py-obj docutils literal notranslate"><span class="pre">sign_in</span></code> method</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">TwitterAsync</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">extra</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">extra</span><span class="p">)</span>
 <span class="k">except</span> <span class="n">ActionRequired</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="n">action</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Action Required :&gt; </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">message</span><span class="p">)</span><span class="si">}</span><span class="s2"> : &quot;</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">action</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sign_in</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">action</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="singing-in-using-cookies">
 <h2>Singing In using Cookies<a class="headerlink" href="#singing-in-using-cookies" title="Link to this heading"></a></h2>
 <p>you can also log-in to Twitter on Tweety using <code class="docutils literal notranslate"><span class="pre">Cookies</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">TwitterAsync</span>
 
 <span class="n">cookies_value</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;guest_id=guest_id_value; guest_id_marketing=guest_id_marketing; guest_id_ads=guest_id_ads; kdt=kdt_value; auth_token=auth_token_value; ct0=ct0_value; twid=twid_value; personalization_id=&quot;personalization_id_value&quot; &quot;&quot;&quot;</span>
 
 <span class="c1"># Cookies can be a str or a dict</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">load_cookies</span><span class="p">(</span><span class="n">cookies_value</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">load_cookies</span><span class="p">(</span><span class="n">cookies_value</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -187,14 +184,14 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 <section id="singing-in-using-auth-token">
 <h2>Singing In using Auth Token<a class="headerlink" href="#singing-in-using-auth-token" title="Link to this heading"></a></h2>
 <p>you can also log-in to Twitter on Tweety using <code class="docutils literal notranslate"><span class="pre">auth_token</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">TwitterAsync</span>
 
 <span class="n">auth_token</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;auth_token_value&quot;&quot;&quot;</span>
 
 <span class="c1"># Cookies can be a str or a dict</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">load_auth_token</span><span class="p">(</span><span class="n">auth_token</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">load_auth_token</span><span class="p">(</span><span class="n">auth_token</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -211,10 +208,10 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
 <p class="admonition-title">Attention</p>
 <p>If the session file is in different directory , make sure to provide the relative path.</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">Twitter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tweety</span> <span class="kn">import</span> <span class="n">TwitterAsync</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Twitter</span><span class="p">(</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <span class="c1"># as &#39;session.tw_session&#39; is already a authenticated session file , the session can be loaded using  `connect` method</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
@@ -234,7 +231,7 @@ This Method will ask for <code class="xref py py-obj docutils literal notranslat
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022 - 2023, mahrtayyab.</p>
+    <p>&#169; Copyright 2022 - 2024, mahrtayyab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
